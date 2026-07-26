@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Sparkles, Terminal, Code, Cpu, ShieldCheck, Activity, Zap, Server } from 'lucide-react';
+import { ArrowRight, Sparkles, Terminal, Code, Cpu, ShieldCheck, Activity, Zap, Server, Mail } from 'lucide-react';
 import { sound } from '../utils/sound';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
