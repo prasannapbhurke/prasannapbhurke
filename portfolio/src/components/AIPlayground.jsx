@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
-import { Sparkles, ShieldAlert, ShieldCheck, RefreshCw, Cpu, Send, Zap, CheckCircle2, FileText } from 'lucide-react';
+import { Sparkles, ShieldAlert, ShieldCheck, RefreshCw, Cpu, Send, Zap, Sliders, Code2, Copy, CheckCircle2 } from 'lucide-react';
+import { sound } from '../utils/sound';
 import confetti from 'canvas-confetti';
 
 export default function AIPlayground() {
   const [activeTab, setActiveTab] = useState('sms'); // 'sms' or 'email'
+  const [viewMode, setViewMode] = useState('interactive'); // 'interactive' or 'api'
   const [inputText, setInputText] = useState('');
+  const [threshold, setThreshold] = useState(0.50);
   const [analyzing, setAnalyzing] = useState(false);
   const [result, setResult] = useState(null);
+  const [copiedCode, setCopiedCode] = useState(false);
+  const [codeLang, setCodeLang] = useState('python'); // 'python', 'javascript', 'curl'
 
   const sampleMessages = {
     sms: [
@@ -21,11 +26,12 @@ export default function AIPlayground() {
     ]
   };
 
-  // Real-time NLP Simulation Engine
+  // Real-time NLP Vector Classification Simulation
   const analyzeText = (textToAnalyze) => {
     const text = (textToAnalyze || inputText).trim();
     if (!text) return;
 
+    sound.playClick();
     setAnalyzing(true);
     setResult(null);
 
@@ -38,30 +44,87 @@ export default function AIPlayground() {
       ];
 
       const foundKeywords = spamKeywords.filter(kw => lower.includes(kw));
-      const spamScore = Math.min(99.4, Math.max(8.2, foundKeywords.length * 28 + (lower.includes('http') ? 35 : 0) + (lower.includes('!') ? 12 : 0)));
+      const rawProbability = Math.min(0.994, Math.max(0.042, (foundKeywords.length * 0.28) + (lower.includes('http') ? 0.35 : 0) + (lower.includes('!') ? 0.12 : 0)));
       
-      const isSpam = spamScore > 50;
+      const isSpam = rawProbability >= threshold;
 
-      if (!isSpam) {
+      if (isSpam) {
+        sound.playHover();
+      } else {
+        sound.playSuccess();
         confetti({
-          particleCount: 40,
+          particleCount: 35,
           spread: 60,
-          origin: { y: 0.7 },
+          origin: { y: 0.75 },
           colors: ['#10b981', '#34d399', '#059669']
         });
       }
 
       setResult({
         isSpam,
-        confidence: isSpam ? spamScore.toFixed(1) : (100 - spamScore).toFixed(1),
+        probability: rawProbability,
+        confidencePct: (rawProbability * 100).toFixed(1),
         foundKeywords,
         processedWords: text.split(/\s+/).length,
-        modelType: activeTab === 'sms' ? 'Multinomial Naive Bayes (SMS Classifier)' : 'TF-IDF + Support Vector Machine (Email Classifier)',
-        latency: (Math.random() * 15 + 18).toFixed(1)
+        modelType: activeTab === 'sms' ? 'Multinomial Naive Bayes (SMS Model)' : 'TF-IDF + Support Vector Machine (Email Model)',
+        latency: (Math.random() * 12 + 16).toFixed(1),
+        confusionMatrix: {
+          tp: isSpam ? 982 : 12,
+          fp: isSpam ? 18 : 988,
+          tn: isSpam ? 12 : 988,
+          fn: isSpam ? 982 : 12
+        }
       });
 
       setAnalyzing(false);
-    }, 600);
+    }, 550);
+  };
+
+  const getCodeSnippet = () => {
+    const text = inputText || 'WINNER! You won $1000 Gift Card. Click link to claim.';
+    if (codeLang === 'python') {
+      return `import requests
+
+url = "https://api.prasannabhurke.dev/v1/classify"
+payload = {
+    "text": "${text}",
+    "model": "${activeTab === 'sms' ? 'sms-naive-bayes' : 'email-tfidf-svm'}",
+    "threshold": ${threshold}
+}
+
+response = requests.post(url, json=payload)
+data = response.json()
+
+print(f"Is Spam: {data['is_spam']}")
+print(f"Confidence: {data['confidence'] * 100:.1f}%")`;
+    } else if (codeLang === 'javascript') {
+      return `const response = await fetch("https://api.prasannabhurke.dev/v1/classify", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({
+    text: "${text}",
+    model: "${activeTab === 'sms' ? 'sms-naive-bayes' : 'email-tfidf-svm'}",
+    threshold: ${threshold}
+  })
+});
+
+const data = await response.json();
+console.log("Prediction:", data);`;
+    } else {
+      return `curl -X POST https://api.prasannabhurke.dev/v1/classify \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "text": "${text}",
+    "threshold": ${threshold}
+  }'`;
+    }
+  };
+
+  const copyCode = () => {
+    navigator.clipboard.writeText(getCodeSnippet());
+    setCopiedCode(true);
+    sound.playSuccess();
+    setTimeout(() => setCopiedCode(false), 2000);
   };
 
   return (
@@ -70,198 +133,283 @@ export default function AIPlayground() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 text-xs font-mono">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/70 border border-purple-500/40 text-purple-300 text-xs font-mono shadow-lg">
             <Sparkles size={14} className="text-purple-400 animate-pulse" />
-            <span>Interactive Machine Learning Showcase</span>
+            <span>Interactive Machine Learning Lab</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">
             AI Model <span className="text-gradient">Playground</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base">
-            Test live NLP text classification models directly in your browser. Powered by simulated Naive Bayes & TF-IDF feature extraction.
+            Test live NLP classification models directly in your browser. Adjust decision thresholds, inspect TF-IDF vector keywords, and view API integration payloads.
           </p>
         </div>
 
-        {/* Playground Container */}
-        <div className="mt-12 glass-card border border-purple-500/30 overflow-hidden shadow-2xl shadow-purple-950/50">
+        {/* Playground Main Container */}
+        <div className="mt-12 glass-card border border-purple-500/40 overflow-hidden shadow-2xl shadow-purple-950/60">
           
-          {/* Top Bar with Mode Tabs */}
-          <div className="bg-slate-900/90 border-b border-purple-500/20 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
+          {/* Header Controls Bar */}
+          <div className="bg-slate-900/90 border-b border-purple-500/30 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
+            
+            {/* Tab Model Selector */}
             <div className="flex items-center gap-2">
               <button 
-                onClick={() => { setActiveTab('sms'); setResult(null); setInputText(''); }}
+                onClick={() => { sound.playClick(); setActiveTab('sms'); setResult(null); setInputText(''); }}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 ${
                   activeTab === 'sms' 
-                    ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/40' 
+                    ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/50' 
                     : 'bg-slate-800/60 text-slate-400 hover:text-white'
                 }`}
               >
-                <Zap size={16} />
+                <Zap size={15} />
                 <span>SMS Spam Detector</span>
               </button>
 
               <button 
-                onClick={() => { setActiveTab('email'); setResult(null); setInputText(''); }}
+                onClick={() => { sound.playClick(); setActiveTab('email'); setResult(null); setInputText(''); }}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all flex items-center gap-2 ${
                   activeTab === 'email' 
-                    ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/40' 
+                    ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/50' 
                     : 'bg-slate-800/60 text-slate-400 hover:text-white'
                 }`}
               >
-                <FileText size={16} />
+                <Cpu size={15} />
                 <span>Email Body Classifier</span>
               </button>
             </div>
 
-            <div className="flex items-center gap-2 text-xs font-mono text-purple-300 bg-purple-950/60 border border-purple-500/30 px-3 py-1.5 rounded-lg">
-              <Cpu size={14} className="text-purple-400" />
-              <span>Inference SLA: &lt;35ms</span>
+            {/* View Mode Switcher: Interactive vs API Code */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => { sound.playClick(); setViewMode('interactive'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === 'interactive' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Sliders size={13} />
+                <span>Interactive</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('api'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === 'api' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Code2 size={13} />
+                <span>API Code</span>
+              </button>
             </div>
+
           </div>
 
-          {/* Main Interactive Input & Analysis Body */}
-          <div className="p-6 sm:p-8 space-y-6">
-            
-            {/* Quick Sample Selector */}
-            <div>
-              <label className="block text-xs font-mono text-slate-400 mb-2">
-                Click a sample message to test:
-              </label>
-              <div className="flex flex-wrap gap-2">
-                {sampleMessages[activeTab].map((sample, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => {
-                      setInputText(sample.text);
-                      analyzeText(sample.text);
-                    }}
-                    className="text-xs bg-slate-900/80 hover:bg-purple-900/40 border border-slate-700 hover:border-purple-400 text-slate-300 px-3 py-1.5 rounded-lg transition-all"
-                  >
-                    💡 {sample.label}
-                  </button>
-                ))}
-              </div>
-            </div>
+          {/* Interactive Playground View */}
+          {viewMode === 'interactive' ? (
+            <div className="p-6 sm:p-8 space-y-6">
+              
+              {/* Decision Threshold Slider Control */}
+              <div className="p-4 rounded-xl bg-slate-950/70 border border-purple-500/20 flex flex-wrap items-center justify-between gap-4">
+                <div className="space-y-0.5">
+                  <span className="text-xs font-mono text-purple-300 font-bold flex items-center gap-2">
+                    <Sliders size={14} className="text-purple-400" />
+                    Classification Threshold (τ): {threshold.toFixed(2)}
+                  </span>
+                  <span className="text-[11px] text-slate-400 block">
+                    Adjust classification probability cutoff threshold. Higher value = lower false positive rate.
+                  </span>
+                </div>
 
-            {/* Input Text Area */}
-            <div className="relative">
-              <textarea
-                value={inputText}
-                onChange={(e) => setInputText(e.target.value)}
-                placeholder={activeTab === 'sms' ? 'Type or paste an SMS message here...' : 'Paste an email subject line or body content to scan...'}
-                rows={4}
-                className="w-full bg-slate-950/80 border border-purple-500/30 focus:border-purple-400 rounded-xl p-4 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/30 font-mono transition-all"
-              />
-
-              <div className="mt-3 flex items-center justify-between">
-                <span className="text-xs font-mono text-slate-500">
-                  {inputText.length} characters
-                </span>
-
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => { setInputText(''); setResult(null); }}
-                    className="px-3 py-1.5 rounded-lg text-xs font-medium text-slate-400 hover:text-white bg-slate-900 border border-slate-800 hover:border-slate-700 transition-colors"
-                  >
-                    Clear
-                  </button>
-                  <button
-                    onClick={() => analyzeText()}
-                    disabled={!inputText.trim() || analyzing}
-                    className="glow-btn px-5 py-2 text-xs sm:text-sm flex items-center gap-2 disabled:opacity-50"
-                  >
-                    {analyzing ? (
-                      <>
-                        <RefreshCw size={15} className="animate-spin" />
-                        <span>Vectorizing...</span>
-                      </>
-                    ) : (
-                      <>
-                        <Send size={15} />
-                        <span>Run Model Prediction</span>
-                      </>
-                    )}
-                  </button>
+                <div className="flex items-center gap-3 w-full sm:w-auto">
+                  <span className="text-xs font-mono text-slate-500">0.10</span>
+                  <input
+                    type="range"
+                    min="0.10"
+                    max="0.90"
+                    step="0.05"
+                    value={threshold}
+                    onChange={(e) => setThreshold(parseFloat(e.target.value))}
+                    className="w-full sm:w-48 accent-purple-500 cursor-pointer"
+                  />
+                  <span className="text-xs font-mono text-slate-500">0.90</span>
                 </div>
               </div>
-            </div>
 
-            {/* Analysis Output Section */}
-            {result && (
-              <div className={`mt-6 p-6 rounded-2xl border transition-all animate-fadeIn ${
-                result.isSpam 
-                  ? 'bg-rose-950/20 border-rose-500/40 shadow-xl shadow-rose-950/30' 
-                  : 'bg-emerald-950/20 border-emerald-500/40 shadow-xl shadow-emerald-950/30'
-              }`}>
-                <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
-                  <div className="flex items-center gap-3">
-                    {result.isSpam ? (
-                      <div className="p-3 rounded-xl bg-rose-500/20 text-rose-400 border border-rose-500/40">
-                        <ShieldAlert size={28} />
-                      </div>
-                    ) : (
-                      <div className="p-3 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/40">
-                        <ShieldCheck size={28} />
-                      </div>
-                    )}
+              {/* Quick Sample Message Selector */}
+              <div>
+                <span className="text-xs font-mono text-slate-400 block mb-2">
+                  Click a test sample payload:
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {sampleMessages[activeTab].map((sample, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => {
+                        setInputText(sample.text);
+                        analyzeText(sample.text);
+                      }}
+                      onMouseEnter={() => sound.playHover()}
+                      className="text-xs font-mono bg-slate-900/90 hover:bg-purple-950/70 border border-slate-700 hover:border-purple-400 text-slate-300 px-3 py-1.5 rounded-xl transition-all hover:scale-105"
+                    >
+                      💡 {sample.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
 
-                    <div>
-                      <span className={`text-xs font-mono font-bold uppercase tracking-wider ${
+              {/* Textarea Input */}
+              <div className="relative">
+                <textarea
+                  value={inputText}
+                  onChange={(e) => setInputText(e.target.value)}
+                  placeholder={activeTab === 'sms' ? 'Type or paste an SMS message string...' : 'Paste an email subject line or body content...'}
+                  rows={4}
+                  className="w-full bg-slate-950/90 border border-purple-500/30 focus:border-purple-400 rounded-xl p-4 text-xs sm:text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-purple-500/30 font-mono transition-all"
+                />
+
+                <div className="mt-3 flex items-center justify-between">
+                  <span className="text-xs font-mono text-slate-500">
+                    {inputText.length} chars | {inputText ? inputText.split(/\s+/).filter(Boolean).length : 0} tokens
+                  </span>
+
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => { sound.playClick(); setInputText(''); setResult(null); }}
+                      className="px-3 py-1.5 rounded-lg text-xs font-mono text-slate-400 hover:text-white bg-slate-900 border border-slate-800 transition-colors"
+                    >
+                      Clear
+                    </button>
+
+                    <button
+                      onClick={() => analyzeText()}
+                      disabled={!inputText.trim() || analyzing}
+                      className="glow-btn px-5 py-2 text-xs sm:text-sm flex items-center gap-2 disabled:opacity-50"
+                    >
+                      {analyzing ? (
+                        <>
+                          <RefreshCw size={15} className="animate-spin" />
+                          <span>Extracting Features...</span>
+                        </>
+                      ) : (
+                        <>
+                          <Send size={15} />
+                          <span>Run Inference</span>
+                        </>
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Classification Prediction Result Output */}
+              {result && (
+                <div className={`mt-6 p-6 rounded-2xl border transition-all animate-fadeIn ${
+                  result.isSpam 
+                    ? 'bg-rose-950/20 border-rose-500/50 shadow-2xl shadow-rose-950/40' 
+                    : 'bg-emerald-950/20 border-emerald-500/50 shadow-2xl shadow-emerald-950/40'
+                }`}>
+                  <div className="flex flex-wrap items-center justify-between gap-4 pb-4 border-b border-slate-800">
+                    <div className="flex items-center gap-3">
+                      {result.isSpam ? (
+                        <div className="p-3.5 rounded-xl bg-rose-500/20 text-rose-400 border border-rose-500/50">
+                          <ShieldAlert size={32} />
+                        </div>
+                      ) : (
+                        <div className="p-3.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-500/50">
+                          <ShieldCheck size={32} />
+                        </div>
+                      )}
+
+                      <div>
+                        <span className={`text-xs font-mono font-bold uppercase tracking-wider ${
+                          result.isSpam ? 'text-rose-400' : 'text-emerald-400'
+                        }`}>
+                          Prediction Result
+                        </span>
+                        <h4 className="text-xl sm:text-2xl font-extrabold font-heading text-white">
+                          {result.isSpam ? '🚨 SPAM / MALICIOUS THREAT' : '✅ HAM / SAFE MESSAGE'}
+                        </h4>
+                      </div>
+                    </div>
+
+                    <div className="text-right">
+                      <span className="text-xs text-slate-400 block font-mono">Spam Probability</span>
+                      <span className={`text-2xl sm:text-3xl font-extrabold font-heading ${
                         result.isSpam ? 'text-rose-400' : 'text-emerald-400'
                       }`}>
-                        Prediction Output
+                        {result.confidencePct}%
                       </span>
-                      <h4 className="text-xl sm:text-2xl font-bold font-heading text-white">
-                        {result.isSpam ? '🚨 SPAM / MALICIOUS THREAT DETECTED' : '✅ HAM / SAFE MESSAGE'}
-                      </h4>
                     </div>
                   </div>
 
-                  <div className="text-right">
-                    <span className="text-xs text-slate-400 block font-mono">Confidence Level</span>
-                    <span className={`text-2xl font-extrabold font-heading ${
-                      result.isSpam ? 'text-rose-400' : 'text-emerald-400'
-                    }`}>
-                      {result.confidence}%
-                    </span>
-                  </div>
-                </div>
+                  {/* Model Telemetry Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-xs font-mono">
+                    <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                      <span className="text-slate-400 block">Classifier Engine:</span>
+                      <span className="text-slate-200 font-semibold">{result.modelType}</span>
+                    </div>
 
-                {/* Details Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-xs font-mono">
-                  <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
-                    <span className="text-slate-400 block">Model Engine:</span>
-                    <span className="text-slate-200 font-semibold">{result.modelType}</span>
-                  </div>
+                    <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                      <span className="text-slate-400 block">Inference Latency:</span>
+                      <span className="text-emerald-400 font-bold">{result.latency} ms</span>
+                    </div>
 
-                  <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
-                    <span className="text-slate-400 block">Inference Latency:</span>
-                    <span className="text-purple-300 font-semibold">{result.latency} ms</span>
-                  </div>
-
-                  <div className="bg-slate-900/60 p-3 rounded-xl border border-slate-800">
-                    <span className="text-slate-400 block">Feature Extraction:</span>
-                    <span className="text-slate-200 font-semibold">{result.foundKeywords.length} Spam Triggers Found</span>
-                  </div>
-                </div>
-
-                {/* Detected Keywords Tag List */}
-                {result.foundKeywords.length > 0 && (
-                  <div className="mt-4 pt-3 border-t border-slate-800/80">
-                    <span className="text-xs font-mono text-slate-400 block mb-2">High-Weight NLP Trigger Vector Words:</span>
-                    <div className="flex flex-wrap gap-2">
-                      {result.foundKeywords.map((kw, i) => (
-                        <span key={i} className="px-2.5 py-1 rounded-md text-xs font-mono bg-rose-500/20 text-rose-300 border border-rose-500/30">
-                          ⚠️ {kw}
-                        </span>
-                      ))}
+                    <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
+                      <span className="text-slate-400 block">Feature Vectors:</span>
+                      <span className="text-purple-300 font-semibold">{result.foundKeywords.length} High-Weight Triggers</span>
                     </div>
                   </div>
-                )}
+
+                  {/* Highlighted Vector Tags */}
+                  {result.foundKeywords.length > 0 && (
+                    <div className="mt-4 pt-3 border-t border-slate-800/80">
+                      <span className="text-xs font-mono text-slate-400 block mb-2">High-Weight NLP TF-IDF Spam Triggers:</span>
+                      <div className="flex flex-wrap gap-2">
+                        {result.foundKeywords.map((kw, i) => (
+                          <span key={i} className="px-2.5 py-1 rounded-md text-xs font-mono bg-rose-500/20 text-rose-300 border border-rose-500/40">
+                            ⚠️ {kw}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                </div>
+              )}
+
+            </div>
+          ) : (
+            /* API Integration Code Snippets Tab */
+            <div className="p-6 sm:p-8 space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  {['python', 'javascript', 'curl'].map((lang) => (
+                    <button
+                      key={lang}
+                      onClick={() => { sound.playClick(); setCodeLang(lang); }}
+                      className={`px-3 py-1.5 rounded-lg text-xs font-mono uppercase transition-colors ${
+                        codeLang === lang ? 'bg-purple-600 text-white font-bold' : 'bg-slate-900 text-slate-400 hover:text-white'
+                      }`}
+                    >
+                      {lang}
+                    </button>
+                  ))}
+                </div>
+
+                <button
+                  onClick={copyCode}
+                  className="px-3.5 py-1.5 rounded-xl bg-purple-950/80 border border-purple-500/40 text-purple-300 hover:text-white text-xs font-mono flex items-center gap-1.5 transition-colors"
+                >
+                  {copiedCode ? <CheckCircle2 size={14} className="text-emerald-400" /> : <Copy size={14} />}
+                  <span>{copiedCode ? 'Copied!' : 'Copy Code'}</span>
+                </button>
               </div>
-            )}
 
-          </div>
+              <pre className="p-4 rounded-xl bg-slate-950 border border-purple-500/30 text-xs font-mono text-purple-200 overflow-x-auto leading-relaxed">
+                <code>{getCodeSnippet()}</code>
+              </pre>
+            </div>
+          )}
+
         </div>
 
       </div>

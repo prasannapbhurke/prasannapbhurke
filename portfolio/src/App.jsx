@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import TerminalModal from './components/TerminalModal';
+import ParticleBackground from './components/ParticleBackground';
 
 export default function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
@@ -18,7 +19,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090a0f] text-slate-100 selection:bg-purple-600 selection:text-white">
+    <div className="min-h-screen bg-[#090a0f] text-slate-100 selection:bg-purple-600 selection:text-white relative">
+      
+      {/* Dynamic Ambient Particle Canvas Node Background */}
+      <ParticleBackground />
+
       {/* Top Navbar */}
       <Navbar 
         onOpenTerminal={() => setTerminalOpen(true)}
