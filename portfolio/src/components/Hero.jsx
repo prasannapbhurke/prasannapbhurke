@@ -82,9 +82,9 @@ export default function Hero({ onOpenTerminal, onOpenContact }) {
             </div>
           </div>
 
-          {/* Main Headline */}
+          {/* Main Headline with High Contrast Readability */}
           <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold font-heading tracking-tight text-white leading-tight">
-            Hi, I'm <span className="text-gradient">Prasanna Bhurke</span>
+            Hi, I'm <span className="text-gradient drop-shadow-[0_0_25px_rgba(233,213,255,0.5)]">Prasanna Bhurke</span>
           </h1>
 
           {/* Typing Subtitle */}
