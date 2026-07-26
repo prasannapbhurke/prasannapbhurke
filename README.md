@@ -21,7 +21,10 @@
 
 <br/><br/>
 
-<!-- Badges Row 2: Socials & GitHub Badges -->
+<!-- Badges Row 2: Portfolio, Socials & GitHub Badges -->
+<a href="https://prasannapbhurke.github.io">
+  <img src="https://img.shields.io/badge/Portfolio-Live%20Site-8A2BE2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
+</a>
 <a href="https://www.linkedin.com/in/prasanna-bhurke-25a10931a">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
