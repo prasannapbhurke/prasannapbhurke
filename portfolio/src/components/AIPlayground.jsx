@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Sparkles, ShieldAlert, ShieldCheck, RefreshCw, Cpu, Send, Zap, Sliders, Code2, Copy, CheckCircle2 } from 'lucide-react';
 import { sound } from '../utils/sound';
+import NeuralNetworkVisualizer from './NeuralNetworkVisualizer';
+import AlgoVisualizer from './AlgoVisualizer';
 import confetti from 'canvas-confetti';
 
 export default function AIPlayground() {
   const [activeTab, setActiveTab] = useState('sms'); // 'sms' or 'email'
-  const [viewMode, setViewMode] = useState('interactive'); // 'interactive' or 'api'
+  const [viewMode, setViewMode] = useState('interactive'); // 'interactive', 'api', or 'algo'
   const [inputText, setInputText] = useState('');
   const [threshold, setThreshold] = useState(0.50);
   const [analyzing, setAnalyzing] = useState(false);
   const [result, setResult] = useState(null);
   const [copiedCode, setCopiedCode] = useState(false);
-  const [codeLang, setCodeLang] = useState('python'); // 'python', 'javascript', 'curl'
+  const [codeLang, setCodeLang] = useState('python');
 
   const sampleMessages = {
     sms: [
@@ -26,7 +28,6 @@ export default function AIPlayground() {
     ]
   };
 
-  // Real-time NLP Vector Classification Simulation
   const analyzeText = (textToAnalyze) => {
     const text = (textToAnalyze || inputText).trim();
     if (!text) return;
@@ -67,13 +68,7 @@ export default function AIPlayground() {
         foundKeywords,
         processedWords: text.split(/\s+/).length,
         modelType: activeTab === 'sms' ? 'Multinomial Naive Bayes (SMS Model)' : 'TF-IDF + Support Vector Machine (Email Model)',
-        latency: (Math.random() * 12 + 16).toFixed(1),
-        confusionMatrix: {
-          tp: isSpam ? 982 : 12,
-          fp: isSpam ? 18 : 988,
-          tn: isSpam ? 12 : 988,
-          fn: isSpam ? 982 : 12
-        }
+        latency: (Math.random() * 12 + 16).toFixed(1)
       });
 
       setAnalyzing(false);
@@ -135,23 +130,22 @@ console.log("Prediction:", data);`;
         <div className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/70 border border-purple-500/40 text-purple-300 text-xs font-mono shadow-lg">
             <Sparkles size={14} className="text-purple-400 animate-pulse" />
-            <span>Interactive Machine Learning Lab</span>
+            <span>Interactive Machine Learning & Neural Network Lab</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">
             AI Model <span className="text-gradient">Playground</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base">
-            Test live NLP classification models directly in your browser. Adjust decision thresholds, inspect TF-IDF vector keywords, and view API integration payloads.
+            Test live NLP classification models directly in your browser. Adjust decision thresholds, inspect neural network weight paths, and execute algorithms.
           </p>
         </div>
 
-        {/* Playground Main Container */}
+        {/* Playground Container */}
         <div className="mt-12 glass-card border border-purple-500/40 overflow-hidden shadow-2xl shadow-purple-950/60">
           
-          {/* Header Controls Bar */}
+          {/* Top Bar Switcher */}
           <div className="bg-slate-900/90 border-b border-purple-500/30 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-4">
             
-            {/* Tab Model Selector */}
             <div className="flex items-center gap-2">
               <button 
                 onClick={() => { sound.playClick(); setActiveTab('sms'); setResult(null); setInputText(''); }}
@@ -178,7 +172,7 @@ console.log("Prediction:", data);`;
               </button>
             </div>
 
-            {/* View Mode Switcher: Interactive vs API Code */}
+            {/* Mode Selector */}
             <div className="flex items-center gap-2">
               <button
                 onClick={() => { sound.playClick(); setViewMode('interactive'); }}
@@ -199,15 +193,28 @@ console.log("Prediction:", data);`;
                 <Code2 size={13} />
                 <span>API Code</span>
               </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('algo'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === 'algo' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Zap size={13} />
+                <span>Algo Visualizer</span>
+              </button>
             </div>
 
           </div>
 
-          {/* Interactive Playground View */}
-          {viewMode === 'interactive' ? (
+          {/* Interactive Mode */}
+          {viewMode === 'interactive' && (
             <div className="p-6 sm:p-8 space-y-6">
               
-              {/* Decision Threshold Slider Control */}
+              {/* Neural Network SVG Node Visualizer */}
+              <NeuralNetworkVisualizer isAnalyzing={analyzing} />
+
+              {/* Threshold Slider */}
               <div className="p-4 rounded-xl bg-slate-950/70 border border-purple-500/20 flex flex-wrap items-center justify-between gap-4">
                 <div className="space-y-0.5">
                   <span className="text-xs font-mono text-purple-300 font-bold flex items-center gap-2">
@@ -234,7 +241,7 @@ console.log("Prediction:", data);`;
                 </div>
               </div>
 
-              {/* Quick Sample Message Selector */}
+              {/* Samples */}
               <div>
                 <span className="text-xs font-mono text-slate-400 block mb-2">
                   Click a test sample payload:
@@ -256,7 +263,7 @@ console.log("Prediction:", data);`;
                 </div>
               </div>
 
-              {/* Textarea Input */}
+              {/* Text Input Area */}
               <div className="relative">
                 <textarea
                   value={inputText}
@@ -300,7 +307,7 @@ console.log("Prediction:", data);`;
                 </div>
               </div>
 
-              {/* Classification Prediction Result Output */}
+              {/* Prediction Result */}
               {result && (
                 <div className={`mt-6 p-6 rounded-2xl border transition-all animate-fadeIn ${
                   result.isSpam 
@@ -341,7 +348,6 @@ console.log("Prediction:", data);`;
                     </div>
                   </div>
 
-                  {/* Model Telemetry Grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 text-xs font-mono">
                     <div className="bg-slate-900/80 p-3 rounded-xl border border-slate-800">
                       <span className="text-slate-400 block">Classifier Engine:</span>
@@ -358,27 +364,14 @@ console.log("Prediction:", data);`;
                       <span className="text-purple-300 font-semibold">{result.foundKeywords.length} High-Weight Triggers</span>
                     </div>
                   </div>
-
-                  {/* Highlighted Vector Tags */}
-                  {result.foundKeywords.length > 0 && (
-                    <div className="mt-4 pt-3 border-t border-slate-800/80">
-                      <span className="text-xs font-mono text-slate-400 block mb-2">High-Weight NLP TF-IDF Spam Triggers:</span>
-                      <div className="flex flex-wrap gap-2">
-                        {result.foundKeywords.map((kw, i) => (
-                          <span key={i} className="px-2.5 py-1 rounded-md text-xs font-mono bg-rose-500/20 text-rose-300 border border-rose-500/40">
-                            ⚠️ {kw}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-
                 </div>
               )}
 
             </div>
-          ) : (
-            /* API Integration Code Snippets Tab */
+          )}
+
+          {/* API Code Mode */}
+          {viewMode === 'api' && (
             <div className="p-6 sm:p-8 space-y-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -407,6 +400,13 @@ console.log("Prediction:", data);`;
               <pre className="p-4 rounded-xl bg-slate-950 border border-purple-500/30 text-xs font-mono text-purple-200 overflow-x-auto leading-relaxed">
                 <code>{getCodeSnippet()}</code>
               </pre>
+            </div>
+          )}
+
+          {/* Algo Visualizer Mode */}
+          {viewMode === 'algo' && (
+            <div className="p-6 sm:p-8">
+              <AlgoVisualizer />
             </div>
           )}
 

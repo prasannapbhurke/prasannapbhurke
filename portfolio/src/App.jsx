@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AIPlayground from './components/AIPlayground';
@@ -9,9 +9,18 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import TerminalModal from './components/TerminalModal';
 import ParticleBackground from './components/ParticleBackground';
+import CustomCursor from './components/CustomCursor';
+import CommandPalette from './components/CommandPalette';
 
 export default function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
+  const [cmdPaletteOpen, setCmdPaletteOpen] = useState(false);
+
+  useEffect(() => {
+    const handleCmdK = () => setCmdPaletteOpen(true);
+    window.addEventListener('toggle-cmd-k', handleCmdK);
+    return () => window.removeEventListener('toggle-cmd-k', handleCmdK);
+  }, []);
 
   const scrollToContact = () => {
     const el = document.getElementById('contact');
@@ -21,7 +30,10 @@ export default function App() {
   return (
     <div className="min-h-screen bg-[#090a0f] text-slate-100 selection:bg-purple-600 selection:text-white relative">
       
-      {/* Dynamic Ambient Particle Canvas Node Background */}
+      {/* Custom Trailing Neon Cursor */}
+      <CustomCursor />
+
+      {/* Dynamic Ambient Particle Canvas Background */}
       <ParticleBackground />
 
       {/* Top Navbar */}
@@ -36,7 +48,7 @@ export default function App() {
         onOpenContact={scrollToContact}
       />
 
-      {/* AI Model Playground Section */}
+      {/* AI Model & Neural Network Playground Section */}
       <AIPlayground />
 
       {/* Featured Projects Section */}
@@ -58,6 +70,15 @@ export default function App() {
       <TerminalModal 
         isOpen={terminalOpen}
         onClose={() => setTerminalOpen(false)}
+      />
+
+      {/* Command Palette Modal (Cmd + K / Ctrl + K) */}
+      <CommandPalette 
+        isOpen={cmdPaletteOpen}
+        onClose={() => setCmdPaletteOpen(false)}
+        onOpenTerminal={() => setTerminalOpen(true)}
+        onOpenContact={scrollToContact}
+        onSelectTheme={(t) => {}}
       />
     </div>
   );
