@@ -43,7 +43,7 @@ export default function Contact({ isOpen, onClose }) {
             <span>Let's Build Together</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">
-            Get in <span className="text-gradient">Touch</span>
+            Get in <span className="bg-gradient-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(233,213,255,0.5)]">Touch</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base">
             Have a project in mind, hiring opportunity, or open-source collaboration? Feel free to reach out directly.

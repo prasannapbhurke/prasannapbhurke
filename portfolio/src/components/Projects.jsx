@@ -134,7 +134,7 @@ export default function Projects() {
             <span>Featured Software Engineering Projects</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">
-            Engineering <span className="text-gradient">Portfolio</span>
+            Engineering <span className="bg-gradient-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(233,213,255,0.5)]">Portfolio</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base">
             Explore production-grade AI platforms, NLP classifiers, browser extensions, and full-stack web applications.

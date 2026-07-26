@@ -41,7 +41,7 @@ export default function Experience() {
             <span>Engineering Career & Achievements</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">
-            Experience & <span className="text-gradient">Timeline</span>
+            Experience & <span className="bg-gradient-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(233,213,255,0.5)]">Timeline</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base">
             Summary of software engineering roles, project achievements, and competitive milestones.

@@ -59,7 +59,7 @@ export default function TechStack() {
             <span>Technical Capabilities</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">
-            Tech Stack & <span className="text-gradient">Ecosystem</span>
+            Tech Stack & <span className="bg-gradient-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(233,213,255,0.5)]">Ecosystem</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base">
             Comprehensive overview of languages, frameworks, AI libraries, and database technologies.
