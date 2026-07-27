@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Sparkles, Mail, Volume2, VolumeX, Menu, X, Cpu } from 'lucide-react';
+import { Terminal, Sparkles, Mail, Volume2, VolumeX, Menu, X, Cpu, ShieldAlert } from 'lucide-react';
 import { sound } from '../utils/sound';
 import { GithubIcon, LinkedinIcon } from './SocialIcons';
 
-export default function Navbar({ onOpenTerminal, onOpenContact }) {
+export default function Navbar({ currentTheme, onToggleTheme, onOpenTerminal, onOpenContact }) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenu, setMobileMenu] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
@@ -25,7 +25,9 @@ export default function Navbar({ onOpenTerminal, onOpenContact }) {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled 
-        ? 'bg-[#090a0f]/90 backdrop-blur-xl border-b border-[#9d4edd]/30 py-3 shadow-2xl shadow-purple-950/40' 
+        ? currentTheme === 'batman'
+          ? 'bg-[#050508]/90 backdrop-blur-xl border-b border-[#facc15]/30 py-3 shadow-2xl shadow-yellow-950/40'
+          : 'bg-[#090a0f]/90 backdrop-blur-xl border-b border-[#9d4edd]/30 py-3 shadow-2xl shadow-purple-950/40' 
         : 'bg-transparent py-5'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
@@ -37,16 +39,24 @@ export default function Navbar({ onOpenTerminal, onOpenContact }) {
           onClick={() => sound.playClick()}
           className="flex items-center gap-3 group"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-purple-600 via-purple-500 to-indigo-500 flex items-center justify-center font-bold text-white shadow-lg shadow-purple-600/40 group-hover:scale-105 transition-transform border border-purple-400/40">
-            PB
+          <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-bold text-white shadow-lg group-hover:scale-105 transition-transform border ${
+            currentTheme === 'batman'
+              ? 'bg-gradient-to-tr from-yellow-700 via-amber-500 to-yellow-400 text-black border-yellow-400/60 shadow-yellow-500/40'
+              : 'bg-gradient-to-tr from-purple-600 via-purple-500 to-indigo-500 text-white border-purple-400/40 shadow-purple-600/40'
+          }`}>
+            {currentTheme === 'batman' ? '🦇' : 'PB'}
           </div>
           <div>
-            <span className="font-heading font-extrabold text-lg text-white group-hover:text-purple-300 transition-colors flex items-center gap-1.5">
+            <span className="font-heading font-extrabold text-lg text-white group-hover:text-yellow-300 transition-colors flex items-center gap-1.5">
               Prasanna Bhurke
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+              <span className={`w-2 h-2 rounded-full animate-pulse ${
+                currentTheme === 'batman' ? 'bg-amber-400' : 'bg-emerald-400'
+              }`} />
             </span>
-            <span className="block text-[11px] text-purple-400 font-mono">
-              AI & Full Stack Engineer
+            <span className={`block text-[11px] font-mono ${
+              currentTheme === 'batman' ? 'text-amber-400' : 'text-purple-400'
+            }`}>
+              {currentTheme === 'batman' ? 'Dark Knight & AI Specialist' : 'AI & Full Stack Engineer'}
             </span>
           </div>
         </a>
@@ -56,44 +66,62 @@ export default function Navbar({ onOpenTerminal, onOpenContact }) {
           <a 
             href="#about" 
             onMouseEnter={() => sound.playHover()}
-            className="text-xs font-mono font-medium text-slate-300 hover:text-purple-400 transition-colors"
+            className="text-xs font-mono font-medium text-slate-300 hover:text-yellow-400 transition-colors"
           >
             // about
           </a>
           <a 
             href="#ai-playground" 
             onMouseEnter={() => sound.playHover()}
-            className="text-xs font-mono font-medium text-purple-300 hover:text-purple-200 flex items-center gap-1.5 bg-purple-950/60 border border-purple-500/40 px-3.5 py-1.5 rounded-full hover:bg-purple-900/50 shadow-md shadow-purple-900/30 transition-all hover:scale-105"
+            className={`text-xs font-mono font-medium flex items-center gap-1.5 border px-3.5 py-1.5 rounded-full transition-all hover:scale-105 ${
+              currentTheme === 'batman'
+                ? 'text-yellow-300 bg-yellow-950/60 border-yellow-500/50 hover:bg-yellow-900/50 shadow-md shadow-yellow-900/30'
+                : 'text-purple-300 bg-purple-950/60 border-purple-500/40 hover:bg-purple-900/50 shadow-md shadow-purple-900/30'
+            }`}
           >
-            <Sparkles size={13} className="text-purple-400 animate-pulse" />
+            <Sparkles size={13} className={currentTheme === 'batman' ? 'text-yellow-400 animate-pulse' : 'text-purple-400 animate-pulse'} />
             <span>AI Playground</span>
           </a>
           <a 
             href="#projects" 
             onMouseEnter={() => sound.playHover()}
-            className="text-xs font-mono font-medium text-slate-300 hover:text-purple-400 transition-colors"
+            className="text-xs font-mono font-medium text-slate-300 hover:text-yellow-400 transition-colors"
           >
             // projects
           </a>
           <a 
             href="#tech-stack" 
             onMouseEnter={() => sound.playHover()}
-            className="text-xs font-mono font-medium text-slate-300 hover:text-purple-400 transition-colors"
+            className="text-xs font-mono font-medium text-slate-300 hover:text-yellow-400 transition-colors"
           >
             // skills
           </a>
           <a 
             href="#experience" 
             onMouseEnter={() => sound.playHover()}
-            className="text-xs font-mono font-medium text-slate-300 hover:text-purple-400 transition-colors"
+            className="text-xs font-mono font-medium text-slate-300 hover:text-yellow-400 transition-colors"
           >
             // timeline
           </a>
         </div>
 
-        {/* Action CTAs, Sound Toggle & Terminal Toggle */}
+        {/* Theme Toggle, Audio Toggle, CLI Mode & Contact */}
         <div className="hidden md:flex items-center gap-3">
           
+          {/* Batman Theme Toggle Button */}
+          <button
+            onClick={() => { sound.playClick(); onToggleTheme(); }}
+            onMouseEnter={() => sound.playHover()}
+            className={`px-3 py-1.5 rounded-xl border text-xs font-mono font-bold flex items-center gap-1.5 transition-all ${
+              currentTheme === 'batman'
+                ? 'bg-yellow-500 text-black border-yellow-300 shadow-lg shadow-yellow-500/50 animate-pulse'
+                : 'bg-slate-900 text-purple-300 border-purple-500/40 hover:border-yellow-400 hover:text-yellow-300'
+            }`}
+            title="Toggle Batman Dark Knight Theme"
+          >
+            <span>{currentTheme === 'batman' ? '🦇 Batcave Active' : '🦇 Batman Theme'}</span>
+          </button>
+
           {/* Audio Mute/Unmute Synthesizer Button */}
           <button
             onClick={toggleAudio}
@@ -101,7 +129,7 @@ export default function Navbar({ onOpenTerminal, onOpenContact }) {
             className="p-2 rounded-xl bg-slate-900/80 border border-purple-500/30 text-purple-300 hover:text-white hover:border-purple-400 transition-all"
             title={isMuted ? "Unmute UI Sounds" : "Mute UI Sounds"}
           >
-            {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} className="text-purple-400 animate-pulse" />}
+            {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} className={currentTheme === 'batman' ? 'text-amber-400 animate-pulse' : 'text-purple-400 animate-pulse'} />}
           </button>
 
           {/* CLI Terminal Mode Button */}
@@ -149,6 +177,12 @@ export default function Navbar({ onOpenTerminal, onOpenContact }) {
           <a href="#experience" onClick={() => setMobileMenu(false)} className="block py-2 text-slate-300 hover:text-purple-400">// timeline</a>
           
           <div className="pt-3 flex flex-col gap-2">
+            <button 
+              onClick={() => { onToggleTheme(); setMobileMenu(false); }}
+              className="w-full flex items-center justify-center gap-2 text-xs font-mono bg-amber-950 text-amber-300 border border-amber-500/40 py-2.5 rounded-xl font-bold"
+            >
+              <span>{currentTheme === 'batman' ? '🟣 Switch to Purple Luxury' : '🦇 Switch to Batman Theme'}</span>
+            </button>
             <button 
               onClick={() => { onOpenTerminal(); setMobileMenu(false); }}
               className="w-full flex items-center justify-center gap-2 text-xs font-mono bg-slate-900 text-purple-300 border border-purple-500/40 py-2.5 rounded-xl"

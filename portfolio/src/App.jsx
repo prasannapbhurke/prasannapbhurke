@@ -13,8 +13,16 @@ import CustomCursor from './components/CustomCursor';
 import CommandPalette from './components/CommandPalette';
 
 export default function App() {
+  const [theme, setTheme] = useState(() => {
+    return localStorage.getItem('app-theme') || 'purple';
+  });
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [cmdPaletteOpen, setCmdPaletteOpen] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('app-theme', theme);
+  }, [theme]);
 
   useEffect(() => {
     const handleCmdK = () => setCmdPaletteOpen(true);
@@ -22,22 +30,28 @@ export default function App() {
     return () => window.removeEventListener('toggle-cmd-k', handleCmdK);
   }, []);
 
+  const toggleTheme = () => {
+    setTheme((prev) => (prev === 'purple' ? 'batman' : 'purple'));
+  };
+
   const scrollToContact = () => {
     const el = document.getElementById('contact');
     if (el) el.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <div className="min-h-screen bg-[#090a0f] text-slate-100 selection:bg-purple-600 selection:text-white relative">
+    <div className="min-h-screen bg-[#090a0f] text-slate-100 selection:bg-purple-600 selection:text-white relative transition-colors duration-500">
       
       {/* Custom Trailing Neon Cursor */}
       <CustomCursor />
 
       {/* Dynamic Ambient Particle Canvas Background */}
-      <ParticleBackground />
+      <ParticleBackground theme={theme} />
 
       {/* Top Navbar */}
       <Navbar 
+        currentTheme={theme}
+        onToggleTheme={toggleTheme}
         onOpenTerminal={() => setTerminalOpen(true)}
         onOpenContact={scrollToContact}
       />
@@ -78,7 +92,7 @@ export default function App() {
         onClose={() => setCmdPaletteOpen(false)}
         onOpenTerminal={() => setTerminalOpen(true)}
         onOpenContact={scrollToContact}
-        onSelectTheme={(t) => {}}
+        onSelectTheme={(t) => setTheme(t)}
       />
     </div>
   );

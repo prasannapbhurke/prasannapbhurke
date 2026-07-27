@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-export default function ParticleBackground() {
+export default function ParticleBackground({ theme }) {
   const canvasRef = useRef(null);
 
   useEffect(() => {
@@ -17,6 +17,8 @@ export default function ParticleBackground() {
       height = canvas.height = window.innerHeight;
     };
     window.addEventListener('resize', handleResize);
+
+    const isBatman = theme === 'batman';
 
     // Particle nodes
     const particleCount = Math.min(Math.floor(width / 18), 70);
@@ -39,6 +41,11 @@ export default function ParticleBackground() {
     const render = () => {
       ctx.clearRect(0, 0, width, height);
 
+      const dotColor = isBatman ? 'rgba(250, 204, 21, ' : 'rgba(157, 78, 221, ';
+      const lineColor = isBatman ? 'rgba(234, 179, 8, ' : 'rgba(112, 0, 255, ';
+      const mouseColor = isBatman ? 'rgba(253, 224, 71, ' : 'rgba(168, 85, 247, ';
+      const shadowColor = isBatman ? '#facc15' : '#7000ff';
+
       // Draw particle connections
       for (let i = 0; i < particles.length; i++) {
         const p1 = particles[i];
@@ -51,9 +58,9 @@ export default function ParticleBackground() {
         // Draw node dot
         ctx.beginPath();
         ctx.arc(p1.x, p1.y, p1.radius, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(157, 78, 221, ${p1.alpha})`;
+        ctx.fillStyle = `${dotColor}${p1.alpha})`;
         ctx.shadowBlur = 10;
-        ctx.shadowColor = '#7000ff';
+        ctx.shadowColor = shadowColor;
         ctx.fill();
 
         // Connect with neighboring nodes
@@ -68,7 +75,7 @@ export default function ParticleBackground() {
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
             const lineAlpha = (1 - dist / 130) * 0.25;
-            ctx.strokeStyle = `rgba(112, 0, 255, ${lineAlpha})`;
+            ctx.strokeStyle = `${lineColor}${lineAlpha})`;
             ctx.lineWidth = 0.8;
             ctx.stroke();
           }
@@ -83,7 +90,7 @@ export default function ParticleBackground() {
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(mouse.x, mouse.y);
-            ctx.strokeStyle = `rgba(168, 85, 247, ${ (1 - dist / 160) * 0.4 })`;
+            ctx.strokeStyle = `${mouseColor}${ (1 - dist / 160) * 0.4 })`;
             ctx.lineWidth = 1;
             ctx.stroke();
           }
@@ -100,12 +107,12 @@ export default function ParticleBackground() {
       window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationFrameId);
     };
-  }, []);
+  }, [theme]);
 
   return (
     <canvas 
       ref={canvasRef} 
-      className="fixed inset-0 pointer-events-none z-0 opacity-80"
+      className="fixed inset-0 pointer-events-none z-0 opacity-80 transition-opacity duration-500"
     />
   );
 }
