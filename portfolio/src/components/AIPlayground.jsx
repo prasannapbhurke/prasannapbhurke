@@ -1,8 +1,20 @@
 import React, { useState } from 'react';
-import { Sparkles, ShieldAlert, ShieldCheck, RefreshCw, Cpu, Send, Zap, Sliders, Code2, Copy, CheckCircle2 } from 'lucide-react';
+import { Sparkles, ShieldAlert, ShieldCheck, RefreshCw, Cpu, Send, Zap, Sliders, Code2, Copy, CheckCircle2, Layers, Activity, HelpCircle, Box, Orbit, TrendingUp, Flag, Gamepad2, Monitor } from 'lucide-react';
 import { sound } from '../utils/sound';
 import NeuralNetworkVisualizer from './NeuralNetworkVisualizer';
 import AlgoVisualizer from './AlgoVisualizer';
+import DecisionBoundaryCanvas from './DecisionBoundaryCanvas';
+import ConfusionMatrixSimulator from './ConfusionMatrixSimulator';
+import RecruiterQnABot from './RecruiterQnABot';
+import ThreeDNeuralBrain from './ThreeDNeuralBrain';
+import ThreeDBatmobileGarage from './ThreeDBatmobileGarage';
+import ThreeDTechGalaxy from './ThreeDTechGalaxy';
+import AlgoRaceMode from './AlgoRaceMode';
+import BigOVisualizer from './BigOVisualizer';
+import ThreeDBatmobileDrive from './ThreeDBatmobileDrive';
+import ThreeDQuantumBlackHole from './ThreeDQuantumBlackHole';
+import ThreeDCyberDeck from './ThreeDCyberDeck';
+import ThreeDConstellationPhysics from './ThreeDConstellationPhysics';
 import confetti from 'canvas-confetti';
 
 export default function AIPlayground() {
@@ -132,8 +144,8 @@ console.log("Prediction:", data);`;
             <Sparkles size={14} className="text-purple-400 animate-pulse" />
             <span>Interactive Machine Learning & Neural Network Lab</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">
-            AI Model <span className="text-gradient">Playground</span>
+          <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white leading-tight pb-2">
+            AI Model <span className="text-purple-300 font-extrabold drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">Playground</span>
           </h2>
           <p className="text-slate-300 text-sm sm:text-base">
             Test live NLP classification models directly in your browser. Adjust decision thresholds, inspect neural network weight paths, and execute algorithms.
@@ -173,7 +185,7 @@ console.log("Prediction:", data);`;
             </div>
 
             {/* Mode Selector */}
-            <div className="flex items-center gap-2">
+            <div className="flex flex-wrap items-center gap-2">
               <button
                 onClick={() => { sound.playClick(); setViewMode('interactive'); }}
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
@@ -185,6 +197,126 @@ console.log("Prediction:", data);`;
               </button>
 
               <button
+                onClick={() => { sound.playClick(); setViewMode('boundary'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === 'boundary' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Layers size={13} />
+                <span>2D Boundary</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('metrics'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === 'metrics' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Activity size={13} />
+                <span>Matrix & ROC</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('qna'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === 'qna' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <HelpCircle size={13} />
+                <span>Recruiter Q&A</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('3d-brain'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === '3d-brain' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Cpu size={13} className="text-purple-400" />
+                <span>3D Neural Brain</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('3d-galaxy'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === '3d-galaxy' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Orbit size={13} className="text-sky-400" />
+                <span>3D Tech Galaxy</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('3d-batmobile'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === '3d-batmobile' ? 'bg-yellow-950 text-yellow-300 border border-yellow-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Box size={13} className="text-yellow-400" />
+                <span>3D Batmobile</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('3d-drive'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === '3d-drive' ? 'bg-yellow-950 text-yellow-300 border border-yellow-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Gamepad2 size={13} className="text-amber-400" />
+                <span>3D Drive Arena</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('3d-quantum'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === '3d-quantum' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Sparkles size={13} className="text-cyan-400" />
+                <span>3D Quantum Core</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('3d-cyberdeck'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === '3d-cyberdeck' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Monitor size={13} className="text-emerald-400" />
+                <span>3D Cyber Deck</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('3d-universe'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === '3d-universe' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Orbit size={13} className="text-purple-400" />
+                <span>3D Skill Universe</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('algo-race'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === 'algo-race' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <Flag size={13} className="text-emerald-400" />
+                <span>Algo Race</span>
+              </button>
+
+              <button
+                onClick={() => { sound.playClick(); setViewMode('bigo'); }}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
+                  viewMode === 'bigo' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
+                }`}
+              >
+                <TrendingUp size={13} className="text-amber-400" />
+                <span>Big-O Chart</span>
+              </button>
+
+              <button
                 onClick={() => { sound.playClick(); setViewMode('api'); }}
                 className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
                   viewMode === 'api' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
@@ -192,16 +324,6 @@ console.log("Prediction:", data);`;
               >
                 <Code2 size={13} />
                 <span>API Code</span>
-              </button>
-
-              <button
-                onClick={() => { sound.playClick(); setViewMode('algo'); }}
-                className={`px-3 py-1.5 rounded-lg text-xs font-mono transition-colors flex items-center gap-1.5 ${
-                  viewMode === 'algo' ? 'bg-purple-950 text-purple-300 border border-purple-500/40' : 'text-slate-400 hover:text-white'
-                }`}
-              >
-                <Zap size={13} />
-                <span>Algo Visualizer</span>
               </button>
             </div>
 
@@ -403,10 +525,94 @@ console.log("Prediction:", data);`;
             </div>
           )}
 
+          {/* 2D Decision Boundary Mode */}
+          {viewMode === 'boundary' && (
+            <div className="p-6 sm:p-8">
+              <DecisionBoundaryCanvas threshold={threshold} />
+            </div>
+          )}
+
+          {/* Matrix & ROC Mode */}
+          {viewMode === 'metrics' && (
+            <div className="p-6 sm:p-8">
+              <ConfusionMatrixSimulator />
+            </div>
+          )}
+
+          {/* Recruiter Q&A Bot Mode */}
+          {viewMode === 'qna' && (
+            <div className="p-6 sm:p-8">
+              <RecruiterQnABot />
+            </div>
+          )}
+
+          {/* 3D Neural Brain Graph Mode */}
+          {viewMode === '3d-brain' && (
+            <div className="p-6 sm:p-8">
+              <ThreeDNeuralBrain />
+            </div>
+          )}
+
+          {/* 3D Tech Galaxy Solar System Mode */}
+          {viewMode === '3d-galaxy' && (
+            <div className="p-6 sm:p-8">
+              <ThreeDTechGalaxy />
+            </div>
+          )}
+
+          {/* 3D Batmobile Garage Mode */}
+          {viewMode === '3d-batmobile' && (
+            <div className="p-6 sm:p-8">
+              <ThreeDBatmobileGarage />
+            </div>
+          )}
+
           {/* Algo Visualizer Mode */}
           {viewMode === 'algo' && (
             <div className="p-6 sm:p-8">
               <AlgoVisualizer />
+            </div>
+          )}
+
+          {/* Algorithm Race Mode */}
+          {viewMode === 'algo-race' && (
+            <div className="p-6 sm:p-8">
+              <AlgoRaceMode />
+            </div>
+          )}
+
+          {/* Big-O Complexity Visualizer */}
+          {viewMode === 'bigo' && (
+            <div className="p-6 sm:p-8">
+              <BigOVisualizer />
+            </div>
+          )}
+
+          {/* 3D Drivable Batmobile Playground */}
+          {viewMode === '3d-drive' && (
+            <div className="p-6 sm:p-8">
+              <ThreeDBatmobileDrive />
+            </div>
+          )}
+
+          {/* 3D Quantum Black Hole Shader */}
+          {viewMode === '3d-quantum' && (
+            <div className="p-6 sm:p-8">
+              <ThreeDQuantumBlackHole />
+            </div>
+          )}
+
+          {/* 3D Holographic Cyber Deck Workstation */}
+          {viewMode === '3d-cyberdeck' && (
+            <div className="p-6 sm:p-8">
+              <ThreeDCyberDeck />
+            </div>
+          )}
+
+          {/* 3D N-Body Physics Skill Constellation */}
+          {viewMode === '3d-universe' && (
+            <div className="p-6 sm:p-8">
+              <ThreeDConstellationPhysics />
             </div>
           )}
 

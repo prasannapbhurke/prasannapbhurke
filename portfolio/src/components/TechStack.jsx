@@ -1,11 +1,26 @@
-import React from 'react';
-import { Code, Cpu, Database, Cloud, Terminal, Wrench, CheckCircle2 } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Code, Cpu, Database, Terminal, Wrench } from 'lucide-react';
+import BatLogoSvg from './BatLogoSvg';
+import SkillRadarChart from './SkillRadarChart';
+import ThreeDSkillCube from './ThreeDSkillCube';
 
 export default function TechStack() {
+  const [isBatman, setIsBatman] = useState(false);
+
+  useEffect(() => {
+    const checkTheme = () => {
+      setIsBatman(document.documentElement.getAttribute('data-theme') === 'batman');
+    };
+    checkTheme();
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    return () => observer.disconnect();
+  }, []);
+
   const categories = [
     {
-      title: 'Programming Languages',
-      icon: <Code size={20} className="text-purple-400" />,
+      title: isBatman ? '🦇 Batcave Core Languages' : 'Programming Languages',
+      icon: isBatman ? <BatLogoSvg className="w-5 h-4" goldBackplate={true} /> : <Code size={20} className="text-purple-400" />,
       skills: [
         { name: 'Python', level: '95%' },
         { name: 'JavaScript / TypeScript', level: '90%' },
@@ -15,8 +30,8 @@ export default function TechStack() {
       ]
     },
     {
-      title: 'AI / ML & Data Science',
-      icon: <Cpu size={20} className="text-purple-400" />,
+      title: isBatman ? '🦇 Gotham Threat Predictive AI' : 'AI / ML & Data Science',
+      icon: isBatman ? <BatLogoSvg className="w-5 h-4" goldBackplate={true} /> : <Cpu size={20} className="text-purple-400" />,
       skills: [
         { name: 'Scikit-Learn', level: '92%' },
         { name: 'NLTK / NLP Text Vectorization', level: '90%' },
@@ -26,8 +41,8 @@ export default function TechStack() {
       ]
     },
     {
-      title: 'Frontend & Web Extensions',
-      icon: <Terminal size={20} className="text-purple-400" />,
+      title: isBatman ? '🦇 Tactical HUD & Web Extensions' : 'Frontend & Web Extensions',
+      icon: isBatman ? <BatLogoSvg className="w-5 h-4" goldBackplate={true} /> : <Terminal size={20} className="text-purple-400" />,
       skills: [
         { name: 'React.js', level: '90%' },
         { name: 'Chrome Extension API', level: '85%' },
@@ -36,8 +51,8 @@ export default function TechStack() {
       ]
     },
     {
-      title: 'Backend & Databases',
-      icon: <Database size={20} className="text-purple-400" />,
+      title: isBatman ? '🦇 WayneTech Microservices Cloud' : 'Backend & Databases',
+      icon: isBatman ? <BatLogoSvg className="w-5 h-4" goldBackplate={true} /> : <Database size={20} className="text-purple-400" />,
       skills: [
         { name: 'FastAPI / Flask', level: '92%' },
         { name: 'Node.js / Express', level: '88%' },
@@ -54,28 +69,42 @@ export default function TechStack() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 text-xs font-mono">
-            <Wrench size={14} className="text-purple-400" />
-            <span>Technical Capabilities</span>
+          <div className={`inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono transition-colors ${
+            isBatman
+              ? 'bg-amber-950/80 border border-yellow-500/50 text-yellow-300 shadow-md shadow-yellow-500/20'
+              : 'bg-purple-950/60 border border-purple-500/40 text-purple-300'
+          }`}>
+            {isBatman ? <BatLogoSvg className="w-4 h-3" goldBackplate={true} /> : <Wrench size={14} className="text-purple-400" />}
+            <span>{isBatman ? 'WAYNE TECH R&D INVENTORY' : 'Technical Capabilities'}</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white">
-            Tech Stack & <span className="bg-gradient-to-r from-purple-200 via-white to-purple-300 bg-clip-text text-transparent drop-shadow-[0_0_25px_rgba(233,213,255,0.5)]">Ecosystem</span>
+          
+          <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white leading-tight pb-2">
+            {isBatman ? (
+              <>Gotham Arsenal & <span className="text-yellow-400 font-extrabold drop-shadow-[0_0_20px_rgba(250,204,21,0.6)]">Ecosystem</span></>
+            ) : (
+              <>Tech Stack & <span className="text-purple-300 font-extrabold drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">Ecosystem</span></>
+            )}
           </h2>
+
           <p className="text-slate-300 text-sm sm:text-base">
-            Comprehensive overview of languages, frameworks, AI libraries, and database technologies.
+            {isBatman 
+              ? 'High-voltage tactical algorithms, AI threat classifiers, and Batcave mainframe infrastructure.' 
+              : 'Comprehensive overview of languages, frameworks, AI libraries, and database technologies.'}
           </p>
         </div>
 
         {/* Skill Matrix Cards */}
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
           {categories.map((cat, idx) => (
-            <div key={idx} className="glass-card p-6 sm:p-8 space-y-6">
-              
+            <div 
+              key={idx} 
+              className={`glass-card p-6 sm:p-8 space-y-6 transition-all duration-300 ${
+                isBatman ? 'border-yellow-500/40 hover:border-yellow-400 hover:shadow-yellow-500/20' : ''
+              }`}
+            >
               <div className="flex items-center gap-3 pb-4 border-b border-slate-800">
-                <div className="p-3 rounded-xl bg-purple-950/60 border border-purple-500/30">
-                  {cat.icon}
-                </div>
-                <h3 className="text-xl font-bold font-heading text-white">
+                {cat.icon}
+                <h3 className={`text-xl font-bold font-heading ${isBatman ? 'text-yellow-300' : 'text-white'}`}>
                   {cat.title}
                 </h3>
               </div>
@@ -83,33 +112,56 @@ export default function TechStack() {
               <div className="space-y-4">
                 {cat.skills.map((skill, sIdx) => (
                   <div key={sIdx} className="space-y-1.5">
-                    <div className="flex items-center justify-between text-xs font-mono">
+                    <div className="flex justify-between text-xs sm:text-sm font-mono">
                       <span className="text-slate-200 font-medium">{skill.name}</span>
-                      <span className="text-purple-400 font-bold">{skill.level}</span>
+                      <span className={isBatman ? 'text-yellow-400 font-bold' : 'text-purple-300 font-bold'}>
+                        {skill.level}
+                      </span>
                     </div>
                     
-                    <div className="w-full h-2 rounded-full bg-slate-900 overflow-hidden border border-slate-800">
+                    {/* Progress Bar Container */}
+                    <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
                       <div 
-                        className="h-full rounded-full bg-gradient-to-r from-purple-600 via-purple-500 to-indigo-400 transition-all duration-1000 shadow-md shadow-purple-500/50"
+                        className={`h-full rounded-full transition-all duration-1000 ${
+                          isBatman
+                            ? 'bg-gradient-to-r from-yellow-600 via-yellow-400 to-amber-300 shadow-md shadow-yellow-500/50'
+                            : 'bg-gradient-to-r from-purple-600 via-indigo-500 to-purple-400 shadow-md shadow-purple-600/50'
+                        }`}
                         style={{ width: skill.level }}
                       />
                     </div>
                   </div>
                 ))}
               </div>
-
             </div>
           ))}
         </div>
 
-        {/* Skill Icons Matrix */}
-        <div className="mt-12 glass-card p-6 text-center">
-          <span className="text-xs font-mono text-slate-400 block mb-4">Integrations & Tooling Matrix:</span>
-          <img 
-            src="https://skillicons.dev/icons?i=python,cpp,js,html,css,postgres,mongodb,sqlite,react,nodejs,flask,fastapi,docker,git,github,vscode&theme=dark" 
-            alt="Skill Icons Matrix" 
-            className="mx-auto max-w-full"
-          />
+        {/* Interactive 3D Skill Cube & Competency Radar Spider Matrix */}
+        <div className="mt-12 space-y-8">
+          <ThreeDSkillCube />
+          <SkillRadarChart />
+        </div>
+
+        {/* Tooling Matrix Footer */}
+        <div className="mt-12 text-center space-y-4">
+          <p className="text-xs font-mono text-slate-400 uppercase tracking-widest">
+            {isBatman ? '🦇 WayneTech Hardware & Defense Tooling Matrix:' : 'Integrations & Tooling Matrix:'}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-3 max-w-4xl mx-auto">
+            {['Python', 'C++', 'JavaScript', 'HTML5', 'CSS3', 'PostgreSQL', 'MongoDB', 'SQLite', 'React', 'Node.js', 'FastAPI', 'Flask', 'Docker', 'Git', 'GitHub', 'VSCode'].map((tool, tIdx) => (
+              <span 
+                key={tIdx}
+                className={`px-3 py-1.5 rounded-lg text-xs font-mono border transition-all ${
+                  isBatman
+                    ? 'bg-slate-950 text-yellow-300 border-yellow-500/30 hover:border-yellow-400 hover:shadow-md hover:shadow-yellow-500/30'
+                    : 'bg-slate-900/90 text-purple-300 border-purple-500/30 hover:border-purple-400'
+                }`}
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
         </div>
 
       </div>
