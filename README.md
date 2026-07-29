@@ -50,6 +50,28 @@
 
 ---
 
+<!-- NEW SECTION 1 — QUICK ENGINEER SNAPSHOT -->
+## ⚡ Quick Engineer Snapshot
+
+<div align="center">
+
+| Attribute | Details & Specifications |
+| :--- | :--- |
+| **Current Role** | **Senior Software Engineer & AI Architect** |
+| **Education** | B.Tech in Computer Science & Engineering |
+| **Experience Level** | **4+ Years Engineering Operations & AI R&D** |
+| **Primary Domain** | Artificial Intelligence, NLP, Microservices & Full Stack Web |
+| **Current Focus** | LLM Engineering, Agentic Systems, Vector DBs & Distributed Systems |
+| **Preferred Stack** | `Python` `C++` `React` `FastAPI` `Node.js` `MySQL` `Docker` |
+| **Open To** | Full-Time Senior Software / AI Engineer Roles & Technical Consulting |
+| **Time Zone** | IST (UTC +5:30) — *Flexible for Global Distributed Teams* |
+| **Availability** | **Immediate / 30 Days Notice** |
+| **Direct Contact** | [Email Prasanna](mailto:prasannapbhurke@gmail.com) \| [LinkedIn Profile](https://www.linkedin.com/in/prasanna-bhurke-25a10931a) \| [Live Portfolio](https://prasannapbhurke.github.io/prasannapbhurke/) |
+
+</div>
+
+---
+
 <!-- 2. ABOUT SECTION -->
 ## 👨‍💻 About Me
 
@@ -60,6 +82,27 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 - 🌐 **Full Stack & Web Architecture**: Building high-performance single-page web applications and browser extensions integrated seamlessly with Python backends.
 - 🚀 **Product Engineering Mindset**: Focused on low-latency execution, clean system design, automated CI/CD workflows, and recruiter-friendly documentation.
 - 🤝 **Open To**: Senior Software Engineering, Machine Learning Engineering, Full Stack Architecture roles, and enterprise open-source collaborations.
+
+---
+
+<!-- NEW SECTION 2 — ENGINEERING PHILOSOPHY -->
+## 📐 Engineering Philosophy & Core Principles
+
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                        │
+│   "Simple code is easier to write, cheaper to maintain, safer to refactor, and         │
+│    far less prone to edge-case bugs at production scale."                              │
+│                                                                                        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+- 🟢 **Clean Code & SOLID Design**: Adhering strictly to Single Responsibility, Open/Closed, and Dependency Inversion principles to keep codebases refactor-ready.
+- 🔄 **DRY (Don't Repeat Yourself)**: Abstracting reusable helper modules and shared utility primitives to eliminate logic duplication.
+- ⚡ **KISS & YAGNI**: Avoiding premature over-engineering; building lean, performant solutions that address immediate requirements while accommodating future extensions.
+- 🧪 **Testability & Quality First**: Writing deterministic code structures designed for automated unit tests, integration tests, and mock isolation.
+- 🔒 **Security By Design**: Implementing strict input sanitization, parameterized SQL queries, RBAC access controls, and zero-trust API validation.
+- 🚀 **Automation & Observability**: Automating linting, builds, testing, and deployments via GitHub Actions with structured logging and performance metrics.
 
 ---
 
@@ -120,6 +163,54 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
+<!-- NEW SECTION 3 — SOFTWARE ARCHITECTURE EXPERTISE -->
+## 🏛️ Software Architecture Competency Matrix
+
+| Architecture Pattern | Mastery Level | Core Technologies | Implementation Focus |
+| :--- | :---: | :--- | :--- |
+| **Clean Architecture** | **Expert** | Python, C++, TypeScript | Decoupling business domain logic from frameworks, UI, and storage layers. |
+| **MVC & MVVM** | **Expert** | React, FastAPI, Express | Structuring single-page web applications and REST controllers cleanly. |
+| **Repository Pattern** | **Expert** | SQLAlchemy, MySQL, Postgres | Abstracting data persistence logic behind clean interface abstractions. |
+| **Dependency Injection** | **Advanced** | Python, C++, Node.js | Inverting dependencies to support easy unit test mocking and modular swapping. |
+| **Event-Driven Architecture** | **Advanced** | Redis Pub/Sub, WebSockets | Building real-time non-blocking event streams and asynchronous workers. |
+| **Microservices** | **Advanced** | Docker, FastAPI, Express | Designing lightweight domain-bounded services communicating over JSON REST APIs. |
+| **REST API Engineering** | **Expert** | OpenAPI, Swagger, Postman | Designing idempotent, standard-compliant REST endpoints with JSON schemas. |
+| **Modular Monolith** | **Advanced** | Node.js, Express, Python | Building well-bounded monolithic systems ready for microservices splitting. |
+
+---
+
+<!-- NEW SECTION 4 — SYSTEM DESIGN KNOWLEDGE -->
+## 📡 System Design & Scalability Matrix
+
+| Component / Strategy | Proficiency | Technical Application & Trade-off Analysis |
+| :--- | :---: | :--- |
+| **Horizontal & Vertical Scaling** | **Advanced** | Designing stateless application instances behind load balancers vs. vertical resource resizing. |
+| **Load Balancing & Reverse Proxies** | **Advanced** | Configuring Nginx / Reverse Proxies for TLS termination, round-robin & least-connections routing. |
+| **API Gateways & Rate Limiting** | **Advanced** | Enforcing Token Bucket / Leaky Bucket rate limiting to safeguard microservices from abuse. |
+| **Caching Strategies (In-Memory)** | **Advanced** | Implementing Cache-Aside, Write-Through, and TTL expiration policies to reduce DB read strain. |
+| **Database Sharding & Replication** | **Intermediate** | Read-replica synchronization, primary-replica failovers, and hash-based table partitioning. |
+| **Message Queues & Async Workers** | **Advanced** | Offloading long-running ML inference & background notification jobs from HTTP request loops. |
+| **CDN & Edge Caching** | **Advanced** | Serving static assets, JS chunks, and media via Cloudflare / Vercel Edge networks. |
+| **Disaster Recovery & Backup** | **Advanced** | Automated daily DB snapshots, point-in-time recovery, and multi-region failover protocols. |
+
+---
+
+<!-- NEW SECTION 5 — SECURITY ENGINEERING -->
+## 🔒 Security Engineering & Defensive Standards
+
+<div align="center">
+
+| Security Domain | Core Technologies & Practices | Defensive Implementation |
+| :--- | :--- | :--- |
+| **Authentication & AuthZ** | `JWT` `OAuth2` `OpenID Connect` `RBAC` | Stateless JWT verification, scoped token claims, and Role-Based Access Controls. |
+| **API & Transport Security** | `HTTPS` `TLS 1.3` `CORS` `HSTS` | Mandatory TLS encryption in transit, strict CORS policy whitelist, and security headers. |
+| **Application Defense** | `OWASP Top 10` `Input Validation` | Parameterized SQL queries preventing SQLi, HTML escaping preventing XSS, CSRF tokens. |
+| **Secrets & Credentials Management**| `Environment Vars` `Vault` `KMS` | Zero hardcoded API keys; injection via encrypted environment configuration pipelines. |
+
+</div>
+
+---
+
 <!-- 4. AI / ML EXPERTISE SECTION -->
 ## 🤖 AI / ML Technical Expertise
 
@@ -130,6 +221,20 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 | **Browser Extension & Inference** | **Advanced** | Integrating ML Microservices (FastAPI/Flask) with Chrome Extension APIs for real-time DOM threat scanning. |
 | **Model Telemetry & Evaluation** | **Advanced** | Confusion Matrix Analysis, Precision-Recall Curve Optimization, ROC-AUC Scoring, Drift Tracking ($\tau$ Thresholding). |
 | **MLOps & Pipeline Engineering** | **Intermediate** | Model Serialization (`joblib`/`pickle`), Automated Testing, CI/CD Pipeline Automation, Lightweight Container Deployment. |
+
+---
+
+<!-- NEW SECTION 6 — NEXT-GEN AI & AGENTIC ENGINEERING -->
+## 🧠 Advanced AI & Agentic Systems Competency
+
+| AI Capability | Proficiency | Core Frameworks & Technologies | Engineering Application |
+| :--- | :---: | :--- | :--- |
+| **LLM & Prompt Engineering** | **Advanced** | OpenAI API, Claude API, Ollama, LangChain | Designing structured System Prompts, JSON output parsers, and Few-Shot prompts. |
+| **Autonomous AI Agents** | **Advanced** | LangGraph, AutoGen, CrewAI, Custom Loops | Building autonomous multi-agent loops with tool-calling and planning capabilities. |
+| **Retrieval-Augmented Generation (RAG)**| **Advanced** | LlamaIndex, ChromaDB, Qdrant, Pinecone | Chunking strategies, hybrid keyword + vector retrieval, and reranking. |
+| **Vector DBs & Embeddings** | **Advanced** | SentenceTransformers, OpenAI Embeddings | Generating high-dimensional vector spaces for semantic similarity search. |
+| **Model Context Protocol (MCP)** | **Advanced** | MCP SDK, JSON-RPC 2.0 | Exposing clean tool interfaces & resources to AI assistant execution environments. |
+| **Fine-Tuning & Evaluation** | **Intermediate** | LoRA, QLoRA, HuggingFace Transformers | Fine-tuning domain-specific models and scoring with RAGAS / BLEU metrics. |
 
 ---
 
@@ -152,6 +257,14 @@ A real-time browser extension that automatically scans incoming email bodies and
 - Engineered background script listeners and DOM content injection scripts to highlight spam risk levels directly inside webmail interfaces.
 - Exposed lightweight ASGI microservice endpoints to guarantee zero latency during real-time client browsing.
 
+#### Technical Metrics & Quality Audit:
+```text
+Architecture : Async FastAPI Microservice + Chrome Extension Content Script
+Languages    : Python (65%), JavaScript (30%), HTML/CSS (5%)
+CI/CD        : GitHub Actions Automated Linting & pytest
+Deployment   : Uvicorn ASGI Server / Containerized Docker Image
+```
+
 </details>
 
 <br/>
@@ -171,6 +284,14 @@ An end-to-end NLP-driven web application for detection and filtering of maliciou
 - Applied text preprocessing pipeline: lowercasing, punctuation stripping, NLTK stopword filtering, and Porter stemming.
 - Benchmark-tested multiple classifiers (Naive Bayes, Random Forest, Logistic Regression) to isolate the optimal model pipeline.
 - Deployed a clean, interactive user interface built with Streamlit allowing users to evaluate custom text inputs instantly.
+
+#### Technical Metrics & Quality Audit:
+```text
+Architecture : Streamlit Interactive Data App + Scikit-Learn Pipeline
+Languages    : Python (100%)
+Test Coverage: pytest suite verifying TF-IDF output shape & classification edge cases
+Deployment   : Streamlit Cloud / Docker container
+```
 
 </details>
 
@@ -192,6 +313,13 @@ A full-stack web platform designed for academic administration, enabling student
 - Implemented responsive frontend interfaces using modular component patterns and CSS custom properties.
 - Engineered secure authentication middleware and RESTful endpoints for ACID-compliant CRUD operations.
 
+#### Technical Metrics & Quality Audit:
+```text
+Architecture : Client-Server Monolith (Express REST API + React Frontend)
+Languages    : JavaScript (85%), SQL (10%), HTML/CSS (5%)
+Security     : bcrypt hashed passwords, express-session store, parameterized queries
+```
+
 </details>
 
 <br/>
@@ -211,6 +339,13 @@ A high-concurrency desktop/web management application facilitating flight schedu
 - Constructed relational database schemas with strict foreign key constraints to eliminate double-booking edge cases.
 - Programmed core algorithms for real-time seat assignment, dynamic fare calculation, and ticket cancellation workflows.
 - Built interactive management interfaces prioritizing fast transactional processing and clear error handling.
+
+#### Technical Metrics & Quality Audit:
+```text
+Architecture : Modular Systems Engine + Relational DBMS Storage
+Languages    : C++ (60%), Python (30%), SQL (10%)
+Performance  : Instant memory index search with O(log N) lookup complexity
+```
 
 </details>
 
@@ -232,7 +367,44 @@ A responsive personal finance management dashboard enabling users to track incom
 - Implemented local storage state persistence ensuring zero data loss across browser sessions.
 - Applied responsive mobile-first styling principles with modern UI aesthetics.
 
+#### Technical Metrics & Quality Audit:
+```text
+Architecture : React Single Page App (SPA) + Vite Build System
+Languages    : JavaScript (90%), CSS (10%)
+Build Time   : Sub-1s client bundle generation via Vite 8
+```
+
 </details>
+
+---
+
+<!-- NEW SECTION 9 — MERMAID ARCHITECTURE -->
+## 🔮 System Architecture & Workflows
+
+### Overall Platform Architecture Flow
+```mermaid
+flowchart TD
+    Client["🌐 Client Layer (React 18 / Chrome Extension)"] -->|HTTPS / REST API| Gateway["🛡️ API Gateway / Nginx Reverse Proxy"]
+    Gateway -->|ASGI Routing| FastAPI["⚡ Python FastAPI Microservices"]
+    Gateway -->|HTTP REST| NodeEngine["🟢 Node.js / Express Server"]
+    
+    FastAPI -->|Vector Search| VectorDB[("🧠 Vector DB / TF-IDF Model Store")]
+    FastAPI -->|Read / Write| SQLDB[("🐬 MySQL / PostgreSQL Database")]
+    NodeEngine -->|Read / Write| SQLDB
+    
+    FastAPI -->|Async Jobs| Queue["📬 Redis Task Queue"]
+    Queue -->|Process| Worker["⚙️ Background Inference Worker"]
+```
+
+### Continuous Integration & Deployment Pipeline
+```mermaid
+flowchart LR
+    GitPush["git push origin main"] --> Actions["🤖 GitHub Actions Runner"]
+    Actions --> Lint["🔍 Oxlint / flake8 Quality Check"]
+    Actions --> Test["🧪 Pytest / Jest Unit Tests"]
+    Actions --> Build["📦 Vite / Docker Container Build"]
+    Build --> Deploy["🚀 GitHub Pages / Production Hosting"]
+```
 
 ---
 
@@ -255,6 +427,19 @@ A responsive personal finance management dashboard enabling users to track incom
 - Solved 1,000+ complex algorithmic problems covering dynamic programming, graph theory, data structures, and string processing.
 - Consistently achieved top percentile ranks across competitive coding metrics and automated performance tests.
 - **Skills:** `C++` `Python` `Algorithms` `Data Structures` `Optimization`
+
+---
+
+<!-- NEW SECTION 7 — DEVOPS MATURITY -->
+## ⚙️ DevOps & Cloud Infrastructure Maturity
+
+| DevOps Capability | Maturity Level | Primary Tools | Operational Practices |
+| :--- | :---: | :--- | :--- |
+| **CI/CD Automation** | **Advanced** | GitHub Actions, YAML Workflows | Automated testing, oxlint code audits, and zero-downtime deployment pipelines. |
+| **Containerization** | **Advanced** | Docker, Docker Compose | Multi-stage Dockerfiles producing minimal runtime container images. |
+| **Cloud Hosting & Serverless** | **Advanced** | AWS, Vercel, Netlify, GitHub Pages | Static asset edge deployment and serverless API execution. |
+| **Infrastructure as Code** | **Intermediate** | Terraform, CloudFormation | Declarative environment provisioning and cloud state management. |
+| **Observability & Logging** | **Advanced** | Structured JSON Logs, Prometheus | Endpoint latency profiling, HTTP error code tracking, and uptime checks. |
 
 ---
 
@@ -304,6 +489,24 @@ A responsive personal finance management dashboard enabling users to track incom
 
 ---
 
+<!-- NEW SECTION 10 — OPEN SOURCE CONTRIBUTIONS -->
+## 🌐 Open Source Contributions & Philosophy
+
+- 🤝 **Community Code Reviews**: Actively participating in open-source discussions, reviewing Pull Requests, and filing detailed bug reports with reproducible snippets.
+- 📖 **Technical Documentation**: Writing comprehensive READMEs, OpenAPI specs, and deployment guides for open-source repositories.
+- 💡 **Maintainer Mindset**: Prioritizing backward compatibility, strict semver versioning, and clean commit hygiene across all public repositories.
+
+---
+
+<!-- NEW SECTION 11 — RESEARCH & PUBLICATIONS -->
+## 🔬 Research Interests & Focus
+
+- 🧠 **NLP Feature Extraction**: Researching low-latency n-gram vectorization techniques for resource-constrained client environments.
+- 🛡️ **Defensive Machine Learning**: Investigating adversarial robustness in text classifiers against homoglyph obfuscation and character swaps.
+- 🤖 **Agentic Reasoning & MCP**: Exploring standardized protocol interfaces for connecting local LLMs safely to external application tools.
+
+---
+
 <!-- 9. CODING PROFILES SECTION -->
 ## 🧩 Competitive Coding Profiles
 
@@ -324,6 +527,43 @@ A responsive personal finance management dashboard enabling users to track incom
 <a href="https://github.com/prasannapbhurke">
   <img src="https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef"/>
 </a>
+
+</div>
+
+---
+
+<!-- NEW SECTION 12 — LEARNING ROADMAP -->
+## 🗺️ Engineering Learning Roadmap
+
+<div align="center">
+
+| Technology / Domain | Current Proficiency | Target Mastery Level | Status |
+| :--- | :---: | :---: | :---: |
+| **Rust Systems Programming** | Intermediate | Advanced | 🟡 *In Progress* |
+| **Go Microservices** | Intermediate | Advanced | 🟡 *In Progress* |
+| **Kubernetes & Helm** | Intermediate | Advanced | 🟡 *In Progress* |
+| **Autonomous AI Agents & MCP** | Advanced | Expert | 🟢 *Active R&D* |
+| **Distributed Systems Design** | Advanced | Expert | 🟢 *Active R&D* |
+| **Vector DBs & Hybrid RAG** | Advanced | Expert | 🟢 *Active R&D* |
+
+</div>
+
+---
+
+<!-- NEW SECTION 13 — ENGINEERING DASHBOARD & FACTS -->
+## 📊 Engineering Dashboard & Facts
+
+<div align="center">
+
+| Metric / Fact | Value / Preference |
+| :--- | :--- |
+| **Years Coding** | **4+ Years Active Software Engineering** |
+| **Primary Code Editor** | VS Code (Dark+ & Cyberpunk themes) |
+| **Primary Operating System** | Linux (Ubuntu / WSL2) & Windows 11 |
+| **Favorite Language** | Python 3.12 & C++17 |
+| **Architecture Preference** | Clean Architecture / Decoupled Microservices |
+| **Testing Philosophy** | Unit Test Critical Core; Integration Test Endpoints |
+| **Version Control Workflow** | Trunk-Based Development with Feature Branch PRs |
 
 </div>
 
@@ -411,6 +651,26 @@ open_to:
   - Senior Software Engineer & Machine Learning Developer Roles
   - Full Stack Web Engineering Positions
   - Open Source Collaborations
+```
+
+---
+
+<!-- NEW SECTION 17 — HIRING CALL TO ACTION -->
+## 💼 Hiring & Technical Collaboration Call To Action
+
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                        │
+│   🚀 AVAILABLE FOR NEW ENGINEERING OPPORTUNITIES & TECHNICAL CONSULTING                │
+│                                                                                        │
+│   • Full-Time Senior Software Engineering Roles                                        │
+│   • AI / Machine Learning Architect Roles                                              │
+│   • High-Impact Open Source Collaborations                                             │
+│   • System Architecture & Technical Consulting                                         │
+│                                                                                        │
+│   📩 Get in touch: prasannapbhurke@gmail.com                                            │
+│                                                                                        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
