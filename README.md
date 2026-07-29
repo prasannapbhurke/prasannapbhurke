@@ -335,7 +335,7 @@ A responsive personal finance management dashboard enabling users to track incom
 <div align="center">
 
 <a href="https://github.com/prasannapbhurke">
-  <img src="https://github-readme-stats.vercel.app/api?username=prasannapbhurke&show_icons=true&theme=purple&count_private=true" alt="GitHub Stats" width="49%"/>
+  <img src="https://github-stats-extended.vercel.app/api?username=prasannapbhurke&show_icons=true&theme=purple&count_private=true" alt="GitHub Stats" width="49%"/>
 </a>
 <a href="https://github.com/prasannapbhurke">
   <img src="https://streak-stats.demolab.com/?user=prasannapbhurke&theme=purple" alt="GitHub Streak Stats" width="49%"/>
@@ -344,7 +344,7 @@ A responsive personal finance management dashboard enabling users to track incom
 <br/><br/>
 
 <a href="https://github.com/prasannapbhurke">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=prasannapbhurke&layout=compact&theme=purple" alt="Top Languages" width="60%"/>
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=prasannapbhurke&layout=compact&theme=purple" alt="Top Languages" width="60%"/>
 </a>
 
 </div>
