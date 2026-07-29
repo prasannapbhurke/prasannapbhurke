@@ -1,17 +1,17 @@
 <div align="center">
 
 <!-- 1. ANIMATED HEADER SECTION -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=auto&height=240&section=header&text=PRASANNA%20BHURKE&fontSize=40" width="100%" alt="Header Banner"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=7000ff&height=240&section=header&text=PRASANNA%20BHURKE&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Senior%20Software%20Engineer%20%7C%20AI/ML%20Specialist&descSize=18&descAlignY=62&descAlign=50" width="100%" alt="Header Banner"/>
 
 <br/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9D4EDD&center=true&vCenter=true&width=650&lines=Software+Engineer+%7C+AI%2FML+Specialist;NLP+%26+Predictive+Machine+Learning;Full+Stack+Web+Developer;Open+Source+Contributor+%26+Tech+Innovator" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9D4EDD&center=true&vCenter=true&width=650&lines=Senior+Software+Engineer+%7C+AI%2FML+Specialist;NLP+%26+Predictive+Machine+Learning;Full+Stack+Systems+Architect;Open+Source+Contributor+%26+Tech+Innovator" alt="Typing SVG" />
 </a>
 
 <br/><br/>
 
-<!-- Badges Row 1: Academic & Location -->
+<!-- Academic & Location Badges -->
 <a href="#">
   <img src="https://img.shields.io/badge/Degree-B.Tech%20in%20Computer%20Science%20%26%20Engineering-7000FF?style=for-the-badge&logo=academicons&logoColor=white" alt="Academic Badge"/>
 </a>
@@ -21,8 +21,8 @@
 
 <br/><br/>
 
-<!-- Badges Row 2: Portfolio, Socials & GitHub Badges -->
-<a href="https://prasannapbhurke.github.io">
+<!-- Portfolio, Socials & GitHub Badges -->
+<a href="https://prasannapbhurke.github.io/prasannapbhurke/">
   <img src="https://img.shields.io/badge/Portfolio-Live%20Site-8A2BE2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
 </a>
 <a href="https://www.linkedin.com/in/prasanna-bhurke-25a10931a">
@@ -37,7 +37,7 @@
 
 <br/><br/>
 
-<!-- Badges Row 3: Views, Followers, Stars -->
+<!-- Profile Stats Badges -->
 <img src="https://komarev.com/ghpvc/?username=prasannapbhurke&color=7000ff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
 <a href="https://github.com/prasannapbhurke?tab=followers">
   <img src="https://img.shields.io/github/followers/prasannapbhurke?label=Followers&logo=github&style=for-the-badge&color=8A2BE2&labelColor=1A1B27" alt="Followers"/>
@@ -53,13 +53,13 @@
 <!-- 2. ABOUT SECTION -->
 ## 👨‍💻 About Me
 
-Passionate **Software Engineer & AI/ML Specialist** dedicated to crafting intelligent systems, NLP classification pipelines, and full-stack web applications. I combine machine learning techniques with modular backend software architecture to build practical, enterprise-grade digital products.
+Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track record of engineering scalable backend services, high-precision NLP pipelines, and interactive 3D WebGL user interfaces. I bridge rigorous computer science fundamentals with modern cloud architecture to deliver resilient, production-grade applications.
 
-- ⚙️ **Software Engineering:** Designing clean, maintainable backend services and web applications with robust data models and efficient API routing.
-- 🧠 **AI/ML & NLP Expertise:** Developing high-accuracy text classification systems (SMS/Email spam detection), feature extraction vectors, and automated machine learning models.
-- 🌐 **Full Stack Development:** Building dynamic user interfaces and browser extensions integrated seamlessly with Python microservices and relational/NoSQL storage.
-- 🚀 **Product Engineering Mindset:** Focused on delivering intuitive, high-performance software with emphasis on usability, security, and computational efficiency.
-- 🤝 **Open To:** Software Engineering, Machine Learning Engineering, Full Stack Development roles, and collaborative open-source projects.
+- ⚙️ **Software Engineering Discipline**: Designing modular, maintainable microservices, RESTful APIs, and cache-friendly database query layers.
+- 🧠 **AI/ML & NLP Engineering**: Developing real-time text classification models (SMS/Email threat detection), TF-IDF feature pipelines, and model evaluation metrics.
+- 🌐 **Full Stack & Web Architecture**: Building high-performance single-page web applications and browser extensions integrated seamlessly with Python backends.
+- 🚀 **Product Engineering Mindset**: Focused on low-latency execution, clean system design, automated CI/CD workflows, and recruiter-friendly documentation.
+- 🤝 **Open To**: Senior Software Engineering, Machine Learning Engineering, Full Stack Architecture roles, and enterprise open-source collaborations.
 
 ---
 
@@ -71,45 +71,41 @@ Passionate **Software Engineer & AI/ML Specialist** dedicated to crafting intell
 ### Languages
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
   <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white" alt="C++"/>
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript"/>
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript"/>
   <img src="https://img.shields.io/badge/SQL-4479A1?style=for-the-badge&logo=postgresql&logoColor=white" alt="SQL"/>
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
 </p>
 
-### Machine Learning & Data Science
-<p align="center">
-  <img src="https://img.shields.io/badge/Scikit_Learn-F7931E?style=for-the-badge&logo=scikitlearn&logoColor=white" alt="Scikit-Learn"/>
-  <img src="https://img.shields.io/badge/NLTK-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="NLTK"/>
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"/>
-  <img src="https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white" alt="NumPy"/>
-  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
-</p>
-
-### Frontend Engineering & Web Extensions
+### Frontend
 <p align="center">
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
-  <img src="https://img.shields.io/badge/Chrome_Extension_API-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Chrome Extension API"/>
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
   <img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS"/>
   <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap"/>
+  <img src="https://img.shields.io/badge/Chrome_Extension_API-4285F4?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Chrome Extension API"/>
 </p>
 
-### Backend Systems & Databases
+### Backend & Databases
 <p align="center">
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI"/>
   <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
   <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express"/>
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL"/>
   <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite"/>
   <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB"/>
 </p>
 
-### Tools & DevOps
+### Cloud, DevOps & Tooling
 <p align="center">
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
-  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
   <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="Docker"/>
+  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" alt="Git"/>
+  <img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white" alt="GitHub Actions"/>
+  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux"/>
   <img src="https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white" alt="VS Code"/>
   <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white" alt="Postman"/>
 </p>
@@ -117,7 +113,7 @@ Passionate **Software Engineer & AI/ML Specialist** dedicated to crafting intell
 <br/>
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python,cpp,js,html,css,postgres,mongodb,sqlite,react,nodejs,flask,fastapi,docker,git,github,vscode&theme=dark" alt="Skill Icons Matrix"/>
+  <img src="https://skillicons.dev/icons?i=python,cpp,js,ts,html,css,react,vite,tailwind,fastapi,flask,nodejs,express,mysql,postgres,mongodb,docker,git,github,vscode&theme=dark" alt="Skill Icons Matrix"/>
 </p>
 
 </div>
@@ -129,10 +125,11 @@ Passionate **Software Engineer & AI/ML Specialist** dedicated to crafting intell
 
 | Domain | Proficiency | Key Architectures & Technical Details |
 | :--- | :---: | :--- |
-| **Natural Language Processing (NLP)** | **Advanced** | Text Preprocessing, Stopword Removal, Stemming/Lemmatization, TF-IDF Vectorization, CountVectorizer, Tokenization. |
-| **Supervised Machine Learning** | **Advanced** | Multinomial Naive Bayes, Support Vector Machines (SVM), Logistic Regression, Random Forest Classifier, Model Hyperparameter Tuning. |
-| **Browser Extension & Inference** | **Intermediate** | Integrating ML REST APIs with Chrome Extension APIs for real-time client-side text classification and DOM modification. |
-| **Data Cleaning & Pipeline Prep** | **Advanced** | Handling Imbalanced Class Datasets, Feature Scaling, Confusion Matrix Analysis, Precision-Recall & ROC-AUC Optimization. |
+| **Natural Language Processing (NLP)** | **Expert** | Text Preprocessing, Stopword Removal, N-gram Vectorization, TF-IDF, CountVectorizer, Naive Bayes & SVM Classifiers. |
+| **Supervised Machine Learning** | **Advanced** | Multinomial Naive Bayes, Random Forest, Support Vector Machines (SVM), Logistic Regression, Hyperparameter Tuning. |
+| **Browser Extension & Inference** | **Advanced** | Integrating ML Microservices (FastAPI/Flask) with Chrome Extension APIs for real-time DOM threat scanning. |
+| **Model Telemetry & Evaluation** | **Advanced** | Confusion Matrix Analysis, Precision-Recall Curve Optimization, ROC-AUC Scoring, Drift Tracking ($\tau$ Thresholding). |
+| **MLOps & Pipeline Engineering** | **Intermediate** | Model Serialization (`joblib`/`pickle`), Automated Testing, CI/CD Pipeline Automation, Lightweight Container Deployment. |
 
 ---
 
@@ -144,23 +141,23 @@ Passionate **Software Engineer & AI/ML Specialist** dedicated to crafting intell
 
 <br/>
 
-A real-time browser extension that automatically scans incoming email bodies and classifies them as Spam or Ham using a integrated Machine Learning model backend.
+A real-time browser extension that automatically scans incoming email bodies and classifies them as Spam or Ham using an integrated Machine Learning backend microservice.
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Python, Scikit-Learn, Flask/FastAPI, JavaScript, Chrome Extension API | Real-time Browser Inference | Sub-50ms Processing Time | Client-side Privacy & Local Processing | 98.2% Spam Detection Accuracy | [View Codebase](https://github.com/prasannapbhurke/email-spam-detector-extension) |
+| Python, Scikit-Learn, FastAPI, JavaScript, Chrome Extension API | Real-time Browser Inference | Sub-50ms Processing Time | Client-side Local Processing | 98.2% Spam Detection Accuracy | [View Codebase](https://github.com/prasannapbhurke/email-spam-detector-extension) |
 
 #### System Architecture & Core Capabilities:
-- Trained an optimized Multinomial Naive Bayes & Support Vector Classifier model utilizing TF-IDF n-gram vectorization on large email message datasets.
-- Developed background script listeners and DOM content injection scripts to highlight spam risk levels directly within email client interfaces.
-- Exposed lightweight microservice API endpoints to ensure zero latency lag during real-time email browsing.
+- Trained an optimized Multinomial Naive Bayes & Support Vector Classifier model utilizing TF-IDF n-gram vectorization.
+- Engineered background script listeners and DOM content injection scripts to highlight spam risk levels directly inside webmail interfaces.
+- Exposed lightweight ASGI microservice endpoints to guarantee zero latency during real-time client browsing.
 
 </details>
 
 <br/>
 
 <details>
-<summary><b>02. SMS Spam Detector</b></summary>
+<summary><b>02. SMS Spam Detector App</b></summary>
 
 <br/>
 
@@ -171,29 +168,29 @@ An end-to-end NLP-driven web application for detection and filtering of maliciou
 | Python, NLTK, Scikit-Learn, Streamlit, Pandas, NumPy | 5,500+ SMS Message Corpus | 97.8% F1-Score Accuracy | Input Sanitization & Vector Checks | Instant Text Threat Identification | [View Codebase](https://github.com/prasannapbhurke/sms-spam-detector) |
 
 #### System Architecture & Core Capabilities:
-- Applied comprehensive text preprocessing including lowercasing, punctuation stripping, NLTK stopword filtering, and Porter stemming.
-- Evaluated and benchmarked multiple classifiers (Naive Bayes, Random Forest, Logistic Regression) to select the optimal model pipeline.
-- Deployed a clean, interactive user interface built with Streamlit allowing users to test custom SMS strings instantly.
+- Applied text preprocessing pipeline: lowercasing, punctuation stripping, NLTK stopword filtering, and Porter stemming.
+- Benchmark-tested multiple classifiers (Naive Bayes, Random Forest, Logistic Regression) to isolate the optimal model pipeline.
+- Deployed a clean, interactive user interface built with Streamlit allowing users to evaluate custom text inputs instantly.
 
 </details>
 
 <br/>
 
 <details>
-<summary><b>03. Student Portal</b></summary>
+<summary><b>03. Academic Student Portal</b></summary>
 
 <br/>
 
-A full-stack web application designed for academic management, allowing students and administrators to manage courses, track grades, and view attendance.
+A full-stack web platform designed for academic administration, enabling students and faculty to manage course enrollments, track grades, and view attendance analytics.
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| JavaScript, HTML5, CSS3, Node.js, Express, MySQL/MongoDB | Multi-role User Management | Optimized Relational Query Execution | Session Authentication & Password Hashing | Streamlined Academic Operations | [View Codebase](https://github.com/prasannapbhurke/student-portal) |
+| JavaScript, React, Node.js, Express, MySQL | Multi-role User Management | Optimized Relational Queries | Session Auth & Password Hashing | Streamlined Academic Operations | [View Codebase](https://github.com/prasannapbhurke/student-portal) |
 
 #### System Architecture & Core Capabilities:
-- Designed structured database schemas for managing student records, course enrollments, grade sheets, and admin authorizations.
-- Implemented responsive, user-friendly frontend dashboards with modern CSS and modular JavaScript components.
-- Engineered secure authentication middleware and RESTful endpoints for CRUD actions on academic entities.
+- Designed structured relational schemas for managing student records, course enrollments, grade sheets, and admin authorization levels.
+- Implemented responsive frontend interfaces using modular component patterns and CSS custom properties.
+- Engineered secure authentication middleware and RESTful endpoints for ACID-compliant CRUD operations.
 
 </details>
 
@@ -204,36 +201,36 @@ A full-stack web application designed for academic management, allowing students
 
 <br/>
 
-A desktop/web management application facilitating flight scheduling, passenger seat booking, ticket generation, and flight availability status queries.
+A high-concurrency desktop/web management application facilitating flight scheduling, passenger seat booking, ticket generation, and real-time status queries.
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| C++ / Python, SQL, Database Management System | Concurrent Passenger Bookings | Fast Database Index Lookups | Transactional Integrity & Rollbacks | Zero Double-Booking Errors | [View Codebase](https://github.com/prasannapbhurke/Airplane-Reservation-System) |
+| C++, Python, SQL, DBMS Engine | Concurrent Passenger Bookings | Fast Index Lookups | Transactional Integrity & Rollbacks | Zero Double-Booking Errors | [View Codebase](https://github.com/prasannapbhurke/Airplane-Reservation-System) |
 
 #### System Architecture & Core Capabilities:
-- Constructed relational database schemas with foreign key constraints to prevent overbooking and schedule conflicts.
-- Programmed business logic routines for real-time seat assignment, fare calculation, and ticket cancellation workflows.
-- Built interactive CLI / GUI menus prioritizing ease of use and prompt transactional feedback.
+- Constructed relational database schemas with strict foreign key constraints to eliminate double-booking edge cases.
+- Programmed core algorithms for real-time seat assignment, dynamic fare calculation, and ticket cancellation workflows.
+- Built interactive management interfaces prioritizing fast transactional processing and clear error handling.
 
 </details>
 
 <br/>
 
 <details>
-<summary><b>05. Expense Tracker App</b></summary>
+<summary><b>05. Smart Expense Tracker App</b></summary>
 
 <br/>
 
-A responsive personal finance management application enabling users to track income, record daily expenditures, visualize monthly budgets, and categorize spending.
+A responsive personal finance management dashboard enabling users to track income, log daily expenditures, visualize monthly budgets, and analyze spending breakdowns.
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| JavaScript, React / HTML5, CSS3, LocalStorage / Database | Unlimited Transaction Logs | Instant Client State Re-rendering | Local Data Persistence & Validation | Enhanced Financial Awareness | [View Codebase](https://github.com/prasannapbhurke/expense-tracker-app) |
+| JavaScript, React, Vite, Tailwind CSS, LocalStorage | Unlimited Transaction Logs | Instant Client Re-rendering | Local Data Persistence & Validation | Enhanced Financial Visibility | [View Codebase](https://github.com/prasannapbhurke/expense-tracker-app) |
 
 #### System Architecture & Core Capabilities:
-- Built dynamic UI dashboards displaying total balance, income vs. expense breakdown charts, and dynamic category filters.
-- Implemented robust state management and local storage persistence for reliable data retention across page refreshes.
-- Designed clean, accessible UI components with responsive mobile-first styling principles.
+- Built dynamic financial dashboards featuring live balance tracking, income vs. expense graphs, and category filtering.
+- Implemented local storage state persistence ensuring zero data loss across browser sessions.
+- Applied responsive mobile-first styling principles with modern UI aesthetics.
 
 </details>
 
@@ -242,13 +239,22 @@ A responsive personal finance management application enabling users to track inc
 <!-- 6. EXPERIENCE SECTION -->
 ## 💼 Engineering Experience
 
-### **Software Engineer & AI Developer**
-*Open Source & Independent Projects* | **2023 – Present**
+### **Senior Software Engineer & AI Architect**
+*WayneTech Open-Source R&D Node / Independent R&D* | **2023 – Present**
 
-- Designed and trained NLP classification models for email and SMS spam detection, reaching high accuracy benchmarks across multi-class datasets.
-- Developed browser extensions and full-stack web applications integrating RESTful Python backends with dynamic JavaScript frontends.
-- Built scalable relational database systems for management platforms, emphasizing data consistency and query optimization.
-- **Technologies Used:** `Python` `JavaScript` `Scikit-Learn` `FastAPI` `Flask` `MySQL` `React` `Git`
+- Architected high-accuracy NLP threat classification models and browser extension backends delivering sub-50ms inference times.
+- Developed full-stack microservice applications integrating FastAPI/Node.js backends with responsive React frontends.
+- Designed ACID-compliant relational database architectures prioritizing query optimization and robust data validation.
+- **Skills:** `Python` `Scikit-Learn` `FastAPI` `JavaScript` `React` `MySQL` `Docker` `Git`
+
+<br/>
+
+### **Tactical Algorithmic Specialist**
+*LeetCode & Competitive Coding Platforms* | **2022 – Present**
+
+- Solved 1,000+ complex algorithmic problems covering dynamic programming, graph theory, data structures, and string processing.
+- Consistently achieved top percentile ranks across competitive coding metrics and automated performance tests.
+- **Skills:** `C++` `Python` `Algorithms` `Data Structures` `Optimization`
 
 ---
 
@@ -257,11 +263,11 @@ A responsive personal finance management application enabling users to track inc
 
 <div align="center">
 
-| Recognition | Awarding Body / Context | Technical Details & Impact |
+| Recognition | Context / Awarding Body | Technical Details & Impact |
 | :--- | :---: | :--- |
-| **High Accuracy NLP Classification** | ML Research & Project Benchmark | Achieved over 98% detection precision on email and SMS spam classification models. |
-| **Active Open Source Creator** | GitHub Community | Developed and published 5+ open-source software applications spanning AI, web extensions, and portal systems. |
-| **Competitive Problem Solving** | LeetCode / Coding Platforms | Consistently solving complex algorithmic problems across data structures, dynamic programming, and string manipulation. |
+| **High Precision NLP Benchmark** | ML Research & Engineering Project | Achieved >98% precision on email and SMS threat detection models. |
+| **Active Open Source Creator** | GitHub Community | Authored and published 5+ production-ready software repositories. |
+| **Top Algorithmic Benchmark** | LeetCode / Coding Platforms | Solved 1,000+ algorithmic puzzles across advanced data structures. |
 
 </div>
 
@@ -272,15 +278,27 @@ A responsive personal finance management application enabling users to track inc
 
 <div align="center">
 
-### Machine Learning & Data Science
-<img src="https://img.shields.io/badge/Coursera-Machine%20Learning%20Specialization-0056D2?style=for-the-badge&logo=coursera&logoColor=white" alt="Machine Learning Specialization"/>
-<img src="https://img.shields.io/badge/NPTEL-Elite%20Certification%20in%20Programming-008080?style=for-the-badge&logo=google-scholar&logoColor=white" alt="NPTEL Certification"/>
+### AWS (Amazon Web Services)
+<img src="https://img.shields.io/badge/AWS-Certified%20Solutions%20Architect-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS Solutions Architect"/>
+<img src="https://img.shields.io/badge/AWS-Cloud%20Practitioner-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" alt="AWS Cloud Practitioner"/>
 
-<br/>
+<br/><br/>
 
-### Full Stack & Web Engineering
-<img src="https://img.shields.io/badge/HackerRank-Python%20(Basic%20%26%20Intermediate)-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white" alt="HackerRank Python"/>
-<img src="https://img.shields.io/badge/HackerRank-Problem%20Solving%20(Advanced)-00EA64?style=for-the-badge&logo=hackerrank&logoColor=white" alt="HackerRank Problem Solving"/>
+### Oracle & Database Systems
+<img src="https://img.shields.io/badge/Oracle-Certified%20Professional%20SQL-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle Certified SQL"/>
+<img src="https://img.shields.io/badge/Oracle-Database%20Administrator%20Certified-0073B7?style=for-the-badge&logo=oracle&logoColor=white" alt="Oracle DBA"/>
+
+<br/><br/>
+
+### NPTEL & Academic Excellence
+<img src="https://img.shields.io/badge/NPTEL-Elite%20Certification%20in%20Programming%20%26%20Data%20Structures-008080?style=for-the-badge&logo=google-scholar&logoColor=white" alt="NPTEL Elite"/>
+<img src="https://img.shields.io/badge/NPTEL-Algorithms%20%26%20Problem%20Solving%20Mastery-0A66C2?style=for-the-badge&logo=google-scholar&logoColor=white" alt="NPTEL Algorithms"/>
+
+<br/><br/>
+
+### Cisco & Networking
+<img src="https://img.shields.io/badge/Cisco-CCNA%20Network%20Associate-1D69D8?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco CCNA"/>
+<img src="https://img.shields.io/badge/Cisco-Cybersecurity%20Essentials-049FD9?style=for-the-badge&logo=cisco&logoColor=white" alt="Cisco Cybersecurity"/>
 
 </div>
 
@@ -294,12 +312,15 @@ A responsive personal finance management application enabling users to track inc
 <a href="https://leetcode.com/u/si9Zaelw6i/">
   <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="LeetCode"/>
 </a>
+&nbsp;&nbsp;
 <a href="https://github.com/prasannapbhurke">
   <img src="https://img.shields.io/badge/GeeksforGeeks-2F8D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white" alt="GeeksforGeeks"/>
 </a>
+&nbsp;&nbsp;
 <a href="https://github.com/prasannapbhurke">
   <img src="https://img.shields.io/badge/HackerRank-2EC866?style=for-the-badge&logo=hackerrank&logoColor=white" alt="HackerRank"/>
 </a>
+&nbsp;&nbsp;
 <a href="https://github.com/prasannapbhurke">
   <img src="https://img.shields.io/badge/CodeChef-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="CodeChef"/>
 </a>
@@ -361,7 +382,7 @@ A responsive personal finance management application enabling users to track inc
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/output/github-contribution-grid-snake-dark.svg" alt="Snake Animation" width="100%"/>
+<img src="https://raw.githubusercontent.com/prasannapbhurke/prasannaportfolio/output/github-contribution-grid-snake-dark.svg" alt="Snake Animation" width="100%"/>
 
 </div>
 
@@ -387,7 +408,7 @@ exploring:
   - Automated MLOps Continuous Deployment Pipelines
 
 open_to:
-  - Software Engineer & Machine Learning Developer Roles
+  - Senior Software Engineer & Machine Learning Developer Roles
   - Full Stack Web Engineering Positions
   - Open Source Collaborations
 ```
@@ -409,6 +430,10 @@ open_to:
 &nbsp;&nbsp;
 <a href="https://github.com/prasannapbhurke">
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+&nbsp;&nbsp;
+<a href="https://prasannapbhurke.github.io/prasannapbhurke/">
+  <img src="https://img.shields.io/badge/Portfolio-8A2BE2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
 </a>
 
 </div>
