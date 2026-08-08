@@ -137,7 +137,7 @@ export default function ParticleBackground({ theme }) {
       if (!signalImageReady) return;
 
       const signalWidth = 205;
-      const signalHeight = 110;
+      const signalHeight = 115;
       targetCtx.save();
       targetCtx.translate(cx, cy);
       targetCtx.beginPath();
@@ -145,7 +145,7 @@ export default function ParticleBackground({ theme }) {
       targetCtx.clip();
       targetCtx.drawImage(
         signalImage,
-        120, 50, 1866, 1015,
+        225, 48, 3500, 1980,
         -signalWidth / 2, -signalHeight / 2, signalWidth, signalHeight
       );
       targetCtx.restore();
