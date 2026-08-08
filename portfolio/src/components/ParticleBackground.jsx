@@ -276,7 +276,7 @@ export default function ParticleBackground({ theme }) {
         ctx.fillStyle = cloudGlow;
         ctx.fill();
 
-        drawBatLogo(ctx, targetX, targetY, 2.4);
+        // The exact user-supplied Bat-Signal artwork is layered above this beam in the component return.
         ctx.restore();
 
         // Layer 1 Buildings
@@ -466,10 +466,23 @@ export default function ParticleBackground({ theme }) {
   }, [theme]);
 
   return (
-    <canvas 
-      ref={canvasRef} 
-      className="fixed inset-0 pointer-events-none z-0 transition-opacity duration-500"
-    />
+    <>
+      <canvas
+        ref={canvasRef}
+        className="fixed inset-0 pointer-events-none z-0 transition-opacity duration-500"
+      />
+      {theme === 'batman' && (
+        <img
+          src={`${import.meta.env.BASE_URL}bat-signal-reference.png`}
+          alt=""
+          aria-hidden="true"
+          className="fixed pointer-events-none z-[1] w-[min(390px,42vw)] max-w-[78vw]"
+          style={{ top: 'clamp(76px, 12vh, 132px)', right: 'clamp(24px, 7vw, 140px)' }}
+        />
+      )}
+    </>
   );
 }
+
+
 
