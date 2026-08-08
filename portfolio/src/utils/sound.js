@@ -17,10 +17,14 @@ class SoundManager {
     }
   }
 
-  toggleMute() {
+  toggleMute({ resumeBatmanMusic = false } = {}) {
     this.muted = !this.muted;
     if (this.muted) {
       this.stopBatmanThemeMusic();
+    } else {
+      this.init();
+      this.ctx?.resume?.().catch?.(() => {});
+      if (resumeBatmanMusic) this.playBatmanThemeMusic();
     }
     return this.muted;
   }

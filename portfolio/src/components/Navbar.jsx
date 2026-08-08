@@ -22,7 +22,7 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenTerminal, on
   }, []);
 
   const toggleAudio = () => {
-    const muted = sound.toggleMute();
+    const muted = sound.toggleMute({ resumeBatmanMusic: currentTheme === 'batman' });
     setIsMuted(muted);
   };
 
@@ -153,7 +153,7 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenTerminal, on
             onClick={toggleAudio}
             onMouseEnter={() => sound.playHover()}
             className="p-2 rounded-xl bg-slate-900/80 border border-yellow-500/30 text-yellow-300 hover:text-white hover:border-yellow-400 transition-all"
-            title={isMuted ? "Unmute UI Sounds" : "Mute UI Sounds"}
+            title={isMuted ? "Unmute and resume Gotham audio" : "Mute all UI and Gotham audio"}
           >
             {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} className="text-amber-400 animate-pulse" />}
           </button>

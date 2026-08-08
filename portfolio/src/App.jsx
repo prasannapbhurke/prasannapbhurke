@@ -18,7 +18,6 @@ import AchievementSystem from './components/AchievementSystem';
 import GothamStorm from './components/GothamStorm';
 import PrasannaBot from './components/PrasannaBot';
 import BatcomputerBoot from './components/BatcomputerBoot';
-import GothamProjectMap from './components/GothamProjectMap';
 import HallOfCases from './components/HallOfCases';
 
 function AppContent() {
@@ -105,7 +104,6 @@ function AppContent() {
         onOpenTerminal={() => setTerminalOpen(true)}
         onOpenContact={scrollToContact}
       />
-      <GothamProjectMap active={theme === 'batman'} />
       <AIPlayground />
       <Projects />
       <TechStack />
