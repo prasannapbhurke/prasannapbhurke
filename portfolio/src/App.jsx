@@ -17,6 +17,9 @@ import { ToastProvider, useToast } from './components/ToastManager';
 import AchievementSystem from './components/AchievementSystem';
 import GothamStorm from './components/GothamStorm';
 import PrasannaBot from './components/PrasannaBot';
+import BatcomputerBoot from './components/BatcomputerBoot';
+import GothamProjectMap from './components/GothamProjectMap';
+import HallOfCases from './components/HallOfCases';
 
 function AppContent() {
   const [theme, setTheme] = useState('purple');
@@ -85,6 +88,9 @@ function AppContent() {
       {/* Gotham Storm (lightning + thunder in Batman mode) */}
       <GothamStorm active={theme === 'batman'} />
 
+      {/* Brief cinematic system hand-off whenever Gotham Mode starts */}
+      <BatcomputerBoot active={theme === 'batman'} />
+
       {/* Top Navbar */}
       <Navbar
         currentTheme={theme}
@@ -99,10 +105,12 @@ function AppContent() {
         onOpenTerminal={() => setTerminalOpen(true)}
         onOpenContact={scrollToContact}
       />
+      <GothamProjectMap active={theme === 'batman'} />
       <AIPlayground />
       <Projects />
       <TechStack />
       <Experience />
+      <HallOfCases active={theme === 'batman'} />
       <Contact />
       <Footer />
 

@@ -12,6 +12,7 @@ export default function Projects() {
   const [isRunningCode, setIsRunningCode] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [activeTag, setActiveTag] = useState('All');
+  const [isBatman, setIsBatman] = useState(false);
   const sectionRef = useScrollReveal({ direction: 'up', delay: 0 });
 
   // Real-time GitHub API Data State
@@ -36,6 +37,14 @@ export default function Projects() {
         }
       })
       .catch(() => {});
+  }, []);
+
+  useEffect(() => {
+    const syncTheme = () => setIsBatman(document.documentElement.getAttribute('data-theme') === 'batman');
+    syncTheme();
+    const observer = new MutationObserver(syncTheme);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+    return () => observer.disconnect();
   }, []);
 
   const projects = [
@@ -326,15 +335,15 @@ print("Summary:", summarize_text(doc))`,
         <div ref={sectionRef} className="text-center max-w-3xl mx-auto space-y-4">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/40 text-purple-300 text-xs font-mono">
             <Layers size={14} className="text-purple-400" />
-            <span>Featured Software Engineering Projects</span>
+            <span>{isBatman ? 'GOTHAM CASE FILES // ENCRYPTED' : 'Featured Software Engineering Projects'}</span>
           </div>
 
           <h2 className="text-3xl sm:text-5xl font-extrabold font-heading text-white leading-tight pb-2">
-            Engineering <span className="text-purple-300 font-extrabold drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">Portfolio</span>
+            {isBatman ? <>Vigilante <span className="text-yellow-300 font-extrabold drop-shadow-[0_0_20px_rgba(250,204,21,0.6)]">Case Files</span></> : <>Engineering <span className="text-purple-300 font-extrabold drop-shadow-[0_0_20px_rgba(168,85,247,0.6)]">Portfolio</span></>}
           </h2>
 
           <p className="text-slate-300 text-sm sm:text-base">
-            Explore production-grade AI platforms, NLP classifiers, browser extensions, and full-stack web applications.
+            {isBatman ? 'Select a secured case file to inspect its stack, operational status, and engineering outcome.' : 'Explore production-grade AI platforms, NLP classifiers, browser extensions, and full-stack web applications.'}
           </p>
 
           {/* GitHub Live API Stat Pill */}
@@ -398,7 +407,8 @@ print("Summary:", summarize_text(doc))`,
             .map((proj) => (
             <div
               key={proj.id}
-              className="glass-card group overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5"
+              id={`case-${proj.id}`}
+              className={`glass-card group overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 ${isBatman ? 'batman-case-file' : ''}`}
             >
               <div>
                 <div className="relative h-48 overflow-hidden">
@@ -409,15 +419,16 @@ print("Summary:", summarize_text(doc))`,
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#090a0f] via-transparent to-transparent opacity-90" />
                   <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-slate-950/80 border border-purple-500/40 text-[11px] font-mono text-purple-300 backdrop-blur-md">
-                    {proj.category}
+                    {isBatman ? `CASE ${String(projects.indexOf(proj) + 1).padStart(2, '0')} // ${proj.category}` : proj.category}
                   </div>
                 </div>
 
                 <div className="p-6 space-y-4">
                   <h3 className="text-xl font-bold font-heading text-white group-hover:text-purple-300 transition-colors">
-                    {proj.title}
+                    {isBatman ? `OPERATION: ${proj.title}` : proj.title}
                   </h3>
 
+                  {isBatman && <div className="case-file-status"><span>STATUS: SOLVED</span><span>ACCESS: LEVEL 07</span></div>}
                   <p className="text-slate-300 text-xs sm:text-sm leading-relaxed line-clamp-3">
                     {proj.description}
                   </p>
@@ -441,7 +452,7 @@ print("Summary:", summarize_text(doc))`,
                   onMouseEnter={() => sound.playHover()}
                   className="text-xs font-mono text-purple-300 hover:text-white font-semibold flex items-center gap-1 transition-colors"
                 >
-                  <span>Inspect Code & Specs</span>
+                  <span>{isBatman ? 'Decrypt Case File' : 'Inspect Code & Specs'}</span>
                   <ExternalLink size={13} />
                 </button>
 

@@ -28,6 +28,17 @@ export default function ParticleBackground({ theme }) {
     };
     window.addEventListener('mousemove', handleMouseMove);
 
+    let scrollDirection = 1;
+    let lastScrollY = window.scrollY;
+    const handleScroll = () => {
+      const nextScrollY = window.scrollY;
+      if (Math.abs(nextScrollY - lastScrollY) > 2) {
+        scrollDirection = nextScrollY > lastScrollY ? 1 : -1;
+        lastScrollY = nextScrollY;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+
     // The supplied emblem is intentionally used as the source of truth for
     // the Bat-Signal, instead of redrawing an approximation in canvas.
     const signalImage = new Image();
@@ -339,15 +350,19 @@ export default function ParticleBackground({ theme }) {
         });
 
         // Animated Batmobile Patrol
-        batmobile.x += batmobile.speed;
+        batmobile.x += batmobile.speed * scrollDirection;
         if (batmobile.x > width + 220) {
           batmobile.x = -240;
+        }
+        if (batmobile.x < -240) {
+          batmobile.x = width + 220;
         }
 
         const bY = height - 26;
 
         ctx.save();
         ctx.translate(batmobile.x, bY);
+        ctx.scale(scrollDirection, 1);
 
         // Headlight Beams
         const headlightGrad = ctx.createLinearGradient(60, 0, 260, 0);
@@ -427,7 +442,7 @@ export default function ParticleBackground({ theme }) {
         ctx.lineWidth = 1;
         rain.forEach((r) => {
           r.y += r.speed;
-          r.x -= 2;
+          r.x += ((mouse.x / width) - 0.5) * 3 + scrollDirection * 1.5;
           if (r.y > height) {
             r.y = -20;
             r.x = Math.random() * (width + 100);
@@ -447,6 +462,7 @@ export default function ParticleBackground({ theme }) {
     return () => {
       window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
       cancelAnimationFrame(animationFrameId);
     };
   }, [theme]);
