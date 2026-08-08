@@ -1,33 +1,69 @@
 import React from 'react';
 
-export default function BatLogoSvg({ className = "w-8 h-5" }) {
+export default function BatLogoSvg({ 
+  className = "w-8 h-5", 
+  goldBackplate = true,
+  batColor = "#000000",
+  yellowColor = "#FED000",
+  ...props 
+}) {
   return (
     <svg 
-      viewBox="0 0 500 300" 
+      viewBox="0 0 500 310" 
       className={className}
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
+      {...props}
     >
-      {/* Outer Thick Yellow Oval Ring */}
-      <ellipse cx="250" cy="150" rx="230" ry="130" fill="#000000" stroke="#facc15" strokeWidth="16" />
+      {goldBackplate && (
+        <g>
+          {/* Outer yellow oval background & ring border */}
+          <ellipse 
+            cx="250" 
+            cy="155" 
+            rx="244" 
+            ry="148" 
+            fill={yellowColor} 
+            stroke={yellowColor} 
+            strokeWidth="4" 
+          />
+          {/* Inner subtle black outline for comic emblem definition */}
+          <ellipse 
+            cx="250" 
+            cy="155" 
+            rx="236" 
+            ry="140" 
+            fill={yellowColor} 
+            stroke="#000000" 
+            strokeWidth="3.5" 
+          />
+        </g>
+      )}
       
-      {/* Exact Bright Yellow Batman Bat Emblem */}
+      {/* Authentic Classic Black Bat Emblem Silhouette */}
       <path 
-        d="M 250 82
-           C 255 82, 258 95, 264 95
-           C 275 95, 285 75, 335 75
-           C 390 75, 420 110, 440 160
-           C 400 170, 360 215, 330 215
-           C 300 215, 280 185, 270 185
-           C 260 185, 255 245, 250 245
-           C 245 245, 240 185, 230 185
-           C 220 185, 200 215, 170 215
-           C 140 215, 100 170, 60 160
-           C 80 110, 110 75, 165 75
-           C 215 75, 225 95, 236 95
-           C 242 95, 245 82, 250 82 Z"
-        fill="#facc15"
+        d="M 250 90
+           C 246 90, 241 78, 236 68
+           C 232 76, 225 95, 225 95
+           C 198 118, 138 100, 102 78
+           C 70 104, 38 132, 42 162
+           C 48 185, 78 208, 104 208
+           C 120 208, 138 196, 148 180
+           C 160 196, 180 208, 196 208
+           C 208 208, 214 194, 218 180
+           C 226 195, 244 225, 250 242
+           C 256 225, 274 195, 282 180
+           C 286 194, 292 208, 304 208
+           C 320 208, 340 196, 352 180
+           C 362 196, 380 208, 396 208
+           C 422 208, 452 185, 458 162
+           C 462 132, 430 104, 398 78
+           C 362 100, 302 118, 275 95
+           C 275 95, 268 76, 264 68
+           C 259 78, 254 90, 250 90 Z"
+        fill={batColor}
       />
     </svg>
   );
 }
+

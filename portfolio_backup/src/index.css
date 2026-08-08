@@ -1,0 +1,240 @@
+@import "tailwindcss";
+
+/* Modern Dark Luxury & Batman Dark Knight Design System */
+
+:root {
+  --bg-dark: #090a0f;
+  --bg-card: rgba(18, 19, 32, 0.7);
+  --bg-card-hover: rgba(27, 28, 48, 0.85);
+  --border-glass: rgba(157, 78, 221, 0.2);
+  --border-glass-hover: rgba(157, 78, 221, 0.5);
+  
+  --purple-primary: #7000ff;
+  --purple-secondary: #8a2be2;
+  --violet-glow: #9d4edd;
+  --indigo-accent: #4b0082;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --terminal-green: #10b981;
+}
+
+/* Batman Dark Knight / Batcave Theme Overrides */
+[data-theme="batman"] {
+  --bg-dark: #050508;
+  --bg-card: rgba(15, 17, 26, 0.85);
+  --bg-card-hover: rgba(25, 29, 42, 0.95);
+  --border-glass: rgba(250, 204, 21, 0.3);
+  --border-glass-hover: rgba(250, 204, 21, 0.75);
+  
+  --purple-primary: #ca8a04;
+  --purple-secondary: #eab308;
+  --violet-glow: #facc15;
+  --indigo-accent: #713f12;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --terminal-green: #eab308;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(circle at 15% 15%, rgba(112, 0, 255, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 85% 85%, rgba(138, 43, 226, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.05) 0%, transparent 60%);
+  background-attachment: fixed;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+[data-theme="batman"] body {
+  background-image: 
+    radial-gradient(circle at 50% 20%, rgba(250, 204, 21, 0.14) 0%, transparent 45%),
+    radial-gradient(circle at 80% 80%, rgba(202, 138, 4, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 20% 70%, rgba(234, 179, 8, 0.08) 0%, transparent 50%);
+}
+
+/* Typography Headings */
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Glassmorphism Card Utility */
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-card:hover {
+  background: var(--bg-card-hover);
+  border-color: var(--border-glass-hover);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px 0 rgba(112, 0, 255, 0.25);
+}
+
+[data-theme="batman"] .glass-card:hover {
+  box-shadow: 0 12px 40px 0 rgba(250, 204, 21, 0.3);
+}
+
+/* Ultra-High Contrast Glowing Text Styling (Resistant to Auto Dark Mode extensions) */
+.text-gradient {
+  display: inline-block;
+  color: #d8b4fe; /* Solid fallback text color for browser extensions */
+  background: linear-gradient(135deg, #ffffff 0%, #f3e8ff 35%, #e9d5ff 70%, #c084fc 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 0.05em;
+  filter: drop-shadow(0 0 12px rgba(192, 132, 252, 0.4));
+}
+
+[data-theme="batman"] .text-gradient {
+  display: inline-block;
+  color: #facc15; /* Solid fallback gold for browser extensions */
+  background: linear-gradient(135deg, #ffffff 0%, #fef08a 35%, #fde047 70%, #eab308 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 0.05em;
+  filter: drop-shadow(0 0 12px rgba(250, 204, 21, 0.5));
+}
+
+.text-gradient-purple {
+  display: inline-block;
+  color: #d8b4fe;
+  background: linear-gradient(135deg, #ffffff 0%, #e9d5ff 50%, #d8b4fe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 0.05em;
+}
+
+[data-theme="batman"] .text-gradient-purple {
+  display: inline-block;
+  color: #facc15;
+  background: linear-gradient(135deg, #ffffff 0%, #fef08a 50%, #eab308 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 0.05em;
+}
+
+/* Glow Effects */
+.glow-purple {
+  box-shadow: 0 0 25px rgba(112, 0, 255, 0.4);
+}
+
+[data-theme="batman"] .glow-purple {
+  box-shadow: 0 0 25px rgba(250, 204, 21, 0.45);
+}
+
+.glow-btn {
+  position: relative;
+  background: linear-gradient(135deg, var(--purple-primary), var(--purple-secondary));
+  color: white;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+[data-theme="batman"] .glow-btn {
+  background: linear-gradient(135deg, #ca8a04, #eab308);
+  color: #050508;
+  font-weight: 800;
+}
+
+.glow-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: 0.5s;
+}
+
+.glow-btn:hover::before {
+  left: 100%;
+}
+
+.glow-btn:hover {
+  box-shadow: 0 0 30px rgba(138, 43, 226, 0.6);
+  transform: scale(1.02);
+}
+
+[data-theme="batman"] .glow-btn:hover {
+  box-shadow: 0 0 30px rgba(250, 204, 21, 0.7);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050508;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b0764;
+  border-radius: 4px;
+}
+
+[data-theme="batman"] ::-webkit-scrollbar-thumb {
+  background: #713f12;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #7000ff;
+}
+
+[data-theme="batman"] ::-webkit-scrollbar-thumb:hover {
+  background: #eab308;
+}
+
+/* Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 4s infinite ease-in-out;
+}
+
+@keyframes scanline {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
+.scanline {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: rgba(157, 78, 221, 0.4);
+  opacity: 0.5;
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+[data-theme="batman"] .scanline {
+  background: rgba(250, 204, 21, 0.4);
+}

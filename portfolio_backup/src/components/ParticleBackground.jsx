@@ -131,41 +131,34 @@ export default function ParticleBackground({ theme }) {
       targetCtx.translate(cx, cy);
       targetCtx.scale(scale, scale);
 
-      // Yellow Oval Field with outer glow & black accent stroke
+      // Black Oval Field with Yellow Border Ring
       targetCtx.beginPath();
       targetCtx.ellipse(0, 0, 38, 24, 0, 0, Math.PI * 2);
-      targetCtx.fillStyle = '#FED000';
+      targetCtx.fillStyle = '#000000';
       targetCtx.shadowBlur = 35;
-      targetCtx.shadowColor = '#FED000';
+      targetCtx.shadowColor = '#facc15';
       targetCtx.fill();
-      targetCtx.lineWidth = 1.5;
-      targetCtx.strokeStyle = '#000000';
+      targetCtx.lineWidth = 3;
+      targetCtx.strokeStyle = '#facc15';
       targetCtx.stroke();
       targetCtx.shadowBlur = 0;
 
-      // Solid Black Batman Bat Silhouette
+      // Bright Yellow Batman Bat Silhouette
       targetCtx.beginPath();
-      targetCtx.moveTo(0, -10);
-      targetCtx.bezierCurveTo(-0.7, -10, -1.5, -12, -2.4, -14);
-      targetCtx.bezierCurveTo(-3.2, -12, -4.5, -9, -4.5, -9);
-      targetCtx.bezierCurveTo(-9, -5, -18, -8, -23.5, -12);
-      targetCtx.bezierCurveTo(-28, -7, -33, -3, -32.5, 1.5);
-      targetCtx.bezierCurveTo(-31.5, 5, -27, 9, -23, 9);
-      targetCtx.bezierCurveTo(-20.5, 9, -17.5, 7, -16, 5);
-      targetCtx.bezierCurveTo(-14, 8, -11, 9, -8.5, 9);
-      targetCtx.bezierCurveTo(-6.5, 9, -5.5, 7, -5, 5);
-      targetCtx.bezierCurveTo(-3.8, 8, -1.2, 13, 0, 15.5);
-      targetCtx.bezierCurveTo(1.2, 13, 3.8, 8, 5, 5);
-      targetCtx.bezierCurveTo(5.5, 7, 6.5, 9, 8.5, 9);
-      targetCtx.bezierCurveTo(11, 9, 14, 8, 16, 5);
-      targetCtx.bezierCurveTo(17.5, 7, 20.5, 9, 23, 9);
-      targetCtx.bezierCurveTo(27, 9, 31.5, 5, 32.5, 1.5);
-      targetCtx.bezierCurveTo(33, -3, 28, -7, 23.5, -12);
-      targetCtx.bezierCurveTo(18, -8, 9, -5, 4.5, -9);
-      targetCtx.bezierCurveTo(4.5, -9, 3.2, -12, 2.4, -14);
-      targetCtx.bezierCurveTo(1.5, -12, 0.7, -10, 0, -10);
+      targetCtx.moveTo(0, -15);
+      targetCtx.lineTo(3, -15);
+      targetCtx.lineTo(5, -9);
+      targetCtx.bezierCurveTo(10, -9, 15, -15, 24, -15);
+      targetCtx.bezierCurveTo(30, -15, 33, -9, 32, 0);
+      targetCtx.bezierCurveTo(26, 8, 17, 13, 12, 7);
+      targetCtx.bezierCurveTo(8, 15, 3, 18, 0, 20);
+      targetCtx.bezierCurveTo(-3, 18, -8, 15, -12, 7);
+      targetCtx.bezierCurveTo(-17, 13, -26, 8, -32, 0);
+      targetCtx.bezierCurveTo(-33, -9, -30, -15, -24, -15);
+      targetCtx.bezierCurveTo(-15, -15, -10, -9, -5, -9);
+      targetCtx.lineTo(-3, -15);
       targetCtx.closePath();
-      targetCtx.fillStyle = '#000000';
+      targetCtx.fillStyle = '#facc15';
       targetCtx.fill();
 
       targetCtx.restore();

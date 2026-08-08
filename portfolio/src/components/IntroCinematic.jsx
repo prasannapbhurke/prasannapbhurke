@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import BatLogoSvg from './BatLogoSvg';
 
 export default function IntroCinematic({ onComplete }) {
   const [phase, setPhase] = useState('enter'); // 'enter' | 'hold' | 'exit'
@@ -53,16 +54,7 @@ export default function IntroCinematic({ onComplete }) {
         }}
       >
         {/* Bat Logo SVG */}
-        <svg width="160" height="100" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-          {/* Outer oval glow */}
-          <ellipse cx="80" cy="50" rx="78" ry="48" fill="#facc15" opacity="0.15"/>
-          <ellipse cx="80" cy="50" rx="75" ry="45" fill="#000" stroke="#facc15" strokeWidth="4"/>
-          {/* Bat silhouette */}
-          <path
-            d="M80 28 C60 28 48 38 44 44 L36 40 C40 46 44 48 48 47 C46 52 44 56 44 62 C50 58 54 54 56 52 C58 56 60 62 80 62 C100 62 102 56 104 52 C106 54 110 58 116 62 C116 56 114 52 112 47 C116 48 120 46 124 40 L116 44 C112 38 100 28 80 28Z"
-            fill="#facc15"
-          />
-        </svg>
+        <BatLogoSvg className="w-40 h-24 drop-shadow-[0_0_25px_rgba(254,208,0,0.6)]" goldBackplate={true} />
 
         <div className="text-center space-y-1">
           <p className="text-yellow-300 font-mono text-xs tracking-[0.4em] uppercase">
