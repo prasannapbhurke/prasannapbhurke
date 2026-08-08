@@ -55,8 +55,8 @@ export default function Navbar({ currentTheme, onToggleTheme, onOpenTerminal, on
           className="flex items-center gap-3 group"
           onMouseEnter={() => sound.playHover()}
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 via-amber-500 to-yellow-600 flex items-center justify-center font-bold text-black font-heading text-lg shadow-lg shadow-yellow-500/40 group-hover:scale-105 transition-transform">
-            <BatLogoSvg className="w-6 h-4" goldBackplate={false} />
+          <div className="flex items-center justify-center group-hover:scale-105 transition-transform drop-shadow-[0_0_12px_rgba(254,208,0,0.8)]">
+            <BatLogoSvg className="w-12 h-8" goldBackplate={true} />
           </div>
           <div className="flex flex-col">
             <span className="font-heading font-extrabold text-white text-base tracking-tight group-hover:text-yellow-400 transition-colors">

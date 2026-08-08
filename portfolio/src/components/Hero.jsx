@@ -112,15 +112,13 @@ export default function Hero({ onOpenTerminal, onOpenContact }) {
           
           {/* Hero Emblem / Monogram Badge */}
           <div className="flex justify-center pb-2">
-            {isBatman ? (
-              <div className="p-3.5 rounded-full bg-yellow-400/15 border-2 border-yellow-400/80 shadow-2xl shadow-yellow-500/60 backdrop-blur-md animate-bounce">
-                <BatLogoSvg className="w-20 h-12" goldBackplate={true} />
-              </div>
-            ) : (
-              <div className="p-3 rounded-full bg-purple-950/60 border border-purple-500/40 shadow-xl shadow-purple-900/40 backdrop-blur-md text-purple-300">
-                <Sparkles size={24} className="text-purple-400 animate-pulse" />
-              </div>
-            )}
+            <div 
+              onClick={handleThemeToggle}
+              className="p-3 rounded-full bg-yellow-400/10 border-2 border-yellow-400/60 shadow-2xl shadow-yellow-500/50 backdrop-blur-md hover:scale-110 transition-transform cursor-pointer group"
+              title="Click to activate Gotham Batman Theme & Sound"
+            >
+              <BatLogoSvg className="w-24 h-14 drop-shadow-[0_0_25px_rgba(254,208,0,0.95)] group-hover:rotate-3 transition-transform" goldBackplate={true} />
+            </div>
           </div>
 
           {/* Availability & Telemetry Pill */}
