@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { ArrowRight, Sparkles, Terminal, Code, Activity } from 'lucide-react';
 import { sound } from '../utils/sound';
 import BatLogoSvg from './BatLogoSvg';
@@ -18,10 +18,10 @@ const TRANSLATED_TITLES = {
     "Open-Source-Tech-Innovator"
   ],
   jp: [
-    "AI・機械学習スペシャリスト",
-    "フルスタックソフトウェアエンジニア",
-    "NLPテキスト分類アーキテクト",
-    "オープンソース技術革新者"
+    "AIãƒ»æ©Ÿæ¢°å­¦ç¿’ã‚¹ãƒšã‚·ãƒ£ãƒªã‚¹ãƒˆ",
+    "ãƒ•ãƒ«ã‚¹ã‚¿ãƒƒã‚¯ã‚½ãƒ•ãƒˆã‚¦ã‚§ã‚¢ã‚¨ãƒ³ã‚¸ãƒ‹ã‚¢",
+    "NLPãƒ†ã‚­ã‚¹ãƒˆåˆ†é¡žã‚¢ãƒ¼ã‚­ãƒ†ã‚¯ãƒˆ",
+    "ã‚ªãƒ¼ãƒ—ãƒ³ã‚½ãƒ¼ã‚¹æŠ€è¡“é©æ–°è€…"
   ]
 };
 
@@ -87,6 +87,12 @@ export default function Hero({ onOpenTerminal, onOpenContact }) {
     return () => clearTimeout(timer);
   }, [displayText, isDeleting, currentTitleIndex, titles]);
 
+  const handleThemeToggle = () => {
+    sound.playBatmanThemeSound?.();
+    sound.playBatmanThemeMusic?.();
+    window.dispatchEvent(new CustomEvent('activate-batman-theme'));
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setTelemetry({
@@ -131,7 +137,7 @@ export default function Hero({ onOpenTerminal, onOpenContact }) {
               <span className={`w-2.5 h-2.5 rounded-full animate-ping ${isBatman ? 'bg-yellow-400' : 'bg-emerald-400'}`} />
               <span className={`w-2.5 h-2.5 rounded-full -ml-4.5 ${isBatman ? 'bg-yellow-400' : 'bg-emerald-400'}`} />
               <span className="text-white font-semibold">
-                {isBatman ? '🦇 GOTHAM MAINFRAME // WAYNE TECH AI NODE' : 'AVAILABLE FOR SENIOR SW/AI ROLES'}
+                {isBatman ? 'ðŸ¦‡ GOTHAM MAINFRAME // WAYNE TECH AI NODE' : 'AVAILABLE FOR SENIOR SW/AI ROLES'}
               </span>
             </div>
             <span className="text-slate-600">|</span>
@@ -222,3 +228,4 @@ export default function Hero({ onOpenTerminal, onOpenContact }) {
     </section>
   );
 }
+
