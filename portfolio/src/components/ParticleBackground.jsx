@@ -276,7 +276,8 @@ export default function ParticleBackground({ theme }) {
         ctx.fillStyle = cloudGlow;
         ctx.fill();
 
-        // The exact user-supplied Bat-Signal artwork is layered above this beam in the component return.
+        // Project the classic black bat directly inside the illuminated signal.
+        drawBatLogo(ctx, targetX, targetY, 2.5);
         ctx.restore();
 
         // Layer 1 Buildings
@@ -471,23 +472,12 @@ export default function ParticleBackground({ theme }) {
         ref={canvasRef}
         className="fixed inset-0 pointer-events-none z-0 transition-opacity duration-500"
       />
-      {theme === 'batman' && (
-        <div
-          aria-hidden="true"
-          className="fixed pointer-events-none z-[1]"
-          style={{ left: '47vw', top: '17vh', transform: 'translate(-50%, -50%)' }}
-        >
-          <img
-            src={`${import.meta.env.BASE_URL}bat-signal-reference.png`}
-            alt=""
-            className="block w-[min(340px,31vw)] max-w-[72vw]"
-            style={{ clipPath: 'ellipse(46% 46% at 50% 48%)' }}
-          />
-        </div>
-      )}
+
     </>
   );
 }
+
+
 
 
 
