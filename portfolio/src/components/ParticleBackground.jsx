@@ -28,6 +28,13 @@ export default function ParticleBackground({ theme }) {
     };
     window.addEventListener('mousemove', handleMouseMove);
 
+    // The supplied emblem is intentionally used as the source of truth for
+    // the Bat-Signal, instead of redrawing an approximation in canvas.
+    const signalImage = new Image();
+    let signalImageReady = false;
+    signalImage.onload = () => { signalImageReady = true; };
+    signalImage.src = `${import.meta.env.BASE_URL}bat-signal-reference.png`;
+
     // =============================================================
     // MODE 1: STANDARD NEON PURPLE PARTICLE CONSTELLATION ENGINE
     // =============================================================
@@ -126,44 +133,21 @@ export default function ParticleBackground({ theme }) {
       speed: 4.8
     };
 
-    const drawBatLogo = (targetCtx, cx, cy, scale) => {
+    const drawBatLogo = (targetCtx, cx, cy) => {
+      if (!signalImageReady) return;
+
+      const signalWidth = 205;
+      const signalHeight = 110;
       targetCtx.save();
       targetCtx.translate(cx, cy);
-      targetCtx.scale(scale, scale);
-
       targetCtx.beginPath();
-      targetCtx.ellipse(0, 0, 39, 23, 0, 0, Math.PI * 2);
-      targetCtx.fillStyle = '#FFEA1A';
-      targetCtx.shadowBlur = 34;
-      targetCtx.shadowColor = '#FFEA1A';
-      targetCtx.fill();
-      targetCtx.lineWidth = 2;
-      targetCtx.strokeStyle = '#000000';
-      targetCtx.stroke();
-      targetCtx.shadowBlur = 0;
-
-      // Classic tall-ear / swept-wing silhouette matching the portfolio emblem.
-      targetCtx.beginPath();
-      targetCtx.moveTo(0, -18);
-      targetCtx.bezierCurveTo(-2, -12, -4, -6, -5, -2);
-      targetCtx.bezierCurveTo(-13, -2, -21, -7, -30, -13);
-      targetCtx.bezierCurveTo(-26, -6, -27, 0, -28, 4);
-      targetCtx.bezierCurveTo(-30, 9, -34, 12, -37, 12);
-      targetCtx.bezierCurveTo(-34, 18, -28, 22, -19, 24);
-      targetCtx.bezierCurveTo(-22, 19, -22, 15, -19, 12);
-      targetCtx.bezierCurveTo(-15, 9, -11, 10, -7, 13);
-      targetCtx.bezierCurveTo(-3, 16, -1, 21, 0, 27);
-      targetCtx.bezierCurveTo(1, 21, 3, 16, 7, 13);
-      targetCtx.bezierCurveTo(11, 10, 15, 9, 19, 12);
-      targetCtx.bezierCurveTo(22, 15, 22, 19, 19, 24);
-      targetCtx.bezierCurveTo(28, 22, 34, 18, 37, 12);
-      targetCtx.bezierCurveTo(34, 12, 30, 9, 28, 4);
-      targetCtx.bezierCurveTo(27, 0, 26, -6, 30, -13);
-      targetCtx.bezierCurveTo(21, -7, 13, -2, 5, -2);
-      targetCtx.bezierCurveTo(4, -6, 2, -12, 0, -18);
-      targetCtx.closePath();
-      targetCtx.fillStyle = '#000000';
-      targetCtx.fill();
+      targetCtx.ellipse(0, 0, signalWidth / 2, signalHeight / 2, 0, 0, Math.PI * 2);
+      targetCtx.clip();
+      targetCtx.drawImage(
+        signalImage,
+        120, 50, 1866, 1015,
+        -signalWidth / 2, -signalHeight / 2, signalWidth, signalHeight
+      );
       targetCtx.restore();
     };
     let time = 0;
@@ -246,8 +230,9 @@ export default function ParticleBackground({ theme }) {
         // Bat-Signal Searchlight Beam
         const signalOriginX = width * 0.22;
         const signalOriginY = height;
-        const targetX = width * 0.47;
-        const targetY = height * 0.17;
+        // Follow the visitor's cursor just like a real searchlight operator.
+        const targetX = mouse.x;
+        const targetY = Math.min(mouse.y, height * 0.58);
 
         ctx.save();
         const beamGradient = ctx.createLinearGradient(signalOriginX, signalOriginY, targetX, targetY);
@@ -277,7 +262,7 @@ export default function ParticleBackground({ theme }) {
         ctx.fill();
 
         // Project the classic black bat directly inside the illuminated signal.
-        drawBatLogo(ctx, targetX, targetY, 2.5);
+        drawBatLogo(ctx, targetX, targetY);
         ctx.restore();
 
         // Layer 1 Buildings
