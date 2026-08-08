@@ -246,8 +246,8 @@ export default function ParticleBackground({ theme }) {
         // Bat-Signal Searchlight Beam
         const signalOriginX = width * 0.22;
         const signalOriginY = height;
-        const targetX = mouse.x ? mouse.x : width * 0.7 + Math.sin(time * 0.5) * 120;
-        const targetY = mouse.y ? Math.min(mouse.y, height * 0.45) : height * 0.2 + Math.cos(time * 0.7) * 40;
+        const targetX = width * 0.47;
+        const targetY = height * 0.17;
 
         ctx.save();
         const beamGradient = ctx.createLinearGradient(signalOriginX, signalOriginY, targetX, targetY);
@@ -472,17 +472,23 @@ export default function ParticleBackground({ theme }) {
         className="fixed inset-0 pointer-events-none z-0 transition-opacity duration-500"
       />
       {theme === 'batman' && (
-        <img
-          src={`${import.meta.env.BASE_URL}bat-signal-reference.png`}
-          alt=""
+        <div
           aria-hidden="true"
-          className="fixed pointer-events-none z-[1] w-[min(390px,42vw)] max-w-[78vw]"
-          style={{ top: 'clamp(76px, 12vh, 132px)', right: 'clamp(24px, 7vw, 140px)' }}
-        />
+          className="fixed pointer-events-none z-[1]"
+          style={{ left: '47vw', top: '17vh', transform: 'translate(-50%, -50%)' }}
+        >
+          <img
+            src={`${import.meta.env.BASE_URL}bat-signal-reference.png`}
+            alt=""
+            className="block w-[min(340px,31vw)] max-w-[72vw]"
+            style={{ clipPath: 'ellipse(46% 46% at 50% 48%)' }}
+          />
+        </div>
       )}
     </>
   );
 }
+
 
 
 
