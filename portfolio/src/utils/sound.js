@@ -20,11 +20,11 @@ class SoundManager {
   toggleMute({ resumeBatmanMusic = false } = {}) {
     this.muted = !this.muted;
     if (this.muted) {
-      this.stopBatmanThemeMusic();
+      this.pauseBatmanThemeMusic();
     } else {
       this.init();
       this.ctx?.resume?.().catch?.(() => {});
-      if (resumeBatmanMusic) this.playBatmanThemeMusic();
+      if (resumeBatmanMusic) this.resumeBatmanThemeMusic();
     }
     return this.muted;
   }
@@ -186,6 +186,25 @@ class SoundManager {
         // Ignore
       }
     }, 220);
+  }
+
+  pauseBatmanThemeMusic() {
+    if (this.audioPlayer) {
+      try { this.audioPlayer.pause(); } catch (e) {}
+    }
+    if (this.musicTimer) {
+      clearInterval(this.musicTimer);
+      this.musicTimer = null;
+    }
+  }
+
+  resumeBatmanThemeMusic() {
+    if (this.audioPlayer) {
+      const playPromise = this.audioPlayer.play();
+      if (playPromise !== undefined) playPromise.catch(() => this.startSynthLoop());
+      return;
+    }
+    this.playBatmanThemeMusic();
   }
 
   stopBatmanThemeMusic() {
