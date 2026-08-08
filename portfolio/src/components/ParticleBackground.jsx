@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+﻿import React, { useEffect, useRef } from 'react';
 
 export default function ParticleBackground({ theme }) {
   const canvasRef = useRef(null);
@@ -131,46 +131,41 @@ export default function ParticleBackground({ theme }) {
       targetCtx.translate(cx, cy);
       targetCtx.scale(scale, scale);
 
-      // Yellow Oval Field with outer glow & black accent stroke
       targetCtx.beginPath();
-      targetCtx.ellipse(0, 0, 38, 24, 0, 0, Math.PI * 2);
-      targetCtx.fillStyle = '#FED000';
-      targetCtx.shadowBlur = 35;
-      targetCtx.shadowColor = '#FED000';
+      targetCtx.ellipse(0, 0, 39, 23, 0, 0, Math.PI * 2);
+      targetCtx.fillStyle = '#FFEA1A';
+      targetCtx.shadowBlur = 34;
+      targetCtx.shadowColor = '#FFEA1A';
       targetCtx.fill();
-      targetCtx.lineWidth = 1.5;
+      targetCtx.lineWidth = 2;
       targetCtx.strokeStyle = '#000000';
       targetCtx.stroke();
       targetCtx.shadowBlur = 0;
 
-      // Solid Black Batman Bat Silhouette
+      // Classic tall-ear / swept-wing silhouette matching the portfolio emblem.
       targetCtx.beginPath();
-      targetCtx.moveTo(0, -10);
-      targetCtx.bezierCurveTo(-0.7, -10, -1.5, -12, -2.4, -14);
-      targetCtx.bezierCurveTo(-3.2, -12, -4.5, -9, -4.5, -9);
-      targetCtx.bezierCurveTo(-9, -5, -18, -8, -23.5, -12);
-      targetCtx.bezierCurveTo(-28, -7, -33, -3, -32.5, 1.5);
-      targetCtx.bezierCurveTo(-31.5, 5, -27, 9, -23, 9);
-      targetCtx.bezierCurveTo(-20.5, 9, -17.5, 7, -16, 5);
-      targetCtx.bezierCurveTo(-14, 8, -11, 9, -8.5, 9);
-      targetCtx.bezierCurveTo(-6.5, 9, -5.5, 7, -5, 5);
-      targetCtx.bezierCurveTo(-3.8, 8, -1.2, 13, 0, 15.5);
-      targetCtx.bezierCurveTo(1.2, 13, 3.8, 8, 5, 5);
-      targetCtx.bezierCurveTo(5.5, 7, 6.5, 9, 8.5, 9);
-      targetCtx.bezierCurveTo(11, 9, 14, 8, 16, 5);
-      targetCtx.bezierCurveTo(17.5, 7, 20.5, 9, 23, 9);
-      targetCtx.bezierCurveTo(27, 9, 31.5, 5, 32.5, 1.5);
-      targetCtx.bezierCurveTo(33, -3, 28, -7, 23.5, -12);
-      targetCtx.bezierCurveTo(18, -8, 9, -5, 4.5, -9);
-      targetCtx.bezierCurveTo(4.5, -9, 3.2, -12, 2.4, -14);
-      targetCtx.bezierCurveTo(1.5, -12, 0.7, -10, 0, -10);
+      targetCtx.moveTo(0, -18);
+      targetCtx.bezierCurveTo(-2, -12, -4, -6, -5, -2);
+      targetCtx.bezierCurveTo(-13, -2, -21, -7, -30, -13);
+      targetCtx.bezierCurveTo(-26, -6, -27, 0, -28, 4);
+      targetCtx.bezierCurveTo(-30, 9, -34, 12, -37, 12);
+      targetCtx.bezierCurveTo(-34, 18, -28, 22, -19, 24);
+      targetCtx.bezierCurveTo(-22, 19, -22, 15, -19, 12);
+      targetCtx.bezierCurveTo(-15, 9, -11, 10, -7, 13);
+      targetCtx.bezierCurveTo(-3, 16, -1, 21, 0, 27);
+      targetCtx.bezierCurveTo(1, 21, 3, 16, 7, 13);
+      targetCtx.bezierCurveTo(11, 10, 15, 9, 19, 12);
+      targetCtx.bezierCurveTo(22, 15, 22, 19, 19, 24);
+      targetCtx.bezierCurveTo(28, 22, 34, 18, 37, 12);
+      targetCtx.bezierCurveTo(34, 12, 30, 9, 28, 4);
+      targetCtx.bezierCurveTo(27, 0, 26, -6, 30, -13);
+      targetCtx.bezierCurveTo(21, -7, 13, -2, 5, -2);
+      targetCtx.bezierCurveTo(4, -6, 2, -12, 0, -18);
       targetCtx.closePath();
       targetCtx.fillStyle = '#000000';
       targetCtx.fill();
-
       targetCtx.restore();
     };
-
     let time = 0;
 
     const render = () => {
@@ -477,3 +472,4 @@ export default function ParticleBackground({ theme }) {
     />
   );
 }
+

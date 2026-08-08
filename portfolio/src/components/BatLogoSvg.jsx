@@ -1,69 +1,28 @@
-import React from 'react';
+﻿import React from 'react';
 
-export default function BatLogoSvg({ 
-  className = "w-8 h-5", 
+/**
+ * Classic yellow-oval Bat-Signal, drawn as an original clean vector so it stays crisp
+ * from the navbar to the full Gotham skyline projection.
+ */
+export default function BatLogoSvg({
+  className = 'w-8 h-5',
   goldBackplate = true,
-  batColor = "#000000",
-  yellowColor = "#FED000",
-  ...props 
+  batColor = '#000000',
+  yellowColor = '#FFEA1A',
+  ...props
 }) {
   return (
-    <svg 
-      viewBox="0 0 500 310" 
-      className={className}
-      fill="none" 
-      xmlns="http://www.w3.org/2000/svg"
-      {...props}
-    >
+    <svg viewBox="0 0 1200 720" className={className} fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       {goldBackplate && (
-        <g>
-          {/* Outer yellow oval background & ring border */}
-          <ellipse 
-            cx="250" 
-            cy="155" 
-            rx="244" 
-            ry="148" 
-            fill={yellowColor} 
-            stroke={yellowColor} 
-            strokeWidth="4" 
-          />
-          {/* Inner subtle black outline for comic emblem definition */}
-          <ellipse 
-            cx="250" 
-            cy="155" 
-            rx="236" 
-            ry="140" 
-            fill={yellowColor} 
-            stroke="#000000" 
-            strokeWidth="3.5" 
-          />
-        </g>
+        <>
+          <ellipse cx="600" cy="360" rx="555" ry="315" fill={yellowColor} stroke="#000000" strokeWidth="24" />
+          <ellipse cx="600" cy="360" rx="522" ry="285" stroke="#FFE100" strokeWidth="12" opacity="0.9" />
+        </>
       )}
-      
-      {/* Authentic Classic Black Bat Emblem Silhouette */}
-      <path 
-        d="M 250 90
-           C 246 90, 241 78, 236 68
-           C 232 76, 225 95, 225 95
-           C 198 118, 138 100, 102 78
-           C 70 104, 38 132, 42 162
-           C 48 185, 78 208, 104 208
-           C 120 208, 138 196, 148 180
-           C 160 196, 180 208, 196 208
-           C 208 208, 214 194, 218 180
-           C 226 195, 244 225, 250 242
-           C 256 225, 274 195, 282 180
-           C 286 194, 292 208, 304 208
-           C 320 208, 340 196, 352 180
-           C 362 196, 380 208, 396 208
-           C 422 208, 452 185, 458 162
-           C 462 132, 430 104, 398 78
-           C 362 100, 302 118, 275 95
-           C 275 95, 268 76, 264 68
-           C 259 78, 254 90, 250 90 Z"
+      <path
+        d="M600 116 C579 150 560 202 547 252 C480 249 397 211 314 165 C358 231 342 304 331 349 C318 403 282 448 240 451 C206 454 177 434 160 408 C165 495 225 577 344 606 C313 557 301 519 313 484 C329 438 380 421 422 448 C474 481 520 540 554 612 L600 686 L646 612 C680 540 726 481 778 448 C820 421 871 438 887 484 C899 519 887 557 856 606 C975 577 1035 495 1040 408 C1023 434 994 454 960 451 C918 448 882 403 869 349 C858 304 842 231 886 165 C803 211 720 249 653 252 C640 202 621 150 600 116 Z"
         fill={batColor}
       />
     </svg>
   );
 }
-
