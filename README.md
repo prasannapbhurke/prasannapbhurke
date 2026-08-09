@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- 1. GOTHAM BATMAN HEADER BANNER -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1A1B27&height=240&section=header&text=PRASANNA%20BHURKE&fontSize=42&fontColor=FFD700&fontAlignY=38&desc=Senior%20Software%20Engineer%20%7C%20Batcave%20AI%20%26%20Systems%20Architect&descSize=18&descAlignY=62&descAlign=50" width="100%" alt="Batcave Header Banner"/>
+<img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/main/assets/gotham-header.svg" width="100%" alt="Batcave Header Banner"/>
 
 <br/>
 
@@ -686,6 +686,6 @@ open_to:
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=1A1B27&height=120&section=footer" width="100%" alt="Batcave Footer Banner"/>
+<img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/main/assets/gotham-footer.svg" width="100%" alt="Batcave Footer Banner"/>
 
 </div>
