@@ -75,6 +75,30 @@ export default function ThreeDSkillCube() {
     isDraggingRef.current = false;
   };
 
+  const handleTouchStart = (e) => {
+    if (e.touches.length > 0) {
+      isDraggingRef.current = true;
+      lastMouseRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDraggingRef.current || e.touches.length === 0) return;
+    const dx = e.touches[0].clientX - lastMouseRef.current.x;
+    const dy = e.touches[0].clientY - lastMouseRef.current.y;
+
+    setRot((prev) => ({
+      x: prev.x - dy * 0.5,
+      y: prev.y + dx * 0.5
+    }));
+
+    lastMouseRef.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+  };
+
+  const handleTouchEnd = () => {
+    isDraggingRef.current = false;
+  };
+
   const spinToFace = (faceName, targetRot) => {
     sound.playClick();
     setActiveFace(faceName);
@@ -89,18 +113,21 @@ export default function ThreeDSkillCube() {
           <Box size={16} />
           <span>Interactive 3D Rubik's Skill Cube</span>
         </div>
-        <span className="text-slate-400">Click & Drag to rotate 3D cube 360°</span>
+        <span className="text-slate-400">Click & Drag (or Touch) to rotate 3D cube 360°</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
         
         {/* 3D Cube Viewport */}
         <div
-          className="flex justify-center items-center h-[300px] perspective-1000 cursor-grab active:cursor-grabbing select-none"
+          className="flex justify-center items-center h-[300px] perspective-1000 cursor-grab active:cursor-grabbing select-none touch-none"
           onMouseDown={handleMouseDown}
           onMouseMove={handleMouseMove}
           onMouseUp={handleMouseUp}
           onMouseLeave={handleMouseUp}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
         >
           <div
             className="relative w-[220px] h-[220px] transform-style-3d transition-transform duration-100 ease-out"

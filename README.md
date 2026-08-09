@@ -1,35 +1,35 @@
 <div align="center">
 
-<!-- 1. ANIMATED HEADER SECTION -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=7000ff&height=240&section=header&text=PRASANNA%20BHURKE&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Senior%20Software%20Engineer%20%7C%20AI/ML%20Specialist&descSize=18&descAlignY=62&descAlign=50" width="100%" alt="Header Banner"/>
+<!-- 1. GOTHAM BATMAN HEADER BANNER -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=11111b&height=260&section=header&text=PRASANNA%20BHURKE&fontSize=42&fontColor=FFD700&fontAlignY=36&desc=Senior%20Software%20Engineer%20%7C%20Batcave%20AI%20%26%20Systems%20Architect&descSize=17&descAlignY=62&descAlign=50" width="100%" alt="Batcave Header Banner"/>
 
 <br/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9D4EDD&center=true&vCenter=true&width=650&lines=Senior+Software+Engineer+%7C+AI%2FML+Specialist;NLP+%26+Predictive+Machine+Learning;Full+Stack+Systems+Architect;Open+Source+Contributor+%26+Tech+Innovator" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=EAB308&center=true&vCenter=true&width=700&lines=Senior+Software+Engineer+%7C+AI%2FML+Specialist;Batcave+Mainframe+%26+Systems+Architect;NLP+%26+Predictive+Machine+Learning;Full+Stack+Engineering+%7C+C%2B%2B+%26+Python" alt="Gotham Typing SVG" />
 </a>
 
 <br/><br/>
 
-<!-- Academic & Location Badges -->
+<!-- Academic, Location & Gotham Badges -->
 <a href="#">
-  <img src="https://img.shields.io/badge/Degree-B.Tech%20in%20Computer%20Science%20%26%20Engineering-7000FF?style=for-the-badge&logo=academicons&logoColor=white" alt="Academic Badge"/>
+  <img src="https://img.shields.io/badge/Degree-B.Tech%20in%20Computer%20Science%20%26%20Engineering-EAB308?style=for-the-badge&logo=academicons&logoColor=black" alt="Academic Badge"/>
 </a>
 <a href="#">
-  <img src="https://img.shields.io/badge/Location-India%20%7C%20Global%20Remote-4B0082?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location Badge"/>
+  <img src="https://img.shields.io/badge/Location-India%20%7C%20Global%20Remote-B45309?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location Badge"/>
 </a>
 
 <br/><br/>
 
 <!-- Portfolio, Socials & GitHub Badges -->
 <a href="https://prasannapbhurke.github.io/prasannapbhurke/">
-  <img src="https://img.shields.io/badge/Portfolio-Live%20Site-8A2BE2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
+  <img src="https://img.shields.io/badge/Portfolio-Live%20Batcave%20Node-D97706?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
 </a>
 <a href="https://www.linkedin.com/in/prasanna-bhurke-25a10931a">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 <a href="mailto:prasannapbhurke@gmail.com">
-  <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  <img src="https://img.shields.io/badge/Email-Bat--Signal%20Direct-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
 </a>
 <a href="https://github.com/prasannapbhurke">
   <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
@@ -38,20 +38,51 @@
 <br/><br/>
 
 <!-- Profile Stats Badges -->
-<img src="https://komarev.com/ghpvc/?username=prasannapbhurke&color=7000ff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
+<img src="https://komarev.com/ghpvc/?username=prasannapbhurke&color=eab308&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
 <a href="https://github.com/prasannapbhurke?tab=followers">
-  <img src="https://img.shields.io/github/followers/prasannapbhurke?label=Followers&logo=github&style=for-the-badge&color=8A2BE2&labelColor=1A1B27" alt="Followers"/>
+  <img src="https://img.shields.io/github/followers/prasannapbhurke?label=Followers&logo=github&style=for-the-badge&color=D97706&labelColor=1A1B27" alt="Followers"/>
 </a>
 <a href="https://github.com/prasannapbhurke?tab=repositories">
-  <img src="https://img.shields.io/github/stars/prasannapbhurke?label=Stars&logo=github&style=for-the-badge&color=6D28D9&labelColor=1A1B27" alt="Stars"/>
+  <img src="https://img.shields.io/github/stars/prasannapbhurke?label=Stars&logo=github&style=for-the-badge&color=B45309&labelColor=1A1B27" alt="Stars"/>
 </a>
+
+<br/><br/>
+
+<!-- QUICK NAVIGATION JUMP BAR -->
+<p align="center">
+  <a href="#-quick-engineer-snapshot--dossier"><b>⚡ Quick Snapshot</b></a> •
+  <a href="#-about-me--gotham-rd-node"><b>🦇 About Me</b></a> •
+  <a href="#-engineering-philosophy--core-principles"><b>📐 Philosophy</b></a> •
+  <a href="#-tech-stack--ecosystem"><b>🛠️ Tech Stack</b></a> •
+  <a href="#-software-architecture-competency-matrix"><b>🏛️ Architecture</b></a> •
+  <a href="#-system-design--scalability-matrix"><b>📡 System Design</b></a> •
+  <a href="#-featured-engineering-projects"><b>🚀 Projects</b></a>
+</p>
 
 </div>
 
 ---
 
-<!-- NEW SECTION 1 — QUICK ENGINEER SNAPSHOT -->
-## ⚡ Quick Engineer Snapshot
+<!-- BATCAVE ASCII MAINFRAME HEADER -->
+```text
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│                                                                                        │
+│   🦇 WAYNE ENTERPRISES OPEN-SOURCE R&D MAINFRAME                                       │
+│   STATUS: OPERATIONAL | LEVEL: SENIOR SOFTWARE ENGINEER & AI ARCHITECT                 │
+│                                                                                        │
+│           _==/  i     i  \==_                                                          │
+│         /XX/    |     |    \XX\                                                        │
+│        /XX/     |     |     \XX\     "Security, Scalability & Simplicity by Design"   │
+│       /XX/______|_____|______\XX\                                                      │
+│      |XXXXXXXXXXXXXXXXXXXXXXXXXXX|                                                     │
+│                                                                                        │
+└────────────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+<!-- 1. QUICK ENGINEER SNAPSHOT & DOSSIER -->
+## ⚡ Quick Engineer Snapshot & Dossier
 
 <div align="center">
 
@@ -66,16 +97,16 @@
 | **Open To** | Full-Time Senior Software / AI Engineer Roles & Technical Consulting |
 | **Time Zone** | IST (UTC +5:30) — *Flexible for Global Distributed Teams* |
 | **Availability** | **Immediate / 30 Days Notice** |
-| **Direct Contact** | [Email Prasanna](mailto:prasannapbhurke@gmail.com) \| [LinkedIn Profile](https://www.linkedin.com/in/prasanna-bhurke-25a10931a) \| [Live Portfolio](https://prasannapbhurke.github.io/prasannapbhurke/) |
+| **Direct Contact** | [Email Prasanna](mailto:prasannapbhurke@gmail.com) \| [LinkedIn Profile](https://www.linkedin.com/in/prasanna-bhurke-25a10931a) \| [Live Batcave Portfolio](https://prasannapbhurke.github.io/prasannapbhurke/) |
 
 </div>
 
 ---
 
 <!-- 2. ABOUT SECTION -->
-## 👨‍💻 About Me
+## 🦇 About Me & Gotham R&D Node
 
-Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track record of engineering scalable backend services, high-precision NLP pipelines, and interactive 3D WebGL user interfaces. I bridge rigorous computer science fundamentals with modern cloud architecture to deliver resilient, production-grade applications.
+Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track record of engineering scalable backend microservices, high-precision NLP threat classification pipelines, and interactive 3D WebGL user interfaces. I bridge rigorous computer science fundamentals with modern cloud architecture to deliver resilient, production-grade applications.
 
 - ⚙️ **Software Engineering Discipline**: Designing modular, maintainable microservices, RESTful APIs, and cache-friendly database query layers.
 - 🧠 **AI/ML & NLP Engineering**: Developing real-time text classification models (SMS/Email threat detection), TF-IDF feature pipelines, and model evaluation metrics.
@@ -85,7 +116,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
-<!-- NEW SECTION 2 — ENGINEERING PHILOSOPHY -->
+<!-- 3. ENGINEERING PHILOSOPHY -->
 ## 📐 Engineering Philosophy & Core Principles
 
 ```text
@@ -97,7 +128,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-- 🟢 **Clean Code & SOLID Design**: Adhering strictly to Single Responsibility, Open/Closed, and Dependency Inversion principles to keep codebases refactor-ready.
+- 🟡 **Clean Code & SOLID Design**: Adhering strictly to Single Responsibility, Open/Closed, and Dependency Inversion principles to keep codebases refactor-ready.
 - 🔄 **DRY (Don't Repeat Yourself)**: Abstracting reusable helper modules and shared utility primitives to eliminate logic duplication.
 - ⚡ **KISS & YAGNI**: Avoiding premature over-engineering; building lean, performant solutions that address immediate requirements while accommodating future extensions.
 - 🧪 **Testability & Quality First**: Writing deterministic code structures designed for automated unit tests, integration tests, and mock isolation.
@@ -106,7 +137,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
-<!-- 3. TECH STACK SECTION -->
+<!-- 4. TECH STACK SECTION -->
 ## 🛠️ Tech Stack & Ecosystem
 
 <div align="center">
@@ -122,7 +153,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"/>
 </p>
 
-### Frontend
+### Frontend & WebGL
 <p align="center">
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
   <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
@@ -163,7 +194,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
-<!-- NEW SECTION 3 — SOFTWARE ARCHITECTURE EXPERTISE -->
+<!-- 5. SOFTWARE ARCHITECTURE EXPERTISE -->
 ## 🏛️ Software Architecture Competency Matrix
 
 | Architecture Pattern | Mastery Level | Core Technologies | Implementation Focus |
@@ -179,7 +210,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
-<!-- NEW SECTION 4 — SYSTEM DESIGN KNOWLEDGE -->
+<!-- 6. SYSTEM DESIGN KNOWLEDGE -->
 ## 📡 System Design & Scalability Matrix
 
 | Component / Strategy | Proficiency | Technical Application & Trade-off Analysis |
@@ -195,7 +226,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
-<!-- NEW SECTION 5 — SECURITY ENGINEERING -->
+<!-- 7. SECURITY ENGINEERING -->
 ## 🔒 Security Engineering & Defensive Standards
 
 <div align="center">
@@ -211,7 +242,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
-<!-- 4. AI / ML EXPERTISE SECTION -->
+<!-- 8. AI / ML EXPERTISE SECTION -->
 ## 🤖 AI / ML Technical Expertise
 
 | Domain | Proficiency | Key Architectures & Technical Details |
@@ -224,7 +255,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
-<!-- NEW SECTION 6 — NEXT-GEN AI & AGENTIC ENGINEERING -->
+<!-- 9. ADVANCED AI & AGENTIC ENGINEERING -->
 ## 🧠 Advanced AI & Agentic Systems Competency
 
 | AI Capability | Proficiency | Core Frameworks & Technologies | Engineering Application |
@@ -238,11 +269,11 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 
 ---
 
-<!-- 5. FEATURED PROJECTS SECTION -->
+<!-- 10. FEATURED PROJECTS SECTION -->
 ## 🚀 Featured Engineering Projects
 
 <details>
-<summary><b>01. Email Spam Detector Extension</b></summary>
+<summary><b>01. Email Spam Detector Extension (AI / ML & Web Extension)</b></summary>
 
 <br/>
 
@@ -270,7 +301,7 @@ Deployment   : Uvicorn ASGI Server / Containerized Docker Image
 <br/>
 
 <details>
-<summary><b>02. SMS Spam Detector App</b></summary>
+<summary><b>02. SMS Spam Detector App (NLP & Web App)</b></summary>
 
 <br/>
 
@@ -298,7 +329,7 @@ Deployment   : Streamlit Cloud / Docker container
 <br/>
 
 <details>
-<summary><b>03. Academic Student Portal</b></summary>
+<summary><b>03. Academic Student Portal (Full Stack Platform)</b></summary>
 
 <br/>
 
@@ -325,7 +356,7 @@ Security     : bcrypt hashed passwords, express-session store, parameterized que
 <br/>
 
 <details>
-<summary><b>04. Airplane Reservation System</b></summary>
+<summary><b>04. Airplane Reservation System (C++ Systems & SQL Engine)</b></summary>
 
 <br/>
 
@@ -352,7 +383,7 @@ Performance  : Instant memory index search with O(log N) lookup complexity
 <br/>
 
 <details>
-<summary><b>05. Smart Expense Tracker App</b></summary>
+<summary><b>05. Smart Expense Tracker App (Frontend & Data Visualization)</b></summary>
 
 <br/>
 
@@ -378,13 +409,13 @@ Build Time   : Sub-1s client bundle generation via Vite 8
 
 ---
 
-<!-- NEW SECTION 9 — MERMAID ARCHITECTURE -->
+<!-- 11. MERMAID ARCHITECTURE -->
 ## 🔮 System Architecture & Workflows
 
 ### Overall Platform Architecture Flow
 ```mermaid
 flowchart TD
-    Client["🌐 Client Layer (React 18 / Chrome Extension)"] -->|HTTPS / REST API| Gateway["🛡️ API Gateway / Nginx Reverse Proxy"]
+    Client["🌐 Client Layer (React 19 / Chrome Extension)"] -->|HTTPS / REST API| Gateway["🛡️ API Gateway / Nginx Reverse Proxy"]
     Gateway -->|ASGI Routing| FastAPI["⚡ Python FastAPI Microservices"]
     Gateway -->|HTTP REST| NodeEngine["🟢 Node.js / Express Server"]
     
@@ -408,11 +439,11 @@ flowchart LR
 
 ---
 
-<!-- 6. EXPERIENCE SECTION -->
-## 💼 Engineering Experience
+<!-- 12. EXPERIENCE SECTION -->
+## 💼 Engineering Experience (Gotham Mission Logs)
 
-### **Senior Software Engineer & AI Architect**
-*WayneTech Open-Source R&D Node / Independent R&D* | **2023 – Present**
+### **🦇 Senior Software Engineer & Batcave AI Architect**
+*WayneTech Open-Source R&D Node / Enterprise Engineering* | **2023 – Present**
 
 - Architected high-accuracy NLP threat classification models and browser extension backends delivering sub-50ms inference times.
 - Developed full-stack microservice applications integrating FastAPI/Node.js backends with responsive React frontends.
@@ -421,7 +452,7 @@ flowchart LR
 
 <br/>
 
-### **Tactical Algorithmic Specialist**
+### **🛡️ Tactical Algorithmic Specialist**
 *LeetCode & Competitive Coding Platforms* | **2022 – Present**
 
 - Solved 1,000+ complex algorithmic problems covering dynamic programming, graph theory, data structures, and string processing.
@@ -430,7 +461,7 @@ flowchart LR
 
 ---
 
-<!-- NEW SECTION 7 — DEVOPS MATURITY -->
+<!-- 13. DEVOPS MATURITY -->
 ## ⚙️ DevOps & Cloud Infrastructure Maturity
 
 | DevOps Capability | Maturity Level | Primary Tools | Operational Practices |
@@ -443,7 +474,7 @@ flowchart LR
 
 ---
 
-<!-- 7. ACHIEVEMENTS SECTION -->
+<!-- 14. ACHIEVEMENTS SECTION -->
 ## 🏆 Key Recognized Achievements
 
 <div align="center">
@@ -458,7 +489,7 @@ flowchart LR
 
 ---
 
-<!-- 8. CERTIFICATIONS SECTION -->
+<!-- 15. CERTIFICATIONS SECTION -->
 ## 📜 Professional Certifications
 
 <div align="center">
@@ -489,25 +520,7 @@ flowchart LR
 
 ---
 
-<!-- NEW SECTION 10 — OPEN SOURCE CONTRIBUTIONS -->
-## 🌐 Open Source Contributions & Philosophy
-
-- 🤝 **Community Code Reviews**: Actively participating in open-source discussions, reviewing Pull Requests, and filing detailed bug reports with reproducible snippets.
-- 📖 **Technical Documentation**: Writing comprehensive READMEs, OpenAPI specs, and deployment guides for open-source repositories.
-- 💡 **Maintainer Mindset**: Prioritizing backward compatibility, strict semver versioning, and clean commit hygiene across all public repositories.
-
----
-
-<!-- NEW SECTION 11 — RESEARCH & PUBLICATIONS -->
-## 🔬 Research Interests & Focus
-
-- 🧠 **NLP Feature Extraction**: Researching low-latency n-gram vectorization techniques for resource-constrained client environments.
-- 🛡️ **Defensive Machine Learning**: Investigating adversarial robustness in text classifiers against homoglyph obfuscation and character swaps.
-- 🤖 **Agentic Reasoning & MCP**: Exploring standardized protocol interfaces for connecting local LLMs safely to external application tools.
-
----
-
-<!-- 9. CODING PROFILES SECTION -->
+<!-- 16. COMPETITIVE CODING PROFILES -->
 ## 🧩 Competitive Coding Profiles
 
 <div align="center">
@@ -532,7 +545,7 @@ flowchart LR
 
 ---
 
-<!-- NEW SECTION 12 — LEARNING ROADMAP -->
+<!-- 17. ENGINEERING LEARNING ROADMAP -->
 ## 🗺️ Engineering Learning Roadmap
 
 <div align="center">
@@ -550,7 +563,7 @@ flowchart LR
 
 ---
 
-<!-- NEW SECTION 13 — ENGINEERING DASHBOARD & FACTS -->
+<!-- 18. ENGINEERING DASHBOARD & FACTS -->
 ## 📊 Engineering Dashboard & Facts
 
 <div align="center">
@@ -558,7 +571,7 @@ flowchart LR
 | Metric / Fact | Value / Preference |
 | :--- | :--- |
 | **Years Coding** | **4+ Years Active Software Engineering** |
-| **Primary Code Editor** | VS Code (Dark+ & Cyberpunk themes) |
+| **Primary Code Editor** | VS Code (Dark+ & Gotham themes) |
 | **Primary Operating System** | Linux (Ubuntu / WSL2) & Windows 11 |
 | **Favorite Language** | Python 3.12 & C++17 |
 | **Architecture Preference** | Clean Architecture / Decoupled Microservices |
@@ -569,58 +582,25 @@ flowchart LR
 
 ---
 
-<!-- 10. GITHUB ANALYTICS SECTION -->
-## 📊 GitHub Analytics & Performance
+<!-- 19. GITHUB ANALYTICS & SNAKE -->
+## 📊 GitHub Analytics & Activity
 
 <div align="center">
 
 <a href="https://github.com/prasannapbhurke">
-  <img src="https://github-stats-extended.vercel.app/api?username=prasannapbhurke&show_icons=true&theme=purple&count_private=true" alt="GitHub Stats" width="49%"/>
+  <img src="https://github-stats-extended.vercel.app/api?username=prasannapbhurke&show_icons=true&theme=dark&count_private=true" alt="GitHub Stats" width="49%"/>
 </a>
 <a href="https://github.com/prasannapbhurke">
-  <img src="https://streak-stats.demolab.com/?user=prasannapbhurke&theme=purple" alt="GitHub Streak Stats" width="49%"/>
+  <img src="https://streak-stats.demolab.com/?user=prasannapbhurke&theme=dark" alt="GitHub Streak Stats" width="49%"/>
 </a>
 
 <br/><br/>
 
 <a href="https://github.com/prasannapbhurke">
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=prasannapbhurke&layout=compact&theme=purple" alt="Top Languages" width="60%"/>
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=prasannapbhurke&layout=compact&theme=dark" alt="Top Languages" width="60%"/>
 </a>
 
-</div>
-
----
-
-<!-- 11. GITHUB TROPHIES SECTION -->
-## 🏅 GitHub Trophies Showcase
-
-<div align="center">
-
-<a href="https://github.com/prasannapbhurke">
-  <img src="https://github-profile-trophy-zeta.vercel.app/?username=prasannapbhurke&theme=purple&column=7&margin-w=15&margin-h=15&no-bg=true" alt="GitHub Trophies" width="100%"/>
-</a>
-
-</div>
-
----
-
-<!-- 12. CONTRIBUTION ACTIVITY SECTION -->
-## 📈 Contribution Activity Graph
-
-<div align="center">
-
-<a href="https://github.com/prasannapbhurke">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=prasannapbhurke&theme=react-dark&bg_color=0D1117&color=7000FF&line=9D4EDD&point=8A2BE2&area=true" alt="Activity Graph" width="100%"/>
-</a>
-
-</div>
-
----
-
-<!-- 13. CONTRIBUTION SNAKE SECTION -->
-## 🐍 Contribution Snake Animation
-
-<div align="center">
+<br/><br/>
 
 <img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/output/github-contribution-grid-snake-dark.svg" alt="Snake Animation" width="100%"/>
 
@@ -628,7 +608,7 @@ flowchart LR
 
 ---
 
-<!-- 14. CURRENT FOCUS SECTION -->
+<!-- 20. CURRENT FOCUS & HIRING CALL TO ACTION -->
 ## 🎯 Current Focus & Technical Roadmap
 
 ```yaml
@@ -653,10 +633,7 @@ open_to:
   - Open Source Collaborations
 ```
 
----
-
-<!-- NEW SECTION 17 — HIRING CALL TO ACTION -->
-## 💼 Hiring & Technical Collaboration Call To Action
+<br/>
 
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
@@ -675,8 +652,8 @@ open_to:
 
 ---
 
-<!-- 15. CONNECT SECTION -->
-## 🌐 Connect & Collaborate
+<!-- 21. CONNECT & BAT-SIGNAL DIRECT -->
+## 🌐 Connect & Bat-Signal Direct Contact
 
 <div align="center">
 
@@ -693,14 +670,14 @@ open_to:
 </a>
 &nbsp;&nbsp;
 <a href="https://prasannapbhurke.github.io/prasannapbhurke/">
-  <img src="https://img.shields.io/badge/Portfolio-8A2BE2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
+  <img src="https://img.shields.io/badge/Portfolio-Live%20Batcave-D97706?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
 </a>
 
 </div>
 
 ---
 
-<!-- 16. FOOTER SECTION -->
+<!-- 22. FOOTER SECTION -->
 <div align="center">
 
 <br/>
@@ -709,6 +686,6 @@ open_to:
 
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=7000FF&height=120&section=footer" width="100%" alt="Footer Banner"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=11111b&height=120&section=footer" width="100%" alt="Batcave Footer Banner"/>
 
 </div>
