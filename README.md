@@ -63,18 +63,14 @@
 
 ---
 
-<!-- BATCAVE ASCII MAINFRAME HEADER -->
+<!-- BATCAVE TERMINAL MAINFRAME HEADER -->
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │                                                                                        │
 │   🦇 WAYNE ENTERPRISES OPEN-SOURCE R&D MAINFRAME                                       │
-│   STATUS: OPERATIONAL | LEVEL: SENIOR SOFTWARE ENGINEER & AI ARCHITECT                 │
+│   STATUS: OPERATIONAL  |  ROLE: SENIOR SOFTWARE ENGINEER & AI ARCHITECT                │
 │                                                                                        │
-│           _==/  i     i  \==_                                                          │
-│         /XX/    |     |    \XX\                                                        │
-│        /XX/     |     |     \XX\     "Security, Scalability & Simplicity by Design"   │
-│       /XX/______|_____|______\XX\                                                      │
-│      |XXXXXXXXXXXXXXXXXXXXXXXXXXX|                                                     │
+│   "Security, Scalability & Simplicity by Design"                                       │
 │                                                                                        │
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
