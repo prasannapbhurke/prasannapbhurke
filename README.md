@@ -369,7 +369,16 @@ flowchart TD
 
 ---
 
-<!-- 10. CONNECT & DIRECT CONTACT -->
+<!-- 10. CONTRIBUTION SNAKE -->
+## 🐍 Contribution Snake Animation
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/output/github-contribution-grid-snake-dark.svg" alt="Animated GitHub contribution snake" width="100%"/>
+</div>
+
+---
+
+<!-- 11. CONNECT & DIRECT CONTACT -->
 ## 🌐 Connect & Direct Contact
 
 <div align="center">
@@ -394,7 +403,7 @@ flowchart TD
 
 ---
 
-<!-- 11. FOOTER SECTION -->
+<!-- 12. FOOTER SECTION -->
 <div align="center">
 
 <br/>
