@@ -181,7 +181,7 @@ export default function Hero({ onOpenTerminal, onOpenContact }) {
           {/* Action CTAs */}
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
             <a 
-              href="#ai-playground"
+              href="#projects"
               onMouseEnter={() => sound.playHover()}
               onClick={() => sound.playClick()}
               className={`px-6 py-3.5 text-xs sm:text-sm rounded-xl font-bold font-mono shadow-xl transition-all flex items-center gap-2 ${
@@ -191,12 +191,12 @@ export default function Hero({ onOpenTerminal, onOpenContact }) {
               }`}
             >
               <Sparkles size={18} />
-              <span>Launch AI Playground</span>
+              <span>View Flagship Work</span>
               <ArrowRight size={16} />
             </a>
 
             <a 
-              href="#projects"
+              href="#ai-playground"
               onMouseEnter={() => sound.playHover()}
               onClick={() => sound.playClick()}
               className={`px-6 py-3.5 text-xs sm:text-sm rounded-xl font-mono font-bold border transition-all flex items-center gap-2 shadow-lg ${
@@ -206,7 +206,7 @@ export default function Hero({ onOpenTerminal, onOpenContact }) {
               }`}
             >
               <Code size={18} className={isBatman ? 'text-yellow-400' : 'text-purple-400'} />
-              <span>Explore Projects</span>
+              <span>Explore Interactive Lab</span>
             </a>
 
             <button

@@ -83,14 +83,14 @@ export default function Experience() {
       ]
     : [
         {
-          title: 'Software Engineer & AI Developer',
+          title: 'AI / ML & Web Engineering Projects',
           company: 'Open Source & Independent Engineering',
           period: '2023 – Present',
-          description: 'Architecting machine learning classification pipelines, browser extensions, and full-stack web applications.',
+          description: 'Building machine learning classification pipelines, browser extensions, and full-stack web applications with a focus on practical outcomes.',
           highlights: [
             'Trained and deployed NLP spam classification models achieving 98.2% accuracy',
             'Engineered real-time Chrome Extension API for browser-based text threat scanning',
-            'Constructed ACID-compliant relational DBMS architectures for enterprise management systems'
+            'Designed relational data models and API workflows for full-stack applications'
           ],
           skills: ['Python', 'Scikit-Learn', 'FastAPI', 'JavaScript', 'React', 'MySQL']
         },
@@ -99,27 +99,27 @@ export default function Experience() {
           company: 'LeetCode / Coding Platforms',
           period: '2022 – Present',
           periodDetail: '1,000+ Algorithmic Challenges Solved',
-          title: '💻 Senior Software Engineer & AI Architect',
-          company: 'Enterprise AI & Web Innovations',
+          title: 'AI & Full-Stack Portfolio Projects',
+          company: 'Independent Project Work',
           period: '2023 – Present',
-          periodDetail: '4+ Years Total Software Engineering Experience',
-          description: 'Designing end-to-end Machine Learning NLP systems, high-performance web applications, and scalable microservices backends.',
+          periodDetail: 'NLP, React, FastAPI, and data-focused applications',
+          description: 'Developing end-to-end NLP and full-stack projects that demonstrate model evaluation, interface design, and service integration.',
           highlights: [
             'Engineered real-time Email & SMS spam classification pipelines using Scikit-Learn, NLTK, and FastAPI',
             'Developed full-stack web platforms and interactive 3D WebGL user interfaces in React 19 & Vite 8',
-            'Optimized database queries and API response times by 40%+ with structured caching and clean architecture'
+            'Applied structured data flows and clean API design across project implementations'
           ],
           skills: ['Python', 'FastAPI', 'React', 'Vite', 'Machine Learning', 'Docker', 'MySQL']
         },
         {
-          title: '🚀 Software Engineer (Backend & Systems)',
-          company: 'Core Systems & Cloud Solutions',
+          title: 'Systems, Algorithms & Data Projects',
+          company: 'Academic & Independent Project Work',
           period: '2021 – 2023',
-          description: 'Built high-throughput backend services, C++ flight reservation systems, and academic enterprise portals.',
+          description: 'Built C++ systems, SQL-backed applications, and academic portals to apply core data structures, database, and backend concepts.',
           highlights: [
-            'Built multi-threaded C++ systems software handling relational data structures and file I/O persistence',
-            'Designed microservices architecture using Node.js, Express, and MySQL with strict REST standards',
-            'Automated CI/CD pipelines, unit testing suites, and containerized deployment workflows'
+            'Built C++ systems projects handling structured data and file I/O persistence',
+            'Designed Node.js, Express, and MySQL application workflows using REST conventions',
+            'Used Git and repeatable build workflows across project repositories'
           ],
           skills: ['C++', 'SQL', 'Node.js', 'Express', 'JavaScript', 'Git', 'Linux']
         }

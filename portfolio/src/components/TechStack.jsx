@@ -22,43 +22,43 @@ export default function TechStack() {
       title: isBatman ? '🦇 Batcave Core Languages' : 'Programming Languages',
       icon: isBatman ? <BatLogoSvg className="w-5 h-4" goldBackplate={true} /> : <Code size={20} className="text-purple-400" />,
       skills: [
-        { name: 'Python', level: '95%' },
-        { name: 'JavaScript / TypeScript', level: '90%' },
-        { name: 'C++', level: '85%' },
-        { name: 'SQL', level: '90%' },
-        { name: 'HTML5 & CSS3', level: '95%' }
+        { name: 'Python', level: 'Primary project stack' },
+        { name: 'JavaScript / TypeScript', level: 'Primary project stack' },
+        { name: 'C++', level: 'Systems project work' },
+        { name: 'SQL', level: 'Data-backed applications' },
+        { name: 'HTML5 & CSS3', level: 'Frontend foundations' }
       ]
     },
     {
       title: isBatman ? '🦇 Gotham Threat Predictive AI' : 'AI / ML & Data Science',
       icon: isBatman ? <BatLogoSvg className="w-5 h-4" goldBackplate={true} /> : <Cpu size={20} className="text-purple-400" />,
       skills: [
-        { name: 'Scikit-Learn', level: '92%' },
-        { name: 'NLTK / NLP Text Vectorization', level: '90%' },
-        { name: 'Pandas & NumPy', level: '92%' },
-        { name: 'Streamlit', level: '88%' },
-        { name: 'Supervised Learning (Naive Bayes, SVM)', level: '95%' }
+        { name: 'Scikit-Learn', level: 'Classifier projects' },
+        { name: 'NLTK / NLP Text Vectorization', level: 'NLP processing' },
+        { name: 'Pandas & NumPy', level: 'Data workflows' },
+        { name: 'Streamlit', level: 'Interactive ML demos' },
+        { name: 'Supervised Learning (Naive Bayes, SVM)', level: 'Model evaluation' }
       ]
     },
     {
       title: isBatman ? '🦇 Tactical HUD & Web Extensions' : 'Frontend & Web Extensions',
       icon: isBatman ? <BatLogoSvg className="w-5 h-4" goldBackplate={true} /> : <Terminal size={20} className="text-purple-400" />,
       skills: [
-        { name: 'React.js', level: '90%' },
-        { name: 'Chrome Extension API', level: '85%' },
-        { name: 'Tailwind CSS / Bootstrap', level: '92%' },
-        { name: 'DOM Scripting & State Management', level: '90%' }
+        { name: 'React.js', level: 'Portfolio and web apps' },
+        { name: 'Chrome Extension API', level: 'Threat-scanning project' },
+        { name: 'Tailwind CSS / Bootstrap', level: 'Responsive interfaces' },
+        { name: 'DOM Scripting & State Management', level: 'Interactive UI work' }
       ]
     },
     {
       title: isBatman ? '🦇 WayneTech Microservices Cloud' : 'Backend & Databases',
       icon: isBatman ? <BatLogoSvg className="w-5 h-4" goldBackplate={true} /> : <Database size={20} className="text-purple-400" />,
       skills: [
-        { name: 'FastAPI / Flask', level: '92%' },
-        { name: 'Node.js / Express', level: '88%' },
-        { name: 'MySQL & SQLite', level: '90%' },
-        { name: 'MongoDB', level: '85%' },
-        { name: 'RESTful Microservices', level: '92%' }
+        { name: 'FastAPI / Flask', level: 'ML and API projects' },
+        { name: 'Node.js / Express', level: 'Full-stack applications' },
+        { name: 'MySQL & SQLite', level: 'Relational data projects' },
+        { name: 'MongoDB', level: 'Document data exposure' },
+        { name: 'RESTful APIs', level: 'Service integration' }
       ]
     }
   ];
@@ -114,21 +114,9 @@ export default function TechStack() {
                   <div key={sIdx} className="space-y-1.5">
                     <div className="flex justify-between text-xs sm:text-sm font-mono">
                       <span className="text-slate-200 font-medium">{skill.name}</span>
-                      <span className={isBatman ? 'text-yellow-400 font-bold' : 'text-purple-300 font-bold'}>
+                      <span className={isBatman ? 'text-yellow-400 font-medium' : 'text-purple-300 font-medium'}>
                         {skill.level}
                       </span>
-                    </div>
-                    
-                    {/* Progress Bar Container */}
-                    <div className="h-2 w-full bg-slate-900 rounded-full overflow-hidden border border-slate-800">
-                      <div 
-                        className={`h-full rounded-full transition-all duration-1000 ${
-                          isBatman
-                            ? 'bg-gradient-to-r from-yellow-600 via-yellow-400 to-amber-300 shadow-md shadow-yellow-500/50'
-                            : 'bg-gradient-to-r from-purple-600 via-indigo-500 to-purple-400 shadow-md shadow-purple-600/50'
-                        }`}
-                        style={{ width: skill.level }}
-                      />
                     </div>
                   </div>
                 ))}

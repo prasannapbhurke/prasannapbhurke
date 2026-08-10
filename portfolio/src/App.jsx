@@ -105,11 +105,11 @@ function AppContent() {
         onOpenTerminal={() => setTerminalOpen(true)}
         onOpenContact={scrollToContact}
       />
-      <AIPlayground />
       <Projects />
-      <TechStack />
       <Experience />
       <Certificates />
+      <TechStack />
+      <AIPlayground />
       <HallOfCases active={theme === 'batman'} />
       <Contact />
       <Footer />
