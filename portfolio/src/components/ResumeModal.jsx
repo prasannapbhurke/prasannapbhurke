@@ -128,7 +128,7 @@ EDUCATION
 
         {/* Modal Navigation Tabs */}
         <div className="flex border-b border-slate-800 bg-slate-950/60 px-6 gap-4 text-xs font-mono overflow-x-auto">
-          {['summary', 'skills', 'experience', 'education'].map((tab) => (
+          {['summary', 'skills', 'certifications', 'experience', 'education'].map((tab) => (
             <button
               key={tab}
               onClick={() => { sound.playClick(); setActiveTab(tab); }}
@@ -157,7 +157,7 @@ EDUCATION
                   Executive Summary
                 </h3>
                 <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                  Senior Software Engineer and Machine Learning Specialist with expertise in building NLP classification models, real-time Chrome Extensions, and scalable full-stack web architectures. Proven track record in training high-accuracy supervised ML models (98.2% accuracy) and solving over 1,000 algorithmic ciphers.
+                  Senior Software Engineer and AI/ML Specialist certified in Oracle Agentic AI and AWS Cloud, with an EduSkills Android Developer Virtual Internship. Experienced in building NLP classification models, autonomous Agentic AI loops, native Android Studio Java applications, and high-concurrency C++ systems engines.
                 </p>
               </div>
 
@@ -184,7 +184,7 @@ EDUCATION
                 <div className="space-y-3">
                   <h4 className="font-mono text-xs font-bold text-purple-300 uppercase tracking-widest">Programming Languages</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Python', 'JavaScript', 'TypeScript', 'C++', 'SQL', 'HTML5', 'CSS3'].map((s, idx) => (
+                    {['Python', 'C++', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'].map((s, idx) => (
                       <span key={idx} className="px-3 py-1.5 rounded-lg bg-slate-900 border border-purple-500/30 text-xs font-mono text-slate-200">
                         {s}
                       </span>
@@ -193,9 +193,9 @@ EDUCATION
                 </div>
 
                 <div className="space-y-3">
-                  <h4 className="font-mono text-xs font-bold text-purple-300 uppercase tracking-widest">AI / Machine Learning</h4>
+                  <h4 className="font-mono text-xs font-bold text-purple-300 uppercase tracking-widest">AI, Mobile & Systems</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Scikit-Learn', 'NLTK', 'Pandas', 'NumPy', 'Streamlit', 'Naive Bayes', 'SVM (RBF/Linear)'].map((s, idx) => (
+                    {['Oracle Agentic AI', 'Scikit-Learn', 'NLTK', 'Android Studio', 'Mistral AI', 'Quantum Computing', 'Blender 3D'].map((s, idx) => (
                       <span key={idx} className="px-3 py-1.5 rounded-lg bg-slate-900 border border-purple-500/30 text-xs font-mono text-slate-200">
                         {s}
                       </span>
@@ -206,28 +206,53 @@ EDUCATION
             </div>
           )}
 
+          {activeTab === 'certifications' && (
+            <div className="space-y-4 animate-fadeIn font-mono text-xs">
+              {[
+                { title: 'Oracle Certified Agentic AI Specialist', issuer: 'Oracle', badge: 'bg-red-950/80 border-red-500/40 text-red-300' },
+                { title: 'AWS Cloud Certification', issuer: 'Amazon Web Services', badge: 'bg-amber-950/80 border-amber-500/40 text-amber-300' },
+                { title: 'Android Developer Virtual Internship', issuer: 'AICTE / EduSkills', badge: 'bg-emerald-950/80 border-emerald-500/40 text-emerald-300' },
+                { title: 'Quantum Computing Virtual Internship', issuer: 'Quantum Computers R&D', badge: 'bg-sky-950/80 border-sky-500/40 text-sky-300' },
+                { title: 'Comprehensive 48-Hour C++ & DS/OOP Mastery', issuer: 'Technical Training', badge: 'bg-blue-950/80 border-blue-500/40 text-blue-300' },
+                { title: 'Python Data Structures & Algorithms', issuer: 'Python Institute', badge: 'bg-purple-950/80 border-purple-500/40 text-purple-300' },
+                { title: 'Java 25-Hour OOP & Android Studio Development', issuer: 'Mobile & Software R&D', badge: 'bg-yellow-950/80 border-yellow-500/40 text-yellow-300' },
+              ].map((cert, idx) => (
+                <div key={idx} className={`p-3.5 rounded-xl border flex items-center justify-between ${cert.badge}`}>
+                  <div className="flex items-center gap-2.5">
+                    <CheckCircle2 size={16} className="shrink-0" />
+                    <div>
+                      <h4 className="font-bold text-white text-sm">{cert.title}</h4>
+                      <span className="text-[11px] opacity-80">{cert.issuer}</span>
+                    </div>
+                  </div>
+                  <span className="px-2.5 py-1 rounded bg-black/40 text-[10px] uppercase font-bold">Verified</span>
+                </div>
+              ))}
+            </div>
+          )}
+
           {activeTab === 'experience' && (
             <div className="space-y-6 animate-fadeIn">
               <div className="space-y-4">
                 <div className="flex items-center justify-between pb-2 border-b border-slate-800">
                   <div>
-                    <h4 className="font-bold text-white text-base">Software Engineer & AI Developer</h4>
-                    <span className="text-xs font-mono text-purple-300">Open Source & Independent R&D</span>
+                    <h4 className="font-bold text-white text-base">Senior Software Engineer & AI Architect</h4>
+                    <span className="text-xs font-mono text-purple-300">WayneTech Open-Source & AI R&D</span>
                   </div>
                   <span className="text-xs font-mono text-slate-400">2023 – Present</span>
                 </div>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Trained and deployed NLP classification models achieving 98.2% test accuracy.</span>
+                    <span>Certified in Oracle Agentic AI Specialist tools, building tool-calling agent loops.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Engineered real-time Chrome Extension API for browser-based text threat scanning.</span>
+                    <span>Completed EduSkills Android Developer Virtual Internship building native Android Studio apps.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Constructed ACID-compliant relational DBMS architectures for enterprise management systems.</span>
+                    <span>Engineered C++ 48-Hour high-performance memory engines and Python DS/Algo pipelines.</span>
                   </li>
                 </ul>
               </div>
@@ -242,8 +267,8 @@ EDUCATION
                     <GraduationCap size={24} />
                   </div>
                   <div>
-                    <h4 className="font-bold font-heading text-white text-base">Bachelor of Engineering (B.E.) in Computer Engineering</h4>
-                    <span className="text-xs font-mono text-purple-300">Comprehensive Software Engineering Curriculum</span>
+                    <h4 className="font-bold font-heading text-white text-base">Bachelor of Technology (B.Tech) in Computer Science & Engineering</h4>
+                    <span className="text-xs font-mono text-purple-300">Semesters 3, 4, 5 Academic & Technical Excellence</span>
                   </div>
                 </div>
               </div>
