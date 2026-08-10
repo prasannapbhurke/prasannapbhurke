@@ -1,35 +1,35 @@
 <div align="center">
 
-<!-- 1. GOTHAM BATMAN HEADER BANNER -->
-<img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/main/assets/gotham-header.svg" width="100%" alt="Batcave Header Banner"/>
+<!-- 1. ANIMATED HEADER BANNER -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=7000ff&height=240&section=header&text=PRASANNA%20BHURKE&fontSize=42&fontColor=ffffff&fontAlignY=38&desc=Senior%20Software%20Engineer%20%7C%20AI/ML%20Specialist&descSize=18&descAlignY=62&descAlign=50" width="100%" alt="Header Banner"/>
 
 <br/>
 
 <a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=EAB308&center=true&vCenter=true&width=750&lines=Senior+Software+Engineer+%7C+AI%2FML+Specialist;Oracle+Certified+Agentic+AI+%26+Systems+Architect;Python%2C+C%2B%2B%2C+Java+%26+Quantum+Computing;Android+Developer+%7C+Full+Stack+%26+Automation+Bots" alt="Gotham Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=9D4EDD&center=true&vCenter=true&width=750&lines=Senior+Software+Engineer+%7C+AI%2FML+Specialist;Oracle+Certified+Agentic+AI+%26+Systems+Architect;Python%2C+C%2B%2B%2C+Java+%26+Quantum+Computing;Android+Developer+%7C+Full+Stack+%26+Automation+Bots" alt="Typing SVG" />
 </a>
 
 <br/><br/>
 
-<!-- Academic, Location & Gotham Badges -->
+<!-- Academic & Location Badges -->
 <a href="#">
-  <img src="https://img.shields.io/badge/Degree-B.Tech%20in%20Computer%20Science%20%26%20Engineering-EAB308?style=for-the-badge&logo=academicons&logoColor=black" alt="Academic Badge"/>
+  <img src="https://img.shields.io/badge/Degree-B.Tech%20in%20Computer%20Science%20%26%20Engineering-7000FF?style=for-the-badge&logo=academicons&logoColor=white" alt="Academic Badge"/>
 </a>
 <a href="#">
-  <img src="https://img.shields.io/badge/Location-India%20%7C%20Global%20Remote-B45309?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location Badge"/>
+  <img src="https://img.shields.io/badge/Location-India%20%7C%20Global%20Remote-4B0082?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Location Badge"/>
 </a>
 
 <br/><br/>
 
 <!-- Portfolio, Socials & GitHub Badges -->
 <a href="https://prasannapbhurke.github.io/prasannapbhurke/">
-  <img src="https://img.shields.io/badge/Portfolio-Live%20Batcave%20Node-D97706?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
+  <img src="https://img.shields.io/badge/Portfolio-Live%20Site-8A2BE2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
 </a>
 <a href="https://www.linkedin.com/in/prasanna-bhurke-25a10931a">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
 <a href="mailto:prasannapbhurke@gmail.com">
-  <img src="https://img.shields.io/badge/Email-Bat--Signal%20Direct-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
+  <img src="https://img.shields.io/badge/Email-Contact%20Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"/>
 </a>
 <a href="https://github.com/prasannapbhurke">
   <img src="https://img.shields.io/badge/GitHub-Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
@@ -38,24 +38,24 @@
 <br/><br/>
 
 <!-- Profile Stats Badges -->
-<img src="https://komarev.com/ghpvc/?username=prasannapbhurke&color=eab308&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
+<img src="https://komarev.com/ghpvc/?username=prasannapbhurke&color=7000ff&style=for-the-badge&label=PROFILE+VIEWS" alt="Profile Views"/>
 <a href="https://github.com/prasannapbhurke?tab=followers">
-  <img src="https://img.shields.io/github/followers/prasannapbhurke?label=Followers&logo=github&style=for-the-badge&color=D97706&labelColor=1A1B27" alt="Followers"/>
+  <img src="https://img.shields.io/github/followers/prasannapbhurke?label=Followers&logo=github&style=for-the-badge&color=8A2BE2&labelColor=1A1B27" alt="Followers"/>
 </a>
 <a href="https://github.com/prasannapbhurke?tab=repositories">
-  <img src="https://img.shields.io/github/stars/prasannapbhurke?label=Stars&logo=github&style=for-the-badge&color=B45309&labelColor=1A1B27" alt="Stars"/>
+  <img src="https://img.shields.io/github/stars/prasannapbhurke?label=Stars&logo=github&style=for-the-badge&color=6D28D9&labelColor=1A1B27" alt="Stars"/>
 </a>
 
 <br/><br/>
 
 <!-- QUICK NAVIGATION JUMP BAR -->
 <p align="center">
-  <a href="#-quick-engineer-snapshot--dossier"><b>⚡ Quick Snapshot</b></a> •
-  <a href="#-about-me--gotham-rd-node"><b>🦇 About Me</b></a> •
+  <a href="#-quick-engineer-snapshot"><b>⚡ Quick Snapshot</b></a> •
+  <a href="#-about-me"><b>👨‍💻 About Me</b></a> •
   <a href="#-engineering-philosophy--core-principles"><b>📐 Philosophy</b></a> •
   <a href="#-tech-stack--ecosystem"><b>🛠️ Tech Stack</b></a> •
-  <a href="#-software-architecture-competency-matrix"><b>🏛️ Architecture</b></a> •
   <a href="#-verified-certifications--credentials"><b>📜 Certifications</b></a> •
+  <a href="#-software-architecture-competency-matrix"><b>🏛️ Architecture</b></a> •
   <a href="#-featured-engineering-projects"><b>🚀 Projects</b></a>
 </p>
 
@@ -63,11 +63,11 @@
 
 ---
 
-<!-- BATCAVE TERMINAL MAINFRAME HEADER -->
+<!-- EXECUTIVE ENGINEERING TERMINAL HEADER -->
 ```text
 ┌────────────────────────────────────────────────────────────────────────────────────────┐
 │                                                                                        │
-│   🦇 WAYNE ENTERPRISES OPEN-SOURCE R&D MAINFRAME                                       │
+│   🚀 PRASANNA BHURKE — EXECUTIVE ENGINEERING DOSSIER                                   │
 │   STATUS: OPERATIONAL  |  ROLE: SENIOR SOFTWARE ENGINEER & AI ARCHITECT                │
 │   CERTIFIED: ORACLE AGENTIC AI | AWS CLOUD | ANDROID DEVELOPER VIRTUAL INTERN          │
 │                                                                                        │
@@ -79,7 +79,7 @@
 ---
 
 <!-- 1. QUICK ENGINEER SNAPSHOT & DOSSIER -->
-## ⚡ Quick Engineer Snapshot & Dossier
+## ⚡ Quick Engineer Snapshot
 
 <div align="center">
 
@@ -94,14 +94,14 @@
 | **Open To** | Full-Time Senior Software / AI Engineer Roles & Technical Consulting |
 | **Time Zone** | IST (UTC +5:30) — *Flexible for Global Distributed Teams* |
 | **Availability** | **Immediate / 30 Days Notice** |
-| **Direct Contact** | [Email Prasanna](mailto:prasannapbhurke@gmail.com) \| [LinkedIn Profile](https://www.linkedin.com/in/prasanna-bhurke-25a10931a) \| [Live Batcave Portfolio](https://prasannapbhurke.github.io/prasannapbhurke/) |
+| **Direct Contact** | [Email Prasanna](mailto:prasannapbhurke@gmail.com) \| [LinkedIn Profile](https://www.linkedin.com/in/prasanna-bhurke-25a10931a) \| [Live Portfolio](https://prasannapbhurke.github.io/prasannapbhurke/) |
 
 </div>
 
 ---
 
 <!-- 2. ABOUT SECTION -->
-## 🦇 About Me & Gotham R&D Node
+## 👨‍💻 About Me
 
 Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track record of engineering scalable backend microservices, high-precision NLP threat classification pipelines, interactive 3D WebGL interfaces, and autonomous Agentic AI workflows. Certified in **Oracle Agentic AI**, **AWS Cloud**, and **Android Development**, I bridge computer science fundamentals with cutting-edge AI and mobile architecture.
 
@@ -125,7 +125,7 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 └────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-- 🟡 **Clean Code & SOLID Design**: Adhering strictly to Single Responsibility, Open/Closed, and Dependency Inversion principles to keep codebases refactor-ready.
+- 🟢 **Clean Code & SOLID Design**: Adhering strictly to Single Responsibility, Open/Closed, and Dependency Inversion principles to keep codebases refactor-ready.
 - 🔄 **DRY (Don't Repeat Yourself)**: Abstracting reusable helper modules and shared utility primitives to eliminate logic duplication.
 - ⚡ **KISS & YAGNI**: Avoiding premature over-engineering; building lean, performant solutions that address immediate requirements while accommodating future extensions.
 - 🧪 **Testability & Quality First**: Writing deterministic code structures designed for automated unit tests, integration tests, and mock isolation.
@@ -339,8 +339,8 @@ flowchart TD
 <!-- 9. EXPERIENCE & MISSION LOGS -->
 ## 💼 Engineering & Virtual Internship Logs
 
-### **🦇 Senior Software Engineer & Batcave AI Architect**
-*WayneTech Open-Source R&D Node / Enterprise Engineering* | **2023 – Present**
+### **Senior Software Engineer & AI Architect**
+*Enterprise AI & Web Innovations* | **2023 – Present**
 
 - Architected high-accuracy NLP threat classification models, autonomous Agentic AI loops, and browser extension backends.
 - Developed full-stack microservice applications integrating FastAPI/Node.js backends with responsive React frontends.
@@ -349,7 +349,7 @@ flowchart TD
 
 <br/>
 
-### **📱 Android Developer Virtual Intern**
+### **Android Developer Virtual Intern**
 *AICTE / EduSkills Virtual Internship* | **2024**
 
 - Developed native Android application modules in Java and Android Studio following clean Android architecture principles.
@@ -358,7 +358,7 @@ flowchart TD
 
 <br/>
 
-### **⚛️ Quantum Computing & Systems Intern**
+### **Quantum Computing & Systems Intern**
 *Quantum Computers R&D Program* | **2024**
 
 - Researched quantum algorithm simulations, qubit circuit logic, and quantum computing frameworks.
@@ -367,8 +367,8 @@ flowchart TD
 
 ---
 
-<!-- 10. CONNECT & BAT-SIGNAL DIRECT -->
-## 🌐 Connect & Bat-Signal Direct Contact
+<!-- 10. CONNECT & DIRECT CONTACT -->
+## 🌐 Connect & Direct Contact
 
 <div align="center">
 
@@ -385,7 +385,7 @@ flowchart TD
 </a>
 &nbsp;&nbsp;
 <a href="https://prasannapbhurke.github.io/prasannapbhurke/">
-  <img src="https://img.shields.io/badge/Portfolio-Live%20Batcave-D97706?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
+  <img src="https://img.shields.io/badge/Portfolio-Live%20Site-8A2BE2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
 </a>
 
 </div>
@@ -401,6 +401,6 @@ flowchart TD
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/main/assets/gotham-footer.svg" width="100%" alt="Batcave Footer Banner"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=7000FF&height=120&section=footer" width="100%" alt="Footer Banner"/>
 
 </div>
