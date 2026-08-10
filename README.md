@@ -48,6 +48,38 @@
 
 <br/><br/>
 
+<!-- GITHUB ACHIEVEMENTS & BADGES SHOWCASE -->
+<p align="center">
+  <b>🏆 GitHub Achievements & Badges</b>
+</p>
+<p align="center">
+  <a href="https://github.com/prasannapbhurke?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pull-shark-default.png?raw=true" width="85" alt="Pull Shark" title="Pull Shark — Merged Pull Requests"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/prasannapbhurke?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/quickdraw-default.png?raw=true" width="85" alt="Quickdraw" title="Quickdraw — Rapid Issue/PR Resolution"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/prasannapbhurke?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/yolo-default.png?raw=true" width="85" alt="YOLO" title="YOLO — Merged PR Without Review"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/prasannapbhurke?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pair-extraordinaire-default.png?raw=true" width="85" alt="Pair Extraordinaire" title="Pair Extraordinaire — Co-Authoring Merged PRs"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/prasannapbhurke?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/starstruck-default.png?raw=true" width="85" alt="Starstruck" title="Starstruck — Starred Repositories"/>
+  </a>
+  &nbsp;&nbsp;
+  <a href="https://github.com/prasannapbhurke?tab=achievements">
+    <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/galaxy-brain-default.png?raw=true" width="85" alt="Galaxy Brain" title="Galaxy Brain — Accepted Discussion Answers"/>
+  </a>
+</p>
+
+<br/><br/>
+
 <!-- QUICK NAVIGATION JUMP BAR -->
 <p align="center">
   <a href="#-quick-engineer-snapshot"><b>⚡ Quick Snapshot</b></a> •
