@@ -1,12 +1,6 @@
 <div align="center">
 
-<!-- 1. GOTHAM BATMAN EMBLEM & HEADER BANNER -->
-<a href="https://prasannapbhurke.github.io/prasannapbhurke/">
-  <img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/main/assets/bat-signal-reference.png" width="160" alt="Bat-Signal" />
-</a>
-
-<br/><br/>
-
+<!-- 1. GOTHAM BATMAN HEADER BANNER -->
 <img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/main/assets/gotham-header.svg" width="100%" alt="Batcave Header Banner"/>
 
 <br/>
