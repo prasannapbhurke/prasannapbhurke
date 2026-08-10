@@ -193,7 +193,9 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 ---
 
 <!-- 5. VERIFIED CERTIFICATIONS SECTION -->
-## 📜 Verified Certifications & Credentials
+## [📜 Verified Certifications & Credentials](./cert)
+
+> [Open the complete certificate vault (43 original files)](./cert)
 
 <div align="center">
 

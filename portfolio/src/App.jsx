@@ -17,6 +17,7 @@ import { ToastProvider, useToast } from './components/ToastManager';
 import AchievementSystem from './components/AchievementSystem';
 import GothamStorm from './components/GothamStorm';
 import PrasannaBot from './components/PrasannaBot';
+import Certificates from './components/Certificates';
 import BatcomputerBoot from './components/BatcomputerBoot';
 import HallOfCases from './components/HallOfCases';
 
@@ -108,6 +109,7 @@ function AppContent() {
       <Projects />
       <TechStack />
       <Experience />
+      <Certificates />
       <HallOfCases active={theme === 'batman'} />
       <Contact />
       <Footer />

@@ -30,6 +30,7 @@ jobs:
         run: |
           cd portfolio
           npm run build
+          cp -R ../cert dist/cert
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
