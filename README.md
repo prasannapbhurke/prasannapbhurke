@@ -1,7 +1,18 @@
 <div align="center">
 
-<!-- 1. GOTHAM BATMAN HEADER BANNER -->
-<img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/main/assets/gotham-header.svg" width="100%" alt="Batcave Header Banner"/>
+<!-- 1. GOTHAM BATMAN HEADER BANNER (EXACT PORTFOLIO LOGO) -->
+<a href="https://prasannapbhurke.github.io/prasannapbhurke/">
+  <img src="https://raw.githubusercontent.com/prasannapbhurke/prasannapbhurke/main/portfolio/public/bat-signal-reference.png" width="220" alt="Bat-Signal Logo" />
+</a>
+
+<br/>
+
+<h1 align="center">
+  <font color="#FFD700" size="7"><b>PRASANNA BHURKE</b></font>
+</h1>
+<p align="center">
+  <code><font color="#FEF08A">SENIOR SOFTWARE ENGINEER | BATCAVE AI &amp; SYSTEMS ARCHITECT</font></code>
+</p>
 
 <br/>
 
