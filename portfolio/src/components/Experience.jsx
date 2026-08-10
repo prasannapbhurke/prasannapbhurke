@@ -3,6 +3,43 @@ import { Briefcase, Calendar, CheckCircle2 } from 'lucide-react';
 import BatLogoSvg from './BatLogoSvg';
 import useScrollReveal from '../hooks/useScrollReveal';
 
+function ExperienceCard({ exp, idx, isBatman }) {
+  const cardRef = useScrollReveal({ direction: 'left', delay: idx * 150 });
+  const accent = isBatman ? 'text-yellow-300' : 'text-purple-300';
+
+  return (
+    <div ref={cardRef} className="relative pl-14 sm:pl-20">
+      <div className={`absolute left-3.5 sm:left-5 top-1.5 w-6 h-6 rounded-full border-4 border-[#090a0f] flex items-center justify-center shadow-lg ${
+        isBatman ? 'bg-yellow-400 shadow-yellow-500/60' : 'bg-purple-600 shadow-purple-600/50'
+      }`}>
+        <div className="w-2 h-2 rounded-full bg-white animate-ping" />
+      </div>
+
+      <article className={`glass-card p-6 sm:p-8 space-y-4 ${isBatman ? 'border-yellow-500/40 hover:border-yellow-400 hover:shadow-yellow-500/20' : ''}`}>
+        <header className="flex flex-wrap items-start justify-between gap-3 pb-3 border-b border-slate-800">
+          <div>
+            <h3 className={`text-xl sm:text-2xl font-bold font-heading ${isBatman ? 'text-yellow-300' : 'text-white'}`}>{exp.title}</h3>
+            <p className={`text-xs sm:text-sm font-mono font-medium ${accent}`}>{exp.company}</p>
+          </div>
+          <div className={`px-3 py-1 rounded-full text-xs font-mono border flex items-center gap-1.5 ${isBatman ? 'bg-amber-950/80 text-yellow-300 border-yellow-500/40' : 'bg-purple-950/60 text-purple-300 border-purple-500/40'}`}>
+            <Calendar size={13} /><span>{exp.period}</span>
+          </div>
+        </header>
+
+        {exp.periodDetail && <p className="text-[11px] font-mono text-emerald-400 font-bold">{exp.periodDetail}</p>}
+        <p className="text-slate-300 text-sm leading-relaxed">{exp.description}</p>
+        <div className="space-y-2 pt-2">
+          <span className="text-xs font-mono text-slate-400 uppercase tracking-wider block">Key achievements:</span>
+          {exp.highlights.map((highlight) => <div key={highlight} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-200"><CheckCircle2 size={16} className={`shrink-0 mt-0.5 ${isBatman ? 'text-yellow-400' : 'text-emerald-400'}`} /><span>{highlight}</span></div>)}
+        </div>
+        <div className="flex flex-wrap gap-2 pt-3">
+          {exp.skills.map((skill) => <span key={skill} className={`px-2.5 py-1 rounded-lg text-xs font-mono border ${isBatman ? 'bg-slate-950 text-yellow-300 border-yellow-500/30' : 'bg-slate-900 text-purple-300 border-purple-500/30'}`}>{skill}</span>)}
+        </div>
+      </article>
+    </div>
+  );
+}
+
 export default function Experience() {
   const [isBatman, setIsBatman] = useState(false);
 
