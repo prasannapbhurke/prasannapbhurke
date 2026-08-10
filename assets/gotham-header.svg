@@ -24,7 +24,7 @@
 
     <!-- Glow Filter -->
     <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feGaussianBlur stdDeviation="3" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
@@ -35,28 +35,15 @@
   <!-- Outer Glow Border -->
   <rect x="2" y="2" width="996" height="236" rx="14" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" stroke-opacity="0.4"/>
 
-  <!-- Classic Bat-Signal Oval Emblem (Pure SVG Vectors) -->
-  <g transform="translate(500, 48)" filter="url(#goldGlow)">
-    <!-- Outer Oval Backplate -->
-    <ellipse cx="0" cy="0" rx="56" ry="32" fill="#0d0e17" stroke="#EAB308" stroke-width="2.5"/>
-    <ellipse cx="0" cy="0" rx="52" ry="28" fill="#141524" stroke="#FFD700" stroke-width="1" opacity="0.9"/>
-    
-    <!-- Classic Bat Silhouette (Vector Path) -->
-    <path d="M -3 -18 
-             Q 0 -13 3 -18 
-             C 15 -22 36 -16 46 -6 
-             C 38 4 28 0 20 10 
-             C 14 18 8 16 0 24 
-             C -8 16 -14 18 -20 10 
-             C -28 0 -38 4 -46 -6 
-             C -36 -16 -15 -22 -3 -18 Z" 
-          fill="#FFD700" 
-          stroke="#EAB308" 
-          stroke-width="0.5"/>
+  <!-- Bat Signal Emblem Backplate -->
+  <g transform="translate(500, 48) scale(0.65)" filter="url(#goldGlow)" opacity="0.85">
+    <path d="M-60 0 C-60 -25 -25 -35 0 -15 C25 -35 60 -25 60 0 C60 25 35 35 0 35 C-35 35 -60 25 -60 0 Z" fill="none" stroke="#EAB308" stroke-width="2"/>
+    <!-- Bat Symbol Silhouette -->
+    <path d="M -40 -5 C -30 -15 -15 -10 0 -2 C 15 -10 30 -15 40 -5 C 35 5 25 2 18 12 C 12 20 6 22 0 15 C -6 22 -12 20 -18 12 C -25 2 -35 5 -40 -5 Z" fill="#FFD700"/>
   </g>
 
   <!-- Main Title -->
-  <text x="500" y="132" text-anchor="middle" fill="url(#goldGrad)" font-family="'Outfit', 'Inter', 'Segoe UI', sans-serif" font-size="44" font-weight="900" letter-spacing="4" filter="url(#goldGlow)">
+  <text x="500" y="130" text-anchor="middle" fill="url(#goldGrad)" font-family="'Outfit', 'Inter', 'Segoe UI', sans-serif" font-size="44" font-weight="900" letter-spacing="4" filter="url(#goldGlow)">
     PRASANNA BHURKE
   </text>
 
