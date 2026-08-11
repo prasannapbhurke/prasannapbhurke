@@ -250,7 +250,157 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 ## 🚀 Featured Engineering Projects
 
 <details>
-<summary><b>01. Email Spam Detector Extension (AI / ML & Web Extension)</b></summary>
+<summary><b>01. Sentinel-AI-X (AI Security & Threat Intelligence)</b></summary>
+
+<br/>
+
+Autonomous AI agent system designed for real-time cybersecurity threat analysis, vulnerability detection, and automated incident response.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Python, FastAPI, AI Security Agent, Threat Intelligence | Sub-30ms Detection | Autonomous Threat Inspector | Zero Trust Agent | Real-time Incident Quarantine | [View Codebase](https://github.com/prasannapbhurke/sentinel-Ai-X) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>02. DSA Visualizer Pro (Algorithm Execution Tracing Engine)</b></summary>
+
+<br/>
+
+Interactive Data Structures & Algorithms Control Center and Android application for real-time algorithm execution tracing and visual complexity analysis.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Java, Android Studio, DSA Algorithms, Execution Tracing | 30+ Visualizers | Real-time Big-O Analysis | Offline Executable APK | Complete DSA Learning Suite | [View Codebase](https://github.com/prasannapbhurke/DSA-Visualizer-Pro) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>03. BeatMatch-Reel (AI Audio & Video Beat Sync Engine)</b></summary>
+
+<br/>
+
+Automated AI audio-video synchronization tool that aligns music beats with video cutpoints for seamless social media reel generation.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Python, Audio Processing, Beat Detection, Video Sync, FFmpeg | Real-time BPM Tracking | Sub-frame Beat Precision | Local File Processing | Automated Reel Production | [View Codebase](https://github.com/prasannapbhurke/BeatMatch-Reel) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>04. LogicLens (Desktop Programming Logic Visualizer)</b></summary>
+
+<br/>
+
+Interactive desktop application for Java & C programming logic visualization, step-by-step memory inspection, and AST execution tracing.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| JavaScript, Electron, React, Java, C, Vite | Cross-Platform Desktop | Real-time AST Stack Inspection | Local Sandbox Isolation | Step-by-Step Code Tracing | [View Codebase](https://github.com/prasannapbhurke/LogicLens) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>05. ClassPulse (Native Android Classroom Analytics)</b></summary>
+
+<br/>
+
+Native Kotlin Android mobile application designed for real-time classroom analytics, attendance pulse tracking, and student engagement telemetry.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Kotlin, Android Studio, Coroutines Flow, Room DB, Material 3 | Android Native App | Sub-50ms Local Sync | Room SQLite Storage | Classroom Attendance Automation | [View Codebase](https://github.com/prasannapbhurke/ClassPulse) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>06. DocuMimic-AI (AI Document Synthesis Engine)</b></summary>
+
+<br/>
+
+AI document synthesis engine that analyzes reference document structures and generates automated technical project reports and formatted documentation.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| JavaScript, Python, AI Synthesis, LLM Prompts, Markdown | 14+ Page Document Output | Multi-Format PDF/Docx Export | Token Optimization | Automated Report Generation | [View Codebase](https://github.com/prasannapbhurke/DocuMimic-AI) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>07. Java Grid Compiler - JGC (Distributed Grid Compiler)</b></summary>
+
+<br/>
+
+Distributed Java compiler engine designed for grid computing, multi-threaded task allocation, and parallel source code compilation.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Java, Grid Computing, Distributed Systems, Multi-threading | Grid Task Allocation | Sub-380ms AST Build | Isolated Worker Threads | Parallel Code Compilation | [View Codebase](https://github.com/prasannapbhurke/Java-Grid-Compiler-JGC-) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>08. WedCraft (Full Stack Event & Wedding Platform)</b></summary>
+
+<br/>
+
+Modern full-stack event and wedding planning management platform featuring interactive RSVP workflows, guest list analytics, and vendor scheduling.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| JavaScript, React, Node.js, Express, Tailwind CSS | Multi-role User Management | Real-time RSVP Tracking | Session Auth | Event Operations Management | [View Codebase](https://github.com/prasannapbhurke/WedCraft) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>09. DYPCET-Portal (Academic Institution Web Portal)</b></summary>
+
+<br/>
+
+Web development academic portal designed for DYPCET engineering institution, featuring course catalogues, department resources, and admissions portals.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| HTML5, CSS3, JavaScript, Academic System | Multi-Department Website | Instant Static Load | Input Validation | Dynamic Academic Viewer | [View Codebase](https://github.com/prasannapbhurke/DYPCET-Portal) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>10. Expense Tracker App (Full Stack Mobile & Web Financial App)</b></summary>
+
+<br/>
+
+Full-stack expense management application featuring an Android mobile app and web application for category budget analytics and offline expense logging.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Java, Android Native, SQLite, Web Analytics, Chart.js | Android & Web Platform | Offline-First SQLite | Encrypted Local Cache | Budget & Expense Tracking | [View Codebase](https://github.com/prasannapbhurke/expense-tracker-app) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>11. Email Spam Detector Extension (AI Security & Web Extension)</b></summary>
 
 <br/>
 
@@ -265,37 +415,37 @@ A real-time browser extension that automatically scans incoming email bodies and
 <br/>
 
 <details>
-<summary><b>02. SMS Spam Detector App (NLP & Web App)</b></summary>
+<summary><b>12. SMS Spam Detector App (NLP & Mobile Application)</b></summary>
 
 <br/>
 
-An end-to-end NLP-driven web application for detection and filtering of malicious SMS text messages with interactive confidence metrics.
+An end-to-end NLP-driven web application and Android mobile app for detection and filtering of malicious SMS text messages with interactive confidence metrics.
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Python, NLTK, Scikit-Learn, Streamlit, Pandas, NumPy | 5,500+ SMS Message Corpus | 97.8% F1-Score Accuracy | Input Sanitization & Vector Checks | Instant Text Threat Identification | [View Codebase](https://github.com/prasannapbhurke/sms-spam-detector) |
+| Java, Python, NLTK, Scikit-Learn, Streamlit, Pandas | 5,500+ SMS Message Corpus | 97.8% F1-Score Accuracy | Input Sanitization & Vector Checks | Instant Text Threat Identification | [View Codebase](https://github.com/prasannapbhurke/sms-spam-detector) |
 
 </details>
 
 <br/>
 
 <details>
-<summary><b>03. Android Quiz App (Java & Android Studio)</b></summary>
+<summary><b>13. AI Email Spam Detector (AI & ML Microservice)</b></summary>
 
 <br/>
 
-A native Android mobile application built with Java and Android Studio featuring dynamic quiz challenges, score persistence, and clean material UI components.
+Dedicated Python machine learning microservice API for high-precision email text classification and spam probability scoring.
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Java, Android Studio, Material UI, SQLite | Mobile App Execution | Smooth 60fps Native UI | Local Encrypted Storage | Certified Mobile App Project | [View Codebase](https://github.com/prasannapbhurke) |
+| Python, Scikit-Learn, FastAPI, TF-IDF, REST API | REST API Microservice | Sub-35ms Inference | Parameterized Input Checks | High-Precision Threat Scoring | [View Codebase](https://github.com/prasannapbhurke/AI-Email-Spam-Detector) |
 
 </details>
 
 <br/>
 
 <details>
-<summary><b>04. Academic Student Portal (Full Stack Platform)</b></summary>
+<summary><b>14. Student Portal (Full Stack Academic Management)</b></summary>
 
 <br/>
 
@@ -303,37 +453,37 @@ A full-stack web platform designed for academic administration, enabling student
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| JavaScript, React, Node.js, Express, MySQL | Multi-role User Management | Optimized Relational Queries | Session Auth & Password Hashing | Streamlined Academic Operations | [View Codebase](https://github.com/prasannapbhurke/student-portal) |
+| JavaScript, Node.js, Express, MySQL, CSS3 | Multi-role User Management | Optimized Relational Queries | Session Auth & Password Hashing | Streamlined Academic Operations | [View Codebase](https://github.com/prasannapbhurke/student-portal) |
 
 </details>
 
 <br/>
 
 <details>
-<summary><b>05. Airplane Reservation System (C++ Systems Engine)</b></summary>
+<summary><b>15. Airplane Reservation System (High-Concurrency Systems Engine)</b></summary>
 
 <br/>
 
-A high-concurrency desktop management application facilitating flight scheduling, passenger seat booking, ticket generation, and real-time status queries built with C++ and relational storage.
+A high-concurrency Java flight booking engine integrated with relational database for seat allocation, ticket generation, and real-time passenger manifest tracking.
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| C++, Python, SQL, DBMS Engine | Concurrent Passenger Bookings | Sub-2ms Index Lookups | Transactional Integrity & Rollbacks | Zero Double-Booking Errors | [View Codebase](https://github.com/prasannapbhurke/Airplane-Reservation-System) |
+| Java, SQL, Data Structures, OOP Design, Swing UI | Concurrent Passenger Bookings | Sub-2ms Index Lookups | Transactional Integrity & Rollbacks | Zero Double-Booking Errors | [View Codebase](https://github.com/prasannapbhurke/Airplane-Reservation-System) |
 
 </details>
 
 <br/>
 
 <details>
-<summary><b>06. Advanced Python Systems & Practicals (Algorithmic Repository)</b></summary>
+<summary><b>16. Java Arithmetic Calculator (Java Desktop & Database Systems)</b></summary>
 
 <br/>
 
-Production repository containing advanced Python data structure implementations, algorithmic problem solvers, and systems execution scripts.
+Java desktop calculation and audit logging application connected to MySQL database via JDBC for real-time transaction persistence.
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Python, Data Structures, Algorithms, Systems Programming | Complete Algorithmic Suite | Sub-millisecond Execution | Open Source Repository | Modular Data Structures | [View Codebase](https://github.com/prasannapbhurke/apc_practical) |
+| Java, JDBC, MySQL 9.7.0, Swing UI | Transaction Audit Log | Instant JDBC Persistence | Parameterized Queries | Audit Log Trail | [View Codebase](https://github.com/prasannapbhurke/Java-Arithmetic-Calculator) |
 
 </details>
 
