@@ -250,7 +250,127 @@ Experienced **Senior Software Engineer & AI/ML Specialist** with a proven track 
 ## 🚀 Featured Engineering Projects
 
 <details>
-<summary><b>01. Email Spam Detector Extension (AI / ML & Web Extension)</b></summary>
+<summary><b>01. FluencyFlow AI (AI Speech Coach & Native Android App)</b></summary>
+
+<br/>
+
+Native Android application powered by an AI Speech Coach & real-time audio analysis engine for fluent language learning, pitch detection, and backtest onboarding.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Android, Kotlin, AI Speech Engine, Python, Gradle | Real-time Mic Stream 44.1kHz | Sub-20ms Audio Pitch Analysis | On-Device Local Cache | 94.8% Pronunciation Accuracy | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>02. Biometric Face Recognition Attendance System (AI Vision & Mobile)</b></summary>
+
+<br/>
+
+Real-time facial biometric attendance platform featuring an Android mobile app, desktop admin dashboard, and cloud relay backend with anti-spoofing checks.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Python, OpenCV, Face Recognition, Android Studio, SQLite, Flask | 128-d Face Embeddings | 99.4% Face Match Precision | Liveness Anti-Spoofing | Automated Attendance Logging | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>03. Logic Lens — Interactive Java & C Logic Visualizer (Electron App)</b></summary>
+
+<br/>
+
+Interactive desktop learning application for Java & C programming logic visualization, step-by-step memory inspection, and AST execution tracing.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| React, Electron, Java, C, Node.js, Vite | Cross-Platform Desktop Build | Real-time AST Stack Inspection | Local Sandbox Isolation | Step-by-Step Code Tracing | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>04. Reality Collapse — Multiplayer WebGL Game Engine (WebGL & Sockets)</b></summary>
+
+<br/>
+
+Real-time multiplayer WebGL game engine built with TypeScript, Socket.io, Zustand, and Framer Motion for high-fps interactive web graphics.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| TypeScript, React, Vite, Socket.io, Zustand, Framer Motion | 48 Concurrent Entities | Constant 60 FPS Render | Sub-20ms WS Sync | Interactive Web Graphics Engine | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>05. DSA Visualizer Pro & Control Center (Android APK & Java Suite)</b></summary>
+
+<br/>
+
+Interactive Data Structures & Algorithms Control Center and Android application for real-time algorithm execution tracing and visual complexity analysis.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Java, Android Studio, DSA Algorithms, AWT/Swing | 30+ Algorithm Visualizers | Real-time Big-O Complexity | Offline Executable APK | Complete DSA Learning Suite | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>06. DocuMimic AI (AI Document Synthesis Engine)</b></summary>
+
+<br/>
+
+AI document synthesis engine that analyzes reference document structures and generates automated technical project reports and formatted documentation.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Python, AI Synthesis, LLM Prompts, NLP, Markdown | 14+ Page Document Output | Multi-Format PDF/Docx Export | Token Optimization | Automated Report Generation | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>07. AI Website Cloner & Scraper Engine (Headless Browser Scraping)</b></summary>
+
+<br/>
+
+Full-stack automated website cloning and structural extraction tool powered by AI agents and headless browser scraping.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Python, Playwright, AI Agents, Node.js, DOM Parser | Full Site Extraction <5s | 100% Asset Preservation | Tracker Script Cleanup | One-Click Template Cloning | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>08. Java Grid Compiler - JGC (Distributed Grid Compiler)</b></summary>
+
+<br/>
+
+Distributed Java compiler engine designed for grid computing, multi-threaded task allocation, and parallel source code compilation.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Java, Distributed Systems, Multi-threading, Grid Computing | Grid Task Allocation | Sub-380ms AST Build | Isolated Worker Threads | Parallel Code Compilation | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>09. Email Spam Detector Extension (AI / ML & Web Extension)</b></summary>
 
 <br/>
 
@@ -265,7 +385,7 @@ A real-time browser extension that automatically scans incoming email bodies and
 <br/>
 
 <details>
-<summary><b>02. SMS Spam Detector App (NLP & Web App)</b></summary>
+<summary><b>10. SMS Spam Detector App (NLP & Web App)</b></summary>
 
 <br/>
 
@@ -280,22 +400,7 @@ An end-to-end NLP-driven web application for detection and filtering of maliciou
 <br/>
 
 <details>
-<summary><b>03. Android Quiz App (Java & Android Studio)</b></summary>
-
-<br/>
-
-A native Android mobile application built with Java and Android Studio featuring dynamic quiz challenges, score persistence, and clean material UI components.
-
-| Stack | Scale | Performance | Security | Impact | Repository |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Java, Android Studio, Material UI, SQLite | Mobile App Execution | Smooth 60fps Native UI | Local Encrypted Storage | Certified Mobile App Project | [View Codebase](https://github.com/prasannapbhurke) |
-
-</details>
-
-<br/>
-
-<details>
-<summary><b>04. Academic Student Portal (Full Stack Platform)</b></summary>
+<summary><b>11. Academic Student Portal (Full Stack Platform)</b></summary>
 
 <br/>
 
@@ -310,7 +415,7 @@ A full-stack web platform designed for academic administration, enabling student
 <br/>
 
 <details>
-<summary><b>05. Airplane Reservation System (C++ Systems Engine)</b></summary>
+<summary><b>12. Airplane Reservation System (C++ & Java Systems Engine)</b></summary>
 
 <br/>
 
@@ -318,7 +423,37 @@ A high-concurrency desktop management application facilitating flight scheduling
 
 | Stack | Scale | Performance | Security | Impact | Repository |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| C++, Python, SQL, DBMS Engine | Concurrent Passenger Bookings | Fast Index Lookups | Transactional Integrity & Rollbacks | Zero Double-Booking Errors | [View Codebase](https://github.com/prasannapbhurke/Airplane-Reservation-System) |
+| C++, Java, SQL, DBMS Engine | Concurrent Passenger Bookings | Sub-2ms Index Lookups | Transactional Integrity & Rollbacks | Zero Double-Booking Errors | [View Codebase](https://github.com/prasannapbhurke/Airplane-Reservation-System) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>13. Java Calculator & Audit Logging App (MySQL 9.7.0 DB)</b></summary>
+
+<br/>
+
+Java desktop calculation and audit logging application connected to MySQL 9.7.0 via JDBC for real-time transaction persistence.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Java, JDBC, MySQL 9.7.0, Swing | Transaction Audit Log | Instant JDBC Persistence | Parameterized Queries | Audit Log Trail | [View Codebase](https://github.com/prasannapbhurke) |
+
+</details>
+
+<br/>
+
+<details>
+<summary><b>14. WD Academic Portal & XML Data Viewers (Web Development)</b></summary>
+
+<br/>
+
+Web development academic portal featuring custom XML data viewers, program catalogues, and interactive admissions forms.
+
+| Stack | Scale | Performance | Security | Impact | Repository |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| HTML5, CSS3, JavaScript, XML | Multi-Page Academic Portal | Client-side XML DOM Parser | Form Validation | Dynamic Program Viewer | [View Codebase](https://github.com/prasannapbhurke) |
 
 </details>
 
