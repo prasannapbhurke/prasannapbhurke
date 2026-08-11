@@ -26,236 +26,12 @@ export default function ResumeModal({ isOpen, onClose }) {
 
   const handleDownloadPdf = () => {
     sound.playSuccess();
-    const resumeText = `PRASANNA PRADEEP BHURKE
-Kolhapur, India | +91 7620809814 | prasannapbhurke@gmail.com
-LinkedIn: linkedin.com/in/prasanna-bhurke-25a10931a | GitHub: github.com/prasannapbhurke | Portfolio: prasannapbhurke.github.io
-
-================================================================================
-EDUCATION
-================================================================================
-B.Tech in Computer Science Engineering
-DYPCET, Kolhapur
-2025 – 2028
-CGPA: 8.0
-
-Diploma in Electronics and Computer Engineering
-New Institute of Technology
-2023 – 2025
-Percentage: 91.00%
-
-================================================================================
-TECHNICAL SKILLS
-================================================================================
-Languages: C, C++, Python, Java, HTML, ASM, MATLAB, SPICE (circuit simulation)
-Web: HTML, CSS, JavaScript, PHP, SQL
-Embedded: Arduino, Sensors, UART, RT Systems
-ML/CV: NLP, OpenCV, YOLO, SSD
-Tools: Git, GitHub, VS Code
-
-================================================================================
-ACHIEVEMENTS
-================================================================================
-- Scored 91% in Diploma (Top academic performance)
-- Organized and led multiple technical and non-technical events
-- Built multiple real-world projects in ML and Embedded Systems
-
-================================================================================
-INTERESTS
-================================================================================
-Chess, Problem Solving, Networking, Reading
-
-================================================================================
-PROJECTS
-================================================================================
-1. Sentinel-AI-X (Threat Intelligence)
-   - Architected autonomous AI threat agent delivering sub-30ms vulnerability payload detection.
-   - Engineered zero-trust inspection pipeline providing instant malicious pattern quarantine.
-
-2. DSA Visualizer Pro
-   - Developed 30+ interactive algorithm visualizers with real-time Big-O complexity graphing.
-   - Engineered dual-platform APK and desktop AWT/Swing control center.
-
-3. BeatMatch-Reel (AI Audio & Video Sync)
-   - Implemented Librosa audio spectral analysis to detect tempo onset transients and music BPM.
-   - Automated FFmpeg video editing pipeline aligning clip transition cuts to musical beats.
-
-4. WedCraft (Full Stack Event Platform)
-   - Designed full-stack event and wedding planning platform with real-time guest RSVP workflows.
-   - Structured responsive glassmorphism user interface using Tailwind CSS and Express REST endpoints.
-
-5. SMS Spam Detection (ML)
-   - Developed NLP-based model to classify spam messages.
-   - Applied text preprocessing and feature extraction techniques.
-
-6. Biometric Attendance System
-   - Designed Arduino-based fingerprint authentication system.
-   - Enabled real-time attendance tracking.
-
-================================================================================
-LEADERSHIP & ACTIVITIES
-================================================================================
-1. Event Coordinator (2023–2025)
-   - Led planning and execution of technical and sports events.
-   - Managed teams and coordinated logistics.
-
-2. Core Team Member, NIT Kolhapur
-   - Organized large-scale institutional events.
-   - Coordinated logistics and team operations.
-`;
-    const blob = new Blob([resumeText], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Prasanna_Pradeep_Bhurke_Resume.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
-  const handleDownloadLatex = () => {
-    sound.playSuccess();
-    const latexCode = `%-------------------------------------------------------------------------------
-% Prasanna Pradeep Bhurke - Two-Column Engineering Resume
-% Format: pdflatex / Overleaf Compatible
-%-------------------------------------------------------------------------------
-
-\\documentclass[letterpaper,10pt]{article}
-\\usepackage[utf8]{inputenc}
-\\usepackage[margin=0.45in]{geometry}
-\\usepackage{titlesec}
-\\usepackage{enumitem}
-\\usepackage[hidelinks]{hyperref}
-\\usepackage{xcolor}
-\\usepackage{tabularx}
-\\usepackage{paracol}
-
-\\definecolor{primary}{RGB}{70, 130, 180} % Steel blue title lines
-
-\\titleformat{\\section}
-  {\\color{primary}\\large\\bfseries}
-  {}{0em}{}
-  [\\color{primary}\\hrule height 0.6pt \\vspace{-3pt}]
-
-\\setlist[itemize]{leftmargin=*,noitemsep,topsep=2pt}
-\\pagestyle{empty}
-
-\\begin{document}
-
-\\begin{center}
-    {\\Huge \\bfseries Prasanna Pradeep Bhurke} \\\\[4pt]
-    Kolhapur, India \\quad $|$ \\quad \\href{tel:+917620809814}{+91 7620809814} \\quad $|$ \\quad \\href{mailto:prasannapbhurke@gmail.com}{prasannapbhurke@gmail.com} \\\\[2pt]
-    \\href{https://www.linkedin.com/in/prasanna-bhurke-25a10931a}{LinkedIn} \\quad $|$ \\quad \\href{https://github.com/prasannapbhurke}{GitHub} \\quad $|$ \\quad \\href{https://prasannapbhurke.github.io/prasannapbhurke/}{Portfolio}
-\\end{center}
-
-\\vspace{-4pt}
-
-\\columnratio{0.46}
-\\begin{paracol}{2}
-
-\\section*{Education}
-
-\\textbf{B.Tech in Computer Science Engineering} \\\\
-DYPCET, Kolhapur \\\\
-2025 -- 2028 \\\\
-CGPA: 8.0 \\\\[6pt]
-
-\\textbf{Diploma in Electronics and Computer Engineering} \\\\
-New Institute of Technology \\\\
-2023 -- 2025 \\\\
-Percentage: 91.00\\%
-
-\\section*{Technical Skills}
-
-\\textbf{Languages:} C, C++, Python, Java, HTML, ASM, MATLAB, SPICE (circuit simulation) \\\\
-\\textbf{Web:} HTML, CSS, JavaScript, PHP, SQL \\\\
-\\textbf{Embedded:} Arduino, Sensors, UART, RT Systems \\\\
-\\textbf{ML/CV:} NLP, OpenCV, YOLO, SSD \\\\
-\\textbf{Tools:} Git, GitHub, VS Code
-
-\\section*{Achievements}
-\\begin{itemize}
-    \\item Scored \\textbf{91\\%} in Diploma (Top academic performance)
-    \\item Organized and led multiple technical and non-technical events
-    \\item Built multiple real-world projects in ML and Embedded Systems
-\\end{itemize}
-
-\\section*{Interests}
-Chess, Problem Solving, Networking, Reading
-
-\\switchcolumn
-
-\\section*{Projects}
-
-\\textbf{Sentinel-AI-X (Threat Intelligence)}
-\\begin{itemize}
-    \\item Architected autonomous AI threat agent delivering sub-30ms vulnerability payload detection
-    \\item Engineered zero-trust inspection pipeline providing instant malicious pattern quarantine
-\\end{itemize}
-\\vspace{4pt}
-
-\\textbf{DSA Visualizer Pro}
-\\begin{itemize}
-    \\item Developed 30+ interactive algorithm visualizers with real-time Big-O complexity graphing
-    \\item Engineered dual-platform APK and desktop AWT/Swing control center
-\\end{itemize}
-\\vspace{4pt}
-
-\\textbf{BeatMatch-Reel (AI Audio \\& Video Sync)}
-\\begin{itemize}
-    \\item Implemented Librosa audio spectral analysis to detect tempo onset transients and music BPM
-    \\item Automated FFmpeg video editing pipeline aligning clip transition cuts to musical beats
-\\end{itemize}
-\\vspace{4pt}
-
-\\textbf{WedCraft (Full Stack Event Platform)}
-\\begin{itemize}
-    \\item Designed full-stack event and wedding planning platform with real-time guest RSVP workflows
-    \\item Structured responsive glassmorphism user interface using Tailwind CSS and Express REST endpoints
-\\end{itemize}
-\\vspace{4pt}
-
-\\textbf{SMS Spam Detection (ML)}
-\\begin{itemize}
-    \\item Developed NLP-based model to classify spam messages
-    \\item Applied text preprocessing and feature extraction techniques
-\\end{itemize}
-\\vspace{4pt}
-
-\\textbf{Biometric Attendance System}
-\\begin{itemize}
-    \\item Designed Arduino-based fingerprint authentication system
-    \\item Enabled real-time attendance tracking
-\\end{itemize}
-
-\\section*{Leadership \\& Activities}
-
-\\textbf{Event Coordinator} (2023--2025)
-\\begin{itemize}
-    \\item Led planning and execution of technical and sports events
-    \\item Managed teams and coordinated logistics
-\\end{itemize}
-\\vspace{4pt}
-
-\\textbf{Core Team Member, NIT Kolhapur}
-\\begin{itemize}
-    \\item Organized large-scale institutional events
-    \\item Coordinated logistics and team operations
-\\end{itemize}
-
-\\end{paracol}
-
-\\end{document}`;
-
-    const blob = new Blob([latexCode], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'Prasanna_Pradeep_Bhurke_Resume.tex';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
+    const link = document.createElement('a');
+    link.href = 'resume.pdf';
+    link.download = 'Prasanna_Pradeep_Bhurke_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -304,28 +80,15 @@ Chess, Problem Solving, Networking, Reading
             <button
               onClick={handleDownloadPdf}
               onMouseEnter={() => sound.playHover()}
-              className={`px-3.5 py-2.5 rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all shadow-md ${
+              className={`px-4 py-2.5 rounded-xl text-xs font-mono font-bold flex items-center gap-2 transition-all shadow-md ${
                 isBatman
                   ? 'bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-300 text-black shadow-yellow-500/30'
                   : 'glow-btn'
               }`}
+              title="Download Resume (PDF)"
             >
-              <Download size={15} />
-              <span>Download CV</span>
-            </button>
-
-            <button
-              onClick={handleDownloadLatex}
-              onMouseEnter={() => sound.playHover()}
-              className={`px-3.5 py-2.5 rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all border ${
-                isBatman
-                  ? 'bg-slate-950 text-amber-300 border-amber-500/40 hover:border-amber-400'
-                  : 'bg-purple-950/80 text-purple-200 border-purple-500/40 hover:border-purple-400'
-              }`}
-              title="Download LaTeX Source File (.tex)"
-            >
-              <Code size={15} />
-              <span>LaTeX (.tex)</span>
+              <Download size={16} />
+              <span>Download PDF</span>
             </button>
 
             <button
