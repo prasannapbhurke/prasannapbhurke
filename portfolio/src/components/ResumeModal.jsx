@@ -75,21 +75,21 @@ PROJECTS
    - Developed 30+ interactive algorithm visualizers with real-time Big-O complexity graphing.
    - Engineered dual-platform APK and desktop AWT/Swing control center.
 
-3. SMS Spam Detection (ML)
+3. BeatMatch-Reel (AI Audio & Video Sync)
+   - Implemented Librosa audio spectral analysis to detect tempo onset transients and music BPM.
+   - Automated FFmpeg video editing pipeline aligning clip transition cuts to musical beats.
+
+4. WedCraft (Full Stack Event Platform)
+   - Designed full-stack event and wedding planning platform with real-time guest RSVP workflows.
+   - Structured responsive glassmorphism user interface using Tailwind CSS and Express REST endpoints.
+
+5. SMS Spam Detection (ML)
    - Developed NLP-based model to classify spam messages.
    - Applied text preprocessing and feature extraction techniques.
 
-4. Portfolio Builder (Web App)
-   - Built dynamic web app using HTML, JS, PHP, SQL.
-   - Generates customizable personal portfolio websites.
-
-5. Biometric Attendance System
+6. Biometric Attendance System
    - Designed Arduino-based fingerprint authentication system.
    - Enabled real-time attendance tracking.
-
-6. Object Detection System
-   - Implemented YOLO and SSD models.
-   - Achieved real-time performance using OpenCV.
 
 ================================================================================
 LEADERSHIP & ACTIVITIES
@@ -201,6 +201,20 @@ Chess, Problem Solving, Networking, Reading
 \\end{itemize}
 \\vspace{4pt}
 
+\\textbf{BeatMatch-Reel (AI Audio \\& Video Sync)}
+\\begin{itemize}
+    \\item Implemented Librosa audio spectral analysis to detect tempo onset transients and music BPM
+    \\item Automated FFmpeg video editing pipeline aligning clip transition cuts to musical beats
+\\end{itemize}
+\\vspace{4pt}
+
+\\textbf{WedCraft (Full Stack Event Platform)}
+\\begin{itemize}
+    \\item Designed full-stack event and wedding planning platform with real-time guest RSVP workflows
+    \\item Structured responsive glassmorphism user interface using Tailwind CSS and Express REST endpoints
+\\end{itemize}
+\\vspace{4pt}
+
 \\textbf{SMS Spam Detection (ML)}
 \\begin{itemize}
     \\item Developed NLP-based model to classify spam messages
@@ -208,24 +222,10 @@ Chess, Problem Solving, Networking, Reading
 \\end{itemize}
 \\vspace{4pt}
 
-\\textbf{Portfolio Builder (Web App)}
-\\begin{itemize}
-    \\item Built dynamic web app using HTML, JS, PHP, SQL
-    \\item Generates customizable personal portfolio websites
-\\end{itemize}
-\\vspace{4pt}
-
 \\textbf{Biometric Attendance System}
 \\begin{itemize}
     \\item Designed Arduino-based fingerprint authentication system
     \\item Enabled real-time attendance tracking
-\\end{itemize}
-\\vspace{4pt}
-
-\\textbf{Object Detection System}
-\\begin{itemize}
-    \\item Implemented YOLO and SSD models
-    \\item Achieved real-time performance using OpenCV
 \\end{itemize}
 
 \\section*{Leadership \\& Activities}
@@ -418,10 +418,10 @@ Chess, Problem Solving, Networking, Reading
                 {[
                   { title: 'Sentinel-AI-X (Threat Intelligence)', points: ['Architected autonomous AI threat agent delivering sub-30ms vulnerability payload detection', 'Engineered zero-trust inspection pipeline providing instant malicious pattern quarantine'] },
                   { title: 'DSA Visualizer Pro', points: ['Developed 30+ interactive algorithm visualizers with real-time Big-O complexity graphing', 'Engineered dual-platform APK and desktop AWT/Swing control center'] },
+                  { title: 'BeatMatch-Reel (AI Beat Sync)', points: ['Implemented Librosa audio spectral analysis to detect tempo onset transients and music BPM', 'Automated FFmpeg video editing pipeline aligning clip transition cuts to musical beats'] },
+                  { title: 'WedCraft (Full Stack Event Platform)', points: ['Designed full-stack event and wedding planning platform with real-time guest RSVP workflows', 'Structured responsive glassmorphism user interface using Tailwind CSS and Express REST endpoints'] },
                   { title: 'SMS Spam Detection (ML)', points: ['Developed NLP-based model to classify spam messages', 'Applied text preprocessing and feature extraction techniques'] },
-                  { title: 'Portfolio Builder (Web App)', points: ['Built dynamic web app using HTML, JS, PHP, SQL', 'Generates customizable personal portfolio websites'] },
-                  { title: 'Biometric Attendance System', points: ['Designed Arduino-based fingerprint authentication system', 'Enabled real-time attendance tracking'] },
-                  { title: 'Object Detection System', points: ['Implemented YOLO and SSD models', 'Achieved real-time performance using OpenCV'] }
+                  { title: 'Biometric Attendance System', points: ['Designed Arduino-based fingerprint authentication system', 'Enabled real-time attendance tracking'] }
                 ].map((p, idx) => (
                   <div key={idx} className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2">
                     <h5 className="font-bold text-white text-sm font-heading">{p.title}</h5>
