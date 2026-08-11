@@ -1,5 +1,5 @@
 %-------------------------
-% Resume in LaTeX
+% Resume in LaTeX (pdflatex / Overleaf Compatible)
 % Author : Prasanna Bhurke
 % License : MIT
 %------------------------
@@ -14,7 +14,6 @@
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
-\usepackage{fontspec}
 \usepackage{tabularx}
 
 % Adjust margins
@@ -33,7 +32,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\vline height 1.5pt \hrule height 0.5pt \vspace{-5pt}]
+}{}{0em}{}[\color{black}\hrule height 0.5pt \vspace{-5pt}]
 
 % Custom commands
 \newcommand{\resumeItem}[1]{
@@ -57,12 +56,8 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemList}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemList}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
