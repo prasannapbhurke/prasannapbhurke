@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Layers, Play, Code2, Star, GitFork, Users, X, CheckCircle2, Search, Filter } from 'lucide-react';
+import { ExternalLink, Layers, Play, Code2, GitFork, Users, X, CheckCircle2, Search, Filter } from 'lucide-react';
 import { GithubIcon } from './SocialIcons';
 import { sound } from '../utils/sound';
 import GitHubHeatmap from './GitHubHeatmap';
@@ -30,8 +30,7 @@ export default function Projects() {
         if (data.public_repos !== undefined) {
           setGithubStats({
             repos: data.public_repos,
-            stars: 24,
-            followers: data.followers || 15,
+            followers: data.followers || 0,
             loaded: true
           });
         }
@@ -47,7 +46,80 @@ export default function Projects() {
     return () => observer.disconnect();
   }, []);
 
+  // Repository-backed portfolio: descriptions and stacks are taken from the project READMEs.
   const projects = [
+    {
+      id: 'beatmatch-reel',
+      title: 'BeatMatch-Reel',
+      category: 'Computer Vision & Video Automation',
+      description: 'Automated video-editing engine that creates beat-synchronised vertical reels from raw clips, with audio analysis, cinematic color grading, and smart 9:16 cropping.',
+      image: 'https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?auto=format&fit=crop&w=800&q=80',
+      tags: ['Python', 'OpenCV', 'FFmpeg', 'NumPy', 'SciPy'],
+      githubUrl: 'https://github.com/prasannapbhurke/BeatMatch-Reel',
+      sampleCode: '# Beat-synchronised video rendering pipeline\npython src/build_reel.py --audio master_audio.wav --output instagram_reel.mp4',
+      expectedOutput: '[RENDER] Beat markers detected\n[EXPORT] Vertical reel generated successfully',
+      details: { architecture: 'Python video-rendering pipeline combining waveform-energy analysis, OpenCV frame processing, NumPy interpolation, and FFmpeg export.', features: ['Millisecond-level audio beat detection', 'Portrait 9:16 auto-cropping with smooth panning', 'Cinematic grading and slow-motion interpolation', 'Shot and reference-frame matching utilities'] }
+    },
+    {
+      id: 'sentinel-ai-x',
+      title: 'Sentinel AI X',
+      category: 'AI Security & Computer Vision',
+      description: 'Autonomous laptop-security ecosystem with facial recognition, liveness scoring, smart auto-locking, forensic incident capture, and remote companion controls.',
+      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
+      tags: ['Python', 'OpenCV', 'PyQt6', 'SQLite', 'Android'],
+      githubUrl: 'https://github.com/prasannapbhurke/sentinel-Ai-X',
+      sampleCode: 'python -m sentinel_ai_x.app --headless',
+      expectedOutput: '[SENTINEL] Threat monitor running\n[SECURITY] Workstation protection active',
+      details: { architecture: 'A Python security engine with computer-vision detection, desktop and web dashboards, local audit storage, and Android/cloud relay integrations.', features: ['Face recognition and anti-spoof liveness checks', 'Automatic lock on absence or intruder detection', 'Timestamped forensic snapshots and audit trails', 'Desktop, web, Android, and Telegram control paths'] }
+    },
+    {
+      id: 'classpulse',
+      title: 'ClassPulse',
+      category: 'Mobile & Full-Stack Education Platform',
+      description: 'Attendance-management platform with Android teacher/student apps, rotating QR check-ins, offline sync, reporting, and a Firebase-backed admin dashboard.',
+      image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
+      tags: ['Kotlin', 'Jetpack Compose', 'Firebase', 'JavaScript', 'Chart.js'],
+      githubUrl: 'https://github.com/prasannapbhurke/ClassPulse',
+      sampleCode: './gradlew assembleDebug',
+      expectedOutput: '[BUILD] Android debug APK generated',
+      details: { architecture: 'Kotlin Android clients and a Firebase web dashboard supporting role-based school workflows, offline data collection, and analytics.', features: ['Role-based teacher, HOD, owner, and student access', 'Rotating QR attendance with timed expiry', 'Offline marking with automatic sync', 'PDF, Excel, and CSV attendance exports'] }
+    },
+    {
+      id: 'documimic-ai',
+      title: 'DocuMimic AI',
+      category: 'Generative AI & Document Automation',
+      description: 'Desktop application that analyses a reference document and produces a new academic or professional report matching its structure and writing style.',
+      image: 'https://images.unsplash.com/photo-1456324504439-367cee3b3c32?auto=format&fit=crop&w=800&q=80',
+      tags: ['Electron', 'Node.js', 'Express', 'Python', 'Ollama'],
+      githubUrl: 'https://github.com/prasannapbhurke/DocuMimic-AI',
+      sampleCode: 'npm start',
+      expectedOutput: '[DOCUMIMIC] Desktop interface and local generation service started',
+      details: { architecture: 'Electron and Express interface paired with Python document-parsing and export scripts, with OpenAI, Ollama, and local fallback generation options.', features: ['PDF and Word style/outline extraction', 'AI-assisted report drafting with local Ollama option', 'Interactive section review before export', 'Formatted DOCX and PDF report output'] }
+    },
+    {
+      id: 'dsa-visualizer-pro',
+      title: 'DSA Visualizer Pro',
+      category: 'Full-Stack Learning Platform',
+      description: 'Cross-platform data-structures and algorithms learning system with Android, React, and Node/Express applications, role-based learning workflows, and visualisers.',
+      image: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=800&q=80',
+      tags: ['Java', 'React', 'Node.js', 'Express', 'PostgreSQL'],
+      githubUrl: 'https://github.com/prasannapbhurke/DSA-Visualizer-Pro',
+      sampleCode: 'npm run install-all',
+      expectedOutput: '[DSA] Client and API dependencies installed',
+      details: { architecture: 'Android and React clients share a Node/Express API with Google authentication, optional PostgreSQL storage, resource workflows, and admin analytics.', features: ['Canvas-based algorithm visualisers', 'Role-based classrooms and progress synchronisation', 'Feedback, resource, and admin workflows', 'Production deployment and scale documentation'] }
+    },
+    {
+      id: 'logiclens',
+      title: 'LogicLens',
+      category: 'Desktop Learning Application',
+      description: 'Interactive Electron desktop app that teaches Java and C programming logic through visual execution tracing, guided explanations, lessons, and quizzes.',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80',
+      tags: ['React', 'Electron', 'JavaScript', 'C', 'Java'],
+      githubUrl: 'https://github.com/prasannapbhurke/LogicLens',
+      sampleCode: 'npm start',
+      expectedOutput: '[LOGICLENS] Electron learning workspace launched',
+      details: { architecture: 'React 19 learning workspace packaged with Electron, using custom code parsers and animation logic for step-by-step code exploration.', features: ['Animated line-by-line logic tracing', 'Java and C learning paths', 'DSA lessons and practice modules', 'Interactive playground, quizzes, and progress tracking'] }
+    },
     {
       id: 'email-spam-extension',
       title: 'Email Spam Detector Extension',
@@ -178,10 +250,10 @@ print(transform_text("Free entry in 2 a wkly comp to win FA Cup final tkts!"))`,
     {
       id: 'student-portal',
       title: 'Academic Student Portal',
-      category: 'Full Stack Web Platform',
-      description: 'Full-stack web application designed for academic management, allowing students and administrators to manage courses, track grades, and view attendance.',
+      category: 'Django Study Management Platform',
+      description: 'Django study-management portal for notes, homework, tasks, study sessions, flashcards, quizzes, and practical reference tools.',
       image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80',
-      tags: ['Node.js', 'Express', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
+      tags: ['Python', 'Django', 'Bootstrap', 'Celery', 'Redis'],
       metrics: {
         db: 'ACID Compliant SQL',
         security: 'Session Auth',
@@ -219,46 +291,36 @@ app.get('/api/students/:id/grades', async (req, res) => {
     {
       id: 'airplane-reservation',
       title: 'Airplane Reservation System',
-      category: 'C++ Systems Engine',
-      description: 'High-concurrency C++ flight booking engine integrated with relational SQL database for seat allocation, ticket generation, and real-time passenger manifest tracking.',
+      category: 'Java Reservation System',
+      description: 'Java flight-booking application with CLI and Swing modes, role-based users, seat selection, booking history, and persistent reservation data.',
       image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=800&q=80',
-      tags: ['C++', 'Python', 'SQL', 'Data Structures', 'OOP'],
+      tags: ['Java', 'Swing', 'OOP', 'Concurrency', 'File I/O'],
       metrics: {
-        speed: '<2ms Lookup',
-        algo: 'Vector Indexing',
-        concurrency: 'Thread-Safe'
+        mode: 'CLI + Swing',
+        pattern: 'Object-Oriented',
+        persistence: 'File Storage'
       },
       githubUrl: 'https://github.com/prasannapbhurke/Airplane-Reservation-System',
-      sampleCode: `#include <iostream>
-#include <vector>
-#include <string>
-
-struct Passenger {
-    std::string name;
-    int seatNumber;
-    std::string flightCode;
-};
-
-class FlightEngine {
-public:
-    void bookSeat(const std::string& name, int seat, const std::string& flight) {
-        Passenger p = {name, seat, flight};
-        manifest.push_back(p);
-        std::cout << "[CONFIRMED] Seat " << seat << " allocated for " << name << " on flight " << flight << "\\n";
+      sampleCode: `public class ReservationService {
+    public Ticket bookSeat(User user, Flight flight, String seatNo) {
+        if (!flight.isSeatAvailable(seatNo)) {
+            throw new IllegalStateException("Seat already booked");
+        }
+        Ticket ticket = new Ticket(user.getName(), flight.getCode(), seatNo);
+        flight.reserve(seatNo);
+        return ticket;
     }
-private:
-    std::vector<Passenger> manifest;
-};`,
+}`,
       expectedOutput: `[SYSTEM] Flight Engine Allocation Daemon Started...
 [ALLOCATE] Requesting Seat 14A on Flight AI-802...
 [CONFIRMED] Seat 14A allocated for Prasanna Bhurke on flight AI-802 (PNR: 98A72B)`,
       details: {
-        architecture: 'Engineered using object-oriented C++ design patterns with thread safety. Integrated SQL transactions to guarantee zero duplicate seat bookings during high-concurrency reservation spikes.',
+        architecture: 'Engineered as a Java booking system with object-oriented entities for flights, users, seats, reservations, and ticket generation across CLI and Swing flows.',
         features: [
-          'Sub-2ms seat allocation using vector indexing and memory caching',
-          'ACID transaction locks preventing double-booking race conditions',
+          'Role-based user and admin booking flows',
+          'Interactive seat selection and reservation history',
           'Automated PNR ticket generation and passenger manifest export',
-          'Modular C++ class structure with clean error recovery'
+          'Modular Java class structure with persistence-oriented data handling'
         ]
       }
     },
@@ -306,7 +368,59 @@ def bfs_traversal(start_node):
     }
   ];
 
-  const categories = ['All', 'AI / Machine Learning', 'Mobile Application', 'Full Stack Web Platform', 'C++ Systems Engine', 'Systems & Algorithmic Repository'];
+  const additionalRepositories = [
+    {
+      title: 'WedCraft',
+      category: 'Interactive Frontend Experience',
+      description: 'Premium digital wedding invitation built with Vite, GSAP, Lenis, Swiper, and responsive web animation.',
+      tags: ['Vite', 'JavaScript', 'GSAP', 'Lenis'],
+      url: 'https://github.com/prasannapbhurke/WedCraft'
+    },
+    {
+      title: 'DYPCET Portal',
+      category: 'College Web Portal',
+      description: 'Admission-focused portal using HTML, CSS, XML, XSLT, and XPath for structured college information flows.',
+      tags: ['HTML', 'CSS', 'XML', 'XSLT'],
+      url: 'https://github.com/prasannapbhurke/DYPCET-Portal'
+    },
+    {
+      title: 'Java Grid Compiler',
+      category: 'Distributed Java System',
+      description: 'Master-worker Java compiler/runtime with sockets, Swing UI, MySQL-backed records, and distributed execution design.',
+      tags: ['Java', 'Swing', 'Sockets', 'MySQL'],
+      url: 'https://github.com/prasannapbhurke/Java-Grid-Compiler-JGC-'
+    },
+    {
+      title: 'Java Arithmetic Calculator',
+      category: 'Java Desktop Utility',
+      description: 'Console and Swing calculator with operation history, logging, multithreaded execution, and MySQL persistence.',
+      tags: ['Java', 'Swing', 'MySQL', 'Threads'],
+      url: 'https://github.com/prasannapbhurke/Java-Arithmetic-Calculator'
+    },
+    {
+      title: 'AI Email Spam Detector',
+      category: 'Machine Learning Classifier',
+      description: 'Python NLP spam-detection project using preprocessing, model training, serialized ML pipelines, and Gmail-oriented classification workflows.',
+      tags: ['Python', 'spaCy', 'NLTK', 'scikit-learn'],
+      url: 'https://github.com/prasannapbhurke/AI-Email-Spam-Detector'
+    },
+    {
+      title: 'Expense Tracker App',
+      category: 'Full Stack Finance App',
+      description: 'Expense-tracking product spanning Android and web interfaces for recording, organizing, and reviewing personal spending.',
+      tags: ['Java', 'Android', 'Web App', 'Finance'],
+      url: 'https://github.com/prasannapbhurke/expense-tracker-app'
+    },
+    {
+      title: 'Portfolio Source',
+      category: 'Personal Brand System',
+      description: 'Source repository for the portfolio and GitHub profile ecosystem, including the live Gotham-themed presentation layer.',
+      tags: ['React', 'Vite', 'Portfolio', 'GitHub Pages'],
+      url: 'https://github.com/prasannapbhurke/prasannaportfolio'
+    }
+  ];
+
+  const categories = ['All', ...Array.from(new Set(projects.map((project) => project.category)))];
 
   const filteredProjects = projects.filter((p) => {
     const matchesCategory = activeTag === 'All' || p.category.includes(activeTag) || p.tags.some(t => t.toLowerCase().includes(activeTag.toLowerCase()));
@@ -370,8 +484,10 @@ def bfs_traversal(start_node):
             </div>
             <div className="h-8 w-[1px] bg-slate-800" />
             <div>
-              <span className="text-xs font-mono block opacity-80">Total Stars</span>
-              <span className="text-lg font-bold font-mono text-amber-400">★ {githubStats.stars}</span>
+              <span className="text-xs font-mono block opacity-80">Followers</span>
+              <span className="text-lg font-bold font-mono text-amber-400 flex items-center gap-1">
+                <Users size={16} /> {githubStats.followers}
+              </span>
             </div>
           </div>
         </div>
@@ -493,6 +609,26 @@ def bfs_traversal(start_node):
         {/* GitHub Heatmap Contribution Graph */}
         <div className="pt-8">
           <GitHubHeatmap />
+        </div>
+
+        <div className="mt-12 rounded-2xl border border-slate-700/70 bg-slate-950/55 p-5 sm:p-7">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.18em] text-purple-300">Repository dossier</p>
+              <h3 className="mt-2 text-2xl font-bold text-white">More engineering work</h3>
+            </div>
+            <a href="https://github.com/prasannapbhurke" target="_blank" rel="noreferrer" className="font-mono text-xs text-purple-300 hover:text-white">Open GitHub profile ↗</a>
+          </div>
+          <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+            {additionalRepositories.map((repo) => (
+              <a key={repo.title} href={repo.url} target="_blank" rel="noreferrer" className="group rounded-xl border border-slate-800 bg-slate-900/70 p-4 transition hover:-translate-y-0.5 hover:border-purple-400/70">
+                <p className="text-xs font-mono text-purple-300">{repo.category}</p>
+                <h4 className="mt-2 font-bold text-white group-hover:text-purple-200">{repo.title}</h4>
+                <p className="mt-2 text-xs leading-relaxed text-slate-400">{repo.description}</p>
+                <div className="mt-3 flex flex-wrap gap-1.5">{repo.tags.map(tag => <span key={tag} className="rounded bg-slate-800 px-2 py-1 font-mono text-[10px] text-slate-300">{tag}</span>)}</div>
+              </a>
+            ))}
+          </div>
         </div>
 
       </div>
