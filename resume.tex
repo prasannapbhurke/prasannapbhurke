@@ -1,213 +1,146 @@
-%-------------------------
-% Resume in LaTeX (pdflatex / Overleaf Compatible)
-% Author : Prasanna Bhurke
-% License : MIT
-%------------------------
+%-------------------------------------------------------------------------------
+% Prasanna Pradeep Bhurke - Two-Column Engineering Resume
+% Format: pdflatex / Overleaf Compatible
+%-------------------------------------------------------------------------------
 
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
+\documentclass[letterpaper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.45in]{geometry}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
 \usepackage{tabularx}
+\usepackage{paracol}
 
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+% Accent Color matching screenshot
+\definecolor{primary}{RGB}{70, 130, 180} % Steel blue section titles and horizontal rules
 
-\urlstyle{same}
+% Section Titles formatting
+\titleformat{\section}
+  {\color{primary}\large\bfseries}
+  {}{0em}{}
+  [\color{primary}\hrule height 0.6pt \vspace{-3pt}]
 
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\hrule height 0.5pt \vspace{-5pt}]
-
-% Custom commands
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
-\newcommand{\resumeSubheading}[4]{
-  \vspace{-1pt}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-5pt}
-}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-
-%-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% Itemize list formatting
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=2pt}
+\pagestyle{empty}
 
 \begin{document}
 
-%----------HEADING----------
+%-------------------------------------------------------------------------------
+% HEADER
+%-------------------------------------------------------------------------------
 \begin{center}
-    \textbf{\Huge \scshape Prasanna Bhurke} \\ \vspace{4pt}
-    \small Senior Software Engineer $|$ AI/ML Specialist $|$ Full Stack Architect \\ \vspace{2pt}
-    \small \href{mailto:prasannapbhurke@gmail.com}{\underline{prasannapbhurke@gmail.com}} $|$ 
-    \href{https://github.com/prasannapbhurke}{\underline{github.com/prasannapbhurke}} $|$ 
-    \href{https://www.linkedin.com/in/prasanna-bhurke-25a10931a}{\underline{linkedin.com/in/prasanna-bhurke}} $|$
-    \href{https://prasannapbhurke.github.io/prasannapbhurke/}{\underline{prasannapbhurke.github.io}}
+    {\Huge \bfseries Prasanna Pradeep Bhurke} \\[4pt]
+    Kolhapur, India \quad $|$ \quad \href{tel:+917620809814}{+91 7620809814} \quad $|$ \quad \href{mailto:prasannapbhurke@gmail.com}{prasannapbhurke@gmail.com} \\[2pt]
+    \href{https://www.linkedin.com/in/prasanna-bhurke-25a10931a}{LinkedIn} \quad $|$ \quad \href{https://github.com/prasannapbhurke}{GitHub} \quad $|$ \quad \href{https://prasannapbhurke.github.io/prasannapbhurke/}{Portfolio}
 \end{center}
 
+\vspace{-4pt}
 
-%-----------EDUCATION-----------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeSubheading
-      {Bachelor of Technology (B.Tech) in Computer Science \& Engineering}{2022 -- 2026}
-      {Relevant Coursework: Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks}{Kolhapur, MH}
-  \resumeSubHeadingListEnd
+%-------------------------------------------------------------------------------
+% TWO-COLUMN LAYOUT
+%-------------------------------------------------------------------------------
+\columnratio{0.46}
+\begin{paracol}{2}
 
+%=========================================
+% LEFT COLUMN
+%=========================================
+\section*{Education}
 
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Languages}{: Python, Java, Kotlin, C++, JavaScript, TypeScript, SQL, HTML5, CSS3} \\
-     \textbf{AI / Machine Learning}{: Oracle Agentic AI, Scikit-Learn, NLTK, FastAPI, Librosa, LLM Prompt Engineering} \\
-     \textbf{Mobile \& Systems}{: Android Studio, Kotlin MVVM, Room SQLite, Electron, Java Swing/AWT, Multi-threading} \\
-     \textbf{Web \& Frameworks}{: React.js, Node.js, Express.js, Flask, Tailwind CSS, RESTful APIs} \\
-     \textbf{Databases \& Tools}{: MySQL, PostgreSQL, SQLite, Git, GitHub Actions, Vite, Chrome Extension API}
-    }}
- \end{itemize}
+\textbf{B.Tech in Computer Science Engineering} \\
+DYPCET, Kolhapur \\
+2025 -- 2028 \\
+CGPA: 8.0 \\[6pt]
 
+\textbf{Diploma in Electronics and Computer Engineering} \\
+New Institute of Technology \\
+2023 -- 2025 \\
+Percentage: 91.00\%
 
-%-----------PROJECTS-----------
-\section{Featured Projects}
-    \resumeSubHeadingListStart
+\section*{Technical Skills}
 
-      \resumeProjectHeading
-          {\textbf{Sentinel-AI-X} $|$ \emph{Python, FastAPI, AI Threat Agents, Zero-Trust Architecture}}{Aug 2024}
-          \resumeItemListStart
-            \resumeItem{Architected autonomous AI threat intelligence agent delivering sub-30ms vulnerability payload detection.}
-            \resumeItem{Engineered zero-trust inspection pipeline providing instant malicious pattern quarantine and telemetry alerts.}
-          \resumeItemListEnd
+\textbf{Languages:} C, C++, Python, Java, HTML, ASM, MATLAB, SPICE (circuit simulation) \\
+\textbf{Web:} HTML, CSS, JavaScript, PHP, SQL \\
+\textbf{Embedded:} Arduino, Sensors, UART, RT Systems \\
+\textbf{ML/CV:} NLP, OpenCV, YOLO, SSD \\
+\textbf{Tools:} Git, GitHub, VS Code
 
-      \resumeProjectHeading
-          {\textbf{DSA Visualizer Pro} $|$ \emph{Java, Android Studio, DSA Algorithms, Execution Tracing}}{Jul 2024}
-          \resumeItemListStart
-            \resumeItem{Developed 30+ interactive algorithm visualizers with real-time Big-O time and space complexity graphing.}
-            \resumeItem{Engineered dual-platform APK and desktop AWT/Swing control center with step-by-step playback controls.}
-          \resumeItemListEnd
+\section*{Achievements}
+\begin{itemize}
+    \item Scored \textbf{91\%} in Diploma (Top academic performance)
+    \item Organized and led multiple technical and non-technical events
+    \item Built multiple real-world projects in ML and Embedded Systems
+\end{itemize}
 
-      \resumeProjectHeading
-          {\textbf{BeatMatch-Reel} $|$ \emph{Python, Librosa, Spectral Beat Onsets, FFmpeg}}{Jun 2024}
-          \resumeItemListStart
-            \resumeItem{Implemented Librosa audio spectral analysis to detect tempo onset transients and music BPM.}
-            \resumeItem{Automated FFmpeg video editing pipeline aligning clip transition cuts to musical beats with frame accuracy.}
-          \resumeItemListEnd
+\section*{Interests}
+Chess, Problem Solving, Networking, Reading
 
-      \resumeProjectHeading
-          {\textbf{LogicLens} $|$ \emph{JavaScript, Electron, React, Java/C AST Parser}}{May 2024}
-          \resumeItemListStart
-            \resumeItem{Created cross-platform Electron desktop app for step-by-step memory stack frame and heap visualizer.}
-            \resumeItem{Integrated native Java/C compilers to parse Abstract Syntax Trees (AST) and variable state transitions.}
-          \resumeItemListEnd
+%=========================================
+% RIGHT COLUMN
+%=========================================
+\switchcolumn
 
-      \resumeProjectHeading
-          {\textbf{ClassPulse} $|$ \emph{Kotlin, Android Studio, Coroutines Flow, Room SQLite}}{Apr 2024}
-          \resumeItemListStart
-            \resumeItem{Built native Kotlin Android app with MVVM architecture, Room SQLite offline storage, and Coroutines Flow.}
-            \resumeItem{Implemented real-time classroom student engagement telemetry and automated attendance pulse tracking.}
-          \resumeItemListEnd
+\section*{Projects}
 
-      \resumeProjectHeading
-          {\textbf{WedCraft} $|$ \emph{React, Node.js, Express, Tailwind CSS, REST API}}{Mar 2024}
-          \resumeItemListStart
-            \resumeItem{Designed full-stack event and wedding planning platform with real-time guest RSVP workflows and budget analytics.}
-            \resumeItem{Structured responsive glassmorphism user interface using Tailwind CSS and Express REST endpoints.}
-          \resumeItemListEnd
+\textbf{Sentinel-AI-X (Threat Intelligence)}
+\begin{itemize}
+    \item Architected autonomous AI threat agent delivering sub-30ms vulnerability payload detection
+    \item Engineered zero-trust inspection pipeline providing instant malicious pattern quarantine
+\end{itemize}
+\vspace{4pt}
 
-      \resumeProjectHeading
-          {\textbf{Student Portal} $|$ \emph{Node.js, Express, MySQL, JavaScript, HTML5/CSS3}}{Feb 2024}
-          \resumeItemListStart
-            \resumeItem{Built ACID-compliant 3NF relational database platform for academic course enrollments, grades, and attendance.}
-            \resumeItem{Implemented role-based session authentication (RBAC) separating student and faculty administration.}
-          \resumeItemListEnd
+\textbf{DSA Visualizer Pro}
+\begin{itemize}
+    \item Developed 30+ interactive algorithm visualizers with real-time Big-O complexity graphing
+    \item Engineered dual-platform APK and desktop AWT/Swing control center
+\end{itemize}
+\vspace{4pt}
 
-      \resumeProjectHeading
-          {\textbf{Airplane Reservation System} $|$ \emph{Java, C++, SQL Database, Data Structures}}{Jan 2024}
-          \resumeItemListStart
-            \resumeItem{Engineered high-concurrency flight booking engine delivering sub-2ms seat allocation index lookups.}
-            \resumeItem{Implemented mutex-locked database transactions preventing double-booking race conditions.}
-          \resumeItemListEnd
+\textbf{SMS Spam Detection (ML)}
+\begin{itemize}
+    \item Developed NLP-based model to classify spam messages
+    \item Applied text preprocessing and feature extraction techniques
+\end{itemize}
+\vspace{4pt}
 
-    \resumeSubHeadingListEnd
+\textbf{Portfolio Builder (Web App)}
+\begin{itemize}
+    \item Built dynamic web app using HTML, JS, PHP, SQL
+    \item Generates customizable personal portfolio websites
+\end{itemize}
+\vspace{4pt}
 
+\textbf{Biometric Attendance System}
+\begin{itemize}
+    \item Designed Arduino-based fingerprint authentication system
+    \item Enabled real-time attendance tracking
+\end{itemize}
+\vspace{4pt}
 
-%-----------EXPERIENCE / INTERNSHIPS-----------
-\section{Experience \& Virtual Internships}
-  \resumeSubHeadingListStart
+\textbf{Object Detection System}
+\begin{itemize}
+    \item Implemented YOLO and SSD models
+    \item Achieved real-time performance using OpenCV
+\end{itemize}
 
-    \resumeSubheading
-      {Senior Software Engineer \& AI Architect}{2023 -- Present}
-      {Enterprise Open-Source \& AI Systems}{Remote}
-      \resumeItemListStart
-        \resumeItem{Certified in Oracle Agentic AI Specialist tools, building autonomous tool-calling agent loops and LLM pipelines.}
-        \resumeItem{Architected high-accuracy NLP threat classification models and browser extension security scanners.}
-        \resumeItem{Engineered C++ 48-Hour high-performance memory engines and distributed Java Grid compilers.}
-      \resumeItemListEnd
-      
-    \resumeSubheading
-      {Android Developer Virtual Intern}{2024}
-      {AICTE / EduSkills Virtual Internship}{Remote}
-      \resumeItemListStart
-        \resumeItem{Developed native Android application modules in Kotlin and Java adhering to clean Android MVVM architecture.}
-        \resumeItem{Designed responsive mobile layouts, intent navigation, and Room SQLite persistent data storage.}
-      \resumeItemListEnd
+\section*{Leadership \& Activities}
 
-    \resumeSubheading
-      {Quantum Computing \& Systems Intern}{2024}
-      {Quantum Computers R\&D Program}{Remote}
-      \resumeItemListStart
-        \resumeItem{Researched quantum algorithm simulations, qubit circuit logic, and quantum computing frameworks.}
-        \resumeItem{Implemented C++ and Python data structure optimizations for high-throughput computational workloads.}
-      \resumeItemListEnd
+\textbf{Event Coordinator} (2023--2025)
+\begin{itemize}
+    \item Led planning and execution of technical and sports events
+    \item Managed teams and coordinated logistics
+\end{itemize}
+\vspace{4pt}
 
-  \resumeSubHeadingListEnd
+\textbf{Core Team Member, NIT Kolhapur}
+\begin{itemize}
+    \item Organized large-scale institutional events
+    \item Coordinated logistics and team operations
+\end{itemize}
 
+\end{paracol}
 
-%-----------CERTIFICATIONS-----------
-\section{Verified Certifications \& Credentials}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     \textbf{Oracle Certified Agentic AI Specialist} -- Oracle Corporation \\
-     \textbf{AWS Cloud Certification} -- Amazon Web Services \\
-     \textbf{Android Developer Virtual Internship} -- AICTE / EduSkills \\
-     \textbf{Quantum Computing Virtual Internship} -- Quantum Computers R\&D \\
-     \textbf{Comprehensive 48-Hour C++ \& DS/OOP Mastery} -- Technical Training \\
-     \textbf{Python Data Structures \& Algorithms} -- Python Institute \\
-     \textbf{Java 25-Hour OOP \& Android Studio Development} -- Mobile R\&D
-    }}
- \end{itemize}
-
-%-------------------------------------------
 \end{document}
