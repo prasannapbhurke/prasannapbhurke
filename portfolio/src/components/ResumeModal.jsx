@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, Download, Printer, ExternalLink, Briefcase, GraduationCap, Code, Award, CheckCircle2 } from 'lucide-react';
+import { X, Download, Printer, ExternalLink, Briefcase, GraduationCap, Code, Award, CheckCircle2, Rocket } from 'lucide-react';
 import { sound } from '../utils/sound';
 import BatLogoSvg from './BatLogoSvg';
 
@@ -31,24 +31,78 @@ export default function ResumeModal({ isOpen, onClose }) {
 Senior Software Engineer & AI/ML Specialist
 Email: prasannapbhurke@gmail.com | GitHub: github.com/prasannapbhurke | LinkedIn: linkedin.com/in/prasanna-bhurke-25a10931a
 
+================================================================================
+EXECUTIVE SUMMARY
+================================================================================
+Senior Software Engineer and AI/ML Specialist certified in Oracle Agentic AI and AWS Cloud, with an EduSkills Android Developer Virtual Internship. Experienced in building NLP classification models, autonomous Agentic AI threat engines, native Android Kotlin/Java applications, and high-concurrency systems engines.
+
+================================================================================
 TECHNICAL SKILLS
-- Programming: Python, JavaScript, TypeScript, C++, SQL, HTML5, CSS3
-- AI / Machine Learning: Scikit-Learn, NLTK, Pandas, NumPy, Streamlit, Supervised Learning (Naive Bayes, SVM, RBF)
-- Web & Backend: React.js, FastAPI, Node.js, Express, Flask, MySQL, SQLite, MongoDB, RESTful APIs
-- Tooling: Chrome Extension API, Git, Docker, Vite, Tailwind CSS
+================================================================================
+- Programming Languages: Python, JavaScript, TypeScript, Java, Kotlin, C++, SQL, HTML5, CSS3
+- AI / Machine Learning: Oracle Agentic AI, Scikit-Learn, NLTK, FastAPI, Librosa, LLM Agents, Supervised Learning
+- Mobile & Systems: Android Studio, Kotlin MVVM, Room SQLite, Electron, Java AWT/Swing, Multi-threading
+- Web & Databases: React.js, Node.js, Express.js, MySQL, PostgreSQL, SQLite, RESTful APIs, Tailwind CSS
 
-EXPERIENCE & PROJECTS
-1. Software Engineer & AI Developer (2023 - Present)
-   - Architected NLP classification pipelines achieving 98.2% accuracy.
-   - Built Chrome Extension API for browser-based text threat scanning.
-   - Built ACID-compliant relational DBMS architectures for enterprise management systems.
+================================================================================
+FEATURED SOFTWARE ENGINEERING PROJECTS
+================================================================================
+1. Sentinel-AI-X (Autonomous AI Threat Intelligence Agent)
+   - GitHub: https://github.com/prasannapbhurke/sentinel-Ai-X
+   - Tech Stack: Python, FastAPI, AI Security Agent, LLM Prompt Loops
+   - Built autonomous AI threat intelligence agent for sub-30ms vulnerability detection and payload quarantine.
 
-2. Competitive Algorithmic Programmer (2022 - Present)
-   - 1,000+ Algorithmic Challenges Solved on LeetCode / Coding Platforms.
-   - Ranked in top percentiles on competitive benchmarks; optimized sub-millisecond execution times.
+2. DSA Visualizer Pro (Algorithm Execution Tracing Engine)
+   - GitHub: https://github.com/prasannapbhurke/DSA-Visualizer-Pro
+   - Tech Stack: Java, Android Studio, DSA Algorithms, AWT/Swing
+   - Developed 30+ interactive algorithm animations with real-time Big-O time and space complexity graphing.
 
+3. BeatMatch-Reel (AI Audio & Video Beat Sync Engine)
+   - GitHub: https://github.com/prasannapbhurke/BeatMatch-Reel
+   - Tech Stack: Python, Librosa, Audio Onset Processing, FFmpeg
+   - Engineered spectral audio beat tracking algorithm to align video cuts to music transients with frame accuracy.
+
+4. LogicLens (Desktop Programming Logic & AST Visualizer)
+   - GitHub: https://github.com/prasannapbhurke/LogicLens
+   - Tech Stack: JavaScript, Electron, React, Java/C AST Parser
+   - Created cross-platform Electron app for step-by-step memory stack and heap allocation visualization.
+
+5. ClassPulse (Native Android Classroom Analytics App)
+   - GitHub: https://github.com/prasannapbhurke/ClassPulse
+   - Tech Stack: Kotlin, Android Studio, Coroutines Flow, Room DB
+   - Architected native Kotlin Android app with Room SQLite offline storage and real-time attendance telemetry.
+
+6. WedCraft (Full Stack Event & Wedding Management Platform)
+   - GitHub: https://github.com/prasannapbhurke/WedCraft
+   - Tech Stack: JavaScript, React, Node.js, Express, Tailwind CSS
+   - Full-stack web application for interactive guest RSVP management, vendor schedules, and budget tracking.
+
+7. Student Portal (Academic Administration Platform)
+   - GitHub: https://github.com/prasannapbhurke/student-portal
+   - Tech Stack: Node.js, Express, MySQL, JavaScript, HTML5/CSS3
+   - ACID-compliant relational academic platform for course enrollments, grade tracking, and transcripts.
+
+8. Airplane Reservation System (High-Concurrency Systems Engine)
+   - GitHub: https://github.com/prasannapbhurke/Airplane-Reservation-System
+   - Tech Stack: Java, SQL Database, Data Structures, OOP Design
+   - High-concurrency flight booking engine delivering sub-2ms index lookups and transactional integrity.
+
+================================================================================
+VERIFIED CERTIFICATIONS & CREDENTIALS
+================================================================================
+- Oracle Certified Agentic AI Specialist (Oracle)
+- AWS Cloud Certification (Amazon Web Services)
+- Android Developer Virtual Internship (AICTE / EduSkills)
+- Quantum Computing Virtual Internship (Quantum Computers R&D)
+- Comprehensive 48-Hour C++ & DS/OOP Mastery
+- Python Data Structures & Algorithms (Python Institute)
+- Java 25-Hour OOP & Android Studio Development
+
+================================================================================
 EDUCATION
-- Bachelor of Engineering (B.E.) in Computer Engineering
+================================================================================
+- Bachelor of Technology (B.Tech) in Computer Science & Engineering
+  Semesters 3, 4, 5 Academic & Technical Excellence
 `;
     const blob = new Blob([resumeText], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -60,6 +114,89 @@ EDUCATION
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
+
+  const resumeProjects = [
+    {
+      title: 'Sentinel-AI-X',
+      subtitle: 'Autonomous AI Threat Intelligence Agent',
+      tech: 'Python, FastAPI, AI Agent Loops',
+      repo: 'https://github.com/prasannapbhurke/sentinel-Ai-X',
+      points: [
+        'Architected autonomous AI threat agent delivering sub-30ms payload inspection.',
+        'Built zero-trust evaluation pipeline for instant malicious pattern quarantine.'
+      ]
+    },
+    {
+      title: 'DSA Visualizer Pro',
+      subtitle: 'Algorithm Execution Tracing Engine',
+      tech: 'Java, Android Studio, DSA Algorithms',
+      repo: 'https://github.com/prasannapbhurke/DSA-Visualizer-Pro',
+      points: [
+        'Developed 30+ interactive algorithm animations with real-time Big-O complexity grapher.',
+        'Engineered dual-platform APK and desktop AWT/Swing control center.'
+      ]
+    },
+    {
+      title: 'BeatMatch-Reel',
+      subtitle: 'AI Audio & Video Beat Sync Engine',
+      tech: 'Python, Librosa, FFmpeg',
+      repo: 'https://github.com/prasannapbhurke/BeatMatch-Reel',
+      points: [
+        'Spectral Librosa audio beat tracking aligning video cutpoints to musical transients.',
+        'Automated FFmpeg video rendering pipeline producing ready-to-publish reels.'
+      ]
+    },
+    {
+      title: 'LogicLens',
+      subtitle: 'Desktop Programming Logic & AST Visualizer',
+      tech: 'JavaScript, Electron, React, Java/C',
+      repo: 'https://github.com/prasannapbhurke/LogicLens',
+      points: [
+        'Cross-platform Electron app inspecting AST stack frames and heap allocations.',
+        'Real-time step-by-step code execution tracing for Java and C programs.'
+      ]
+    },
+    {
+      title: 'ClassPulse',
+      subtitle: 'Native Android Classroom Analytics App',
+      tech: 'Kotlin, Android Studio, Room DB',
+      repo: 'https://github.com/prasannapbhurke/ClassPulse',
+      points: [
+        'Native Kotlin Android app using Room SQLite offline storage and Coroutines Flow.',
+        'Real-time classroom engagement telemetry and student attendance pulse.'
+      ]
+    },
+    {
+      title: 'WedCraft',
+      subtitle: 'Full Stack Event & Wedding Platform',
+      tech: 'React, Node.js, Express, Tailwind CSS',
+      repo: 'https://github.com/prasannapbhurke/WedCraft',
+      points: [
+        'Full-stack platform featuring guest RSVP management and seating arrangements.',
+        'Responsive glassmorphism UI styled with Tailwind CSS.'
+      ]
+    },
+    {
+      title: 'Student Portal',
+      subtitle: 'Academic Administration Platform',
+      tech: 'Node.js, Express, MySQL',
+      repo: 'https://github.com/prasannapbhurke/student-portal',
+      points: [
+        'ACID-compliant relational database platform for course enrollments and grades.',
+        'Role-based session authentication for students and faculty administrators.'
+      ]
+    },
+    {
+      title: 'Airplane Reservation System',
+      subtitle: 'High-Concurrency Systems Engine',
+      tech: 'Java, C++, SQL Database',
+      repo: 'https://github.com/prasannapbhurke/Airplane-Reservation-System',
+      points: [
+        'High-concurrency flight booking engine delivering sub-2ms seat allocation lookups.',
+        'Mutex-locked database transactions preventing double-booking race conditions.'
+      ]
+    }
+  ];
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fadeIn">
@@ -128,7 +265,7 @@ EDUCATION
 
         {/* Modal Navigation Tabs */}
         <div className="flex border-b border-slate-800 bg-slate-950/60 px-6 gap-4 text-xs font-mono overflow-x-auto">
-          {['summary', 'skills', 'certifications', 'experience', 'education'].map((tab) => (
+          {['summary', 'projects', 'skills', 'certifications', 'experience', 'education'].map((tab) => (
             <button
               key={tab}
               onClick={() => { sound.playClick(); setActiveTab(tab); }}
@@ -157,7 +294,7 @@ EDUCATION
                   Executive Summary
                 </h3>
                 <p className="text-slate-300 text-xs sm:text-sm leading-relaxed">
-                  Senior Software Engineer and AI/ML Specialist certified in Oracle Agentic AI and AWS Cloud, with an EduSkills Android Developer Virtual Internship. Experienced in building NLP classification models, autonomous Agentic AI loops, native Android Studio Java applications, and high-concurrency C++ systems engines.
+                  Senior Software Engineer and AI/ML Specialist certified in Oracle Agentic AI and AWS Cloud, with an EduSkills Android Developer Virtual Internship. Experienced in building NLP classification models, autonomous Agentic AI threat engines, native Android Kotlin/Java applications, and high-concurrency systems engines.
                 </p>
               </div>
 
@@ -178,13 +315,48 @@ EDUCATION
             </div>
           )}
 
+          {activeTab === 'projects' && (
+            <div className="space-y-4 animate-fadeIn">
+              <div className="flex items-center justify-between pb-2 border-b border-slate-800">
+                <h4 className="font-mono text-xs font-bold text-purple-300 uppercase tracking-widest">Featured Technical Projects</h4>
+                <span className="text-xs font-mono text-slate-400">8 Verified Repositories</span>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {resumeProjects.map((p, idx) => (
+                  <div key={idx} className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 space-y-2 flex flex-col justify-between">
+                    <div className="space-y-1">
+                      <div className="flex items-center justify-between">
+                        <h5 className="font-bold text-white text-sm font-heading">{p.title}</h5>
+                        <a href={p.repo} target="_blank" rel="noreferrer" className="text-slate-400 hover:text-purple-300 transition-colors">
+                          <ExternalLink size={14} />
+                        </a>
+                      </div>
+                      <p className="text-xs text-purple-300 font-mono font-medium">{p.subtitle}</p>
+                      <p className="text-[11px] font-mono text-slate-400 pt-0.5">Stack: {p.tech}</p>
+                    </div>
+
+                    <ul className="space-y-1 pt-1 border-t border-slate-800/60">
+                      {p.points.map((pt, pIdx) => (
+                        <li key={pIdx} className="text-[11px] text-slate-300 flex items-start gap-1.5">
+                          <span className="text-purple-400 shrink-0">•</span>
+                          <span>{pt}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {activeTab === 'skills' && (
             <div className="space-y-6 animate-fadeIn">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-3">
                   <h4 className="font-mono text-xs font-bold text-purple-300 uppercase tracking-widest">Programming Languages</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Python', 'C++', 'Java', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'].map((s, idx) => (
+                    {['Python', 'C++', 'Java', 'Kotlin', 'JavaScript', 'TypeScript', 'SQL', 'HTML5', 'CSS3'].map((s, idx) => (
                       <span key={idx} className="px-3 py-1.5 rounded-lg bg-slate-900 border border-purple-500/30 text-xs font-mono text-slate-200">
                         {s}
                       </span>
@@ -195,7 +367,7 @@ EDUCATION
                 <div className="space-y-3">
                   <h4 className="font-mono text-xs font-bold text-purple-300 uppercase tracking-widest">AI, Mobile & Systems</h4>
                   <div className="flex flex-wrap gap-2">
-                    {['Oracle Agentic AI', 'Scikit-Learn', 'NLTK', 'Android Studio', 'Mistral AI', 'Quantum Computing', 'Blender 3D'].map((s, idx) => (
+                    {['Oracle Agentic AI', 'Scikit-Learn', 'NLTK', 'Android Studio', 'Kotlin MVVM', 'Room DB', 'Electron', 'FastAPI', 'Librosa', 'MySQL'].map((s, idx) => (
                       <span key={idx} className="px-3 py-1.5 rounded-lg bg-slate-900 border border-purple-500/30 text-xs font-mono text-slate-200">
                         {s}
                       </span>
@@ -237,22 +409,22 @@ EDUCATION
                 <div className="flex items-center justify-between pb-2 border-b border-slate-800">
                   <div>
                     <h4 className="font-bold text-white text-base">Senior Software Engineer & AI Architect</h4>
-                    <span className="text-xs font-mono text-purple-300">WayneTech Open-Source & AI R&D</span>
+                    <span className="text-xs font-mono text-purple-300">Open-Source AI & Systems Development</span>
                   </div>
                   <span className="text-xs font-mono text-slate-400">2023 – Present</span>
                 </div>
                 <ul className="space-y-2 text-xs sm:text-sm text-slate-300">
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Certified in Oracle Agentic AI Specialist tools, building tool-calling agent loops.</span>
+                    <span>Certified in Oracle Agentic AI Specialist tools, building autonomous AI threat agents and tool loops.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Completed EduSkills Android Developer Virtual Internship building native Android Studio apps.</span>
+                    <span>Completed EduSkills Android Developer Virtual Internship building native Android Studio apps in Kotlin and Java.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <CheckCircle2 size={16} className="text-emerald-400 shrink-0 mt-0.5" />
-                    <span>Engineered C++ 48-Hour high-performance memory engines and Python DS/Algo pipelines.</span>
+                    <span>Engineered high-performance C++ systems engines and distributed Java Grid compilers.</span>
                   </li>
                 </ul>
               </div>
