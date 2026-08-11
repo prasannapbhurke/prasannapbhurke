@@ -244,14 +244,205 @@ EDUCATION
             <button
               onClick={handleDownloadPdf}
               onMouseEnter={() => sound.playHover()}
-              className={`px-4 py-2.5 rounded-xl text-xs font-mono font-bold flex items-center gap-2 transition-all shadow-md ${
+              className={`px-3.5 py-2.5 rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all shadow-md ${
                 isBatman
                   ? 'bg-gradient-to-r from-yellow-500 via-amber-400 to-yellow-300 text-black shadow-yellow-500/30'
                   : 'glow-btn'
               }`}
             >
-              <Download size={16} />
+              <Download size={15} />
               <span>Download CV</span>
+            </button>
+
+            <button
+              onClick={() => {
+                sound.playSuccess();
+                const latexCode = `%-------------------------
+% Resume in LaTeX
+% Author : Prasanna Bhurke
+%------------------------
+
+\\documentclass[letterpaper,11pt]{article}
+\\usepackage{latexsym}
+\\usepackage[empty]{fullpage}
+\\usepackage{titlesec}
+\\usepackage{marvosym}
+\\usepackage[usenames,dvipsnames]{color}
+\\usepackage{verbatim}
+\\usepackage{enumitem}
+\\usepackage[hidelinks]{hyperref}
+\\usepackage{tabularx}
+
+\\addtolength{\\oddsidemargin}{-0.5in}
+\\addtolength{\\evensidemargin}{-0.5in}
+\\addtolength{\\textwidth}{1in}
+\\addtolength{\\topmargin}{-.5in}
+\\addtolength{\\textheight}{1.0in}
+
+\\urlstyle{same}
+\\raggedbottom
+\\raggedright
+\\setlength{\\tabcolsep}{0in}
+
+\\titleformat{\\section}{
+  \\vspace{-4pt}\\scshape\\raggedright\\large
+}{}{0em}{}[\\color{black}\\vline height 1.5pt \\hrule height 0.5pt \\vspace{-5pt}]
+
+\\newcommand{\\resumeItem}[1]{\\item\\small{{#1 \\vspace{-2pt}}}}
+\\newcommand{\\resumeSubheading}[4]{
+  \\vspace{-1pt}\\item
+    \\begin{tabular*}{0.97\\textwidth}[t]{l@{\\extracolsep{\\fill}}r}
+      \\textbf{#1} & #2 \\\\
+      \\textit{\\small#3} & \\textit{\\small #4} \\\\
+    \\end{tabular*}\\vspace{-5pt}
+}
+\\newcommand{\\resumeProjectHeading}[2]{
+    \\item
+    \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
+      \\small#1 & #2 \\\\
+    \\end{tabular*}\\vspace{-5pt}
+}
+
+\\begin{document}
+
+\\begin{center}
+    \\textbf{\\Huge \\scshape Prasanna Bhurke} \\\\ \\vspace{4pt}
+    \\small Senior Software Engineer $|$ AI/ML Specialist $|$ Full Stack Architect \\\\ \\vspace{2pt}
+    \\small \\href{mailto:prasannapbhurke@gmail.com}{\\underline{prasannapbhurke@gmail.com}} $|$ 
+    \\href{https://github.com/prasannapbhurke}{\\underline{github.com/prasannapbhurke}} $|$ 
+    \\href{https://www.linkedin.com/in/prasanna-bhurke-25a10931a}{\\underline{linkedin.com/in/prasanna-bhurke}} $|$
+    \\href{https://prasannapbhurke.github.io/prasannapbhurke/}{\\underline{prasannapbhurke.github.io}}
+\\end{center}
+
+\\section{Education}
+  \\begin{itemize}[leftmargin=0.15in, label={}]
+    \\resumeSubheading
+      {Bachelor of Technology (B.Tech) in Computer Science \\& Engineering}{2022 -- 2026}
+      {Relevant Coursework: Data Structures, Algorithms, DBMS, Operating Systems, Computer Networks}{Kolhapur, MH}
+  \\end{itemize}
+
+\\section{Technical Skills}
+ \\begin{itemize}[leftmargin=0.15in, label={}]
+    \\small{\\item{
+     \\textbf{Languages}{: Python, Java, Kotlin, C++, JavaScript, TypeScript, SQL, HTML5, CSS3} \\\\
+     \\textbf{AI / Machine Learning}{: Oracle Agentic AI, Scikit-Learn, NLTK, FastAPI, Librosa, LLM Prompting} \\\\
+     \\textbf{Mobile \\& Systems}{: Android Studio, Kotlin MVVM, Room SQLite, Electron, Java Swing/AWT, Multi-threading} \\\\
+     \\textbf{Web \\& Frameworks}{: React.js, Node.js, Express.js, Flask, Tailwind CSS, RESTful APIs} \\\\
+     \\textbf{Databases \\& Tools}{: MySQL, PostgreSQL, SQLite, Git, GitHub Actions, Vite, Chrome Extension API}
+    }}
+ \\end{itemize}
+
+\\section{Featured Projects}
+    \\begin{itemize}[leftmargin=0.15in, label={}]
+
+      \\resumeProjectHeading
+          {\\textbf{Sentinel-AI-X} $|$ \\emph{Python, FastAPI, AI Threat Agents}}{Aug 2024}
+          \\begin{itemize}
+            \\resumeItem{Architected autonomous AI threat intelligence agent delivering sub-30ms vulnerability detection.}
+            \\resumeItem{Engineered zero-trust inspection pipeline providing instant malicious pattern quarantine.}
+          \\end{itemize}
+
+      \\resumeProjectHeading
+          {\\textbf{DSA Visualizer Pro} $|$ \\emph{Java, Android Studio, DSA Algorithms}}{Jul 2024}
+          \\begin{itemize}
+            \\resumeItem{Developed 30+ interactive algorithm visualizers with real-time Big-O complexity graphing.}
+            \\resumeItem{Engineered dual-platform APK and desktop AWT/Swing control center.}
+          \\end{itemize}
+
+      \\resumeProjectHeading
+          {\\textbf{BeatMatch-Reel} $|$ \\emph{Python, Librosa, Audio Onset Processing, FFmpeg}}{Jun 2024}
+          \\begin{itemize}
+            \\resumeItem{Spectral audio beat tracking aligning video cutpoints to musical transients.}
+            \\resumeItem{Automated FFmpeg video rendering pipeline producing ready-to-publish reels.}
+          \\end{itemize}
+
+      \\resumeProjectHeading
+          {\\textbf{LogicLens} $|$ \\emph{JavaScript, Electron, React, Java/C}}{May 2024}
+          \\begin{itemize}
+            \\resumeItem{Cross-platform Electron app inspecting AST stack frames and heap allocations.}
+            \\resumeItem{Real-time step-by-step code execution tracing for Java and C programs.}
+          \\end{itemize}
+
+      \\resumeProjectHeading
+          {\\textbf{ClassPulse} $|$ \\emph{Kotlin, Android Studio, Room DB}}{Apr 2024}
+          \\begin{itemize}
+            \\resumeItem{Native Kotlin Android app using Room SQLite offline storage and Coroutines Flow.}
+            \\resumeItem{Real-time classroom engagement telemetry and student attendance pulse.}
+          \\end{itemize}
+
+      \\resumeProjectHeading
+          {\\textbf{WedCraft} $|$ \\emph{React, Node.js, Express, Tailwind CSS}}{Mar 2024}
+          \\begin{itemize}
+            \\resumeItem{Full-stack platform featuring guest RSVP management and seating arrangements.}
+            \\resumeItem{Responsive glassmorphism UI styled with Tailwind CSS.}
+          \\end{itemize}
+
+      \\resumeProjectHeading
+          {\\textbf{Student Portal} $|$ \\emph{Node.js, Express, MySQL}}{Feb 2024}
+          \\begin{itemize}
+            \\resumeItem{ACID-compliant relational database platform for course enrollments and grades.}
+            \\resumeItem{Role-based session authentication for students and faculty administrators.}
+          \\end{itemize}
+
+      \\resumeProjectHeading
+          {\\textbf{Airplane Reservation System} $|$ \\emph{Java, C++, SQL Database}}{Jan 2024}
+          \\begin{itemize}
+            \\resumeItem{High-concurrency flight booking engine delivering sub-2ms seat allocation lookups.}
+            \\resumeItem{Mutex-locked database transactions preventing double-booking race conditions.}
+          \\end{itemize}
+
+    \\end{itemize}
+
+\\section{Experience \\& Virtual Internships}
+  \\begin{itemize}[leftmargin=0.15in, label={}]
+    \\resumeSubheading
+      {Senior Software Engineer \\& AI Architect}{2023 -- Present}
+      {Open-Source AI \\& Systems Development}{Remote}
+      \\begin{itemize}
+        \\resumeItem{Certified in Oracle Agentic AI Specialist tools, building autonomous tool-calling agent loops.}
+        \\resumeItem{Architected high-accuracy NLP threat classification models and browser extension security scanners.}
+      \\end{itemize}
+      
+    \\resumeSubheading
+      {Android Developer Virtual Intern}{2024}
+      {AICTE / EduSkills Virtual Internship}{Remote}
+      \\begin{itemize}
+        \\resumeItem{Developed native Android application modules in Kotlin and Java adhering to clean Android MVVM architecture.}
+      \\end{itemize}
+  \\end{itemize}
+
+\\section{Verified Certifications \\& Credentials}
+ \\begin{itemize}[leftmargin=0.15in, label={}]
+    \\small{\\item{
+     \\textbf{Oracle Certified Agentic AI Specialist} -- Oracle Corporation \\\\
+     \\textbf{AWS Cloud Certification} -- Amazon Web Services \\\\
+     \\textbf{Android Developer Virtual Internship} -- AICTE / EduSkills \\\\
+     \\textbf{Quantum Computing Virtual Internship} -- Quantum Computers R\\&D
+    }}
+ \\end{itemize}
+
+\\end{document}`;
+
+                const blob = new Blob([latexCode], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'Prasanna_Bhurke_Resume.tex';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+              }}
+              onMouseEnter={() => sound.playHover()}
+              className={`px-3.5 py-2.5 rounded-xl text-xs font-mono font-bold flex items-center gap-1.5 transition-all border ${
+                isBatman
+                  ? 'bg-slate-950 text-amber-300 border-amber-500/40 hover:border-amber-400'
+                  : 'bg-purple-950/80 text-purple-200 border-purple-500/40 hover:border-purple-400'
+              }`}
+              title="Download LaTeX Source File (.tex)"
+            >
+              <Code size={15} />
+              <span>LaTeX (.tex)</span>
             </button>
 
             <button
