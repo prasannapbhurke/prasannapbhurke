@@ -25,6 +25,9 @@
 <a href="https://prasannapbhurke.github.io/prasannapbhurke/">
   <img src="https://img.shields.io/badge/Portfolio-Live%20Site-8A2BE2?style=for-the-badge&logo=firefox&logoColor=white" alt="Portfolio"/>
 </a>
+<a href="https://prasannapbhurke.github.io/prasannapbhurke/resume.pdf" target="_blank">
+  <img src="https://img.shields.io/badge/Resume-Download%20PDF-FF0055?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Resume PDF"/>
+</a>
 <a href="https://www.linkedin.com/in/prasanna-bhurke-25a10931a">
   <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
 </a>
@@ -88,11 +91,13 @@
 | Attribute | Details & Specifications |
 | :--- | :--- |
 | **Current Role** | **Senior Software Engineer & AI Architect** |
-| **Education** | **B.Tech in Computer Science & Engineering** |
+| **Education** | **B.Tech in Computer Science & Engineering (CGPA: 8.0)** |
+| **Diploma** | **Electronics & Computer Engineering (91.00%)** |
 | **Key Credentials** | **Oracle Certified Agentic AI** \| **AWS Cloud** \| **EduSkills Android Developer Intern** |
 | **Primary Domains** | Agentic AI Systems, Machine Learning NLP, Systems C++, Android & Full Stack Web |
 | **Core Stack** | `Python` `C++` `Java` `React` `FastAPI` `Android Studio` `MySQL` `Docker` |
 | **Specialized Skills** | Quantum Computing, Mistral AI, AI Automation Bots, Data Analytics & Blender 3D |
+| **Official Resume** | [📄 Download Resume PDF](https://prasannapbhurke.github.io/prasannapbhurke/resume.pdf) \| [📄 View LaTeX Source](https://github.com/prasannapbhurke/prasannapbhurke/blob/main/resume.tex) |
 | **Open To** | Full-Time Senior Software / AI Engineer Roles & Technical Consulting |
 | **Time Zone** | IST (UTC +5:30) — *Flexible for Global Distributed Teams* |
 | **Availability** | **Immediate / 30 Days Notice** |
