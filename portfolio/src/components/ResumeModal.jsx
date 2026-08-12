@@ -181,8 +181,8 @@ export default function ResumeModal({ isOpen, onClose }) {
                 {[
                   { title: 'Sentinel-AI-X (Threat Intelligence)', points: ['Architected autonomous AI threat agent delivering sub-30ms vulnerability payload detection', 'Engineered zero-trust inspection pipeline providing instant malicious pattern quarantine'] },
                   { title: 'DSA Visualizer Pro', points: ['Developed 30+ interactive algorithm visualizers with real-time Big-O complexity graphing', 'Engineered dual-platform APK and desktop AWT/Swing control center'] },
-                  { title: 'LogicLens (Desktop Programming Logic)', points: ['Created cross-platform Electron desktop app for step-by-step memory stack frame and heap visualizer', 'Integrated native Java/C compilers to parse Abstract Syntax Trees (AST) and variable state transitions'] },
-                  { title: 'WedCraft (Full Stack Event Platform)', points: ['Designed full-stack event and wedding planning platform with real-time guest RSVP workflows', 'Structured responsive glassmorphism user interface using Tailwind CSS and Express REST endpoints'] },
+                  { title: 'LogicLens (Desktop Programming Logic)', points: ['Created cross-platform Electron desktop app for step-by-step memory stack frame and heap visualizer', 'Integrated native Java/C compilers to parse AST and variable state transitions'] },
+                  { title: 'WedCraft (Full Stack Event Platform)', points: ['Designed full-stack event and wedding planning platform with real-time guest RSVP workflows', 'Structured responsive glassmorphism UI using Tailwind CSS and Express REST endpoints'] },
                   { title: 'SMS Spam Detection (ML)', points: ['Developed NLP-based model to classify spam messages', 'Applied text preprocessing and feature extraction techniques'] },
                   { title: 'Biometric Attendance System', points: ['Designed Arduino-based fingerprint authentication system', 'Enabled real-time attendance tracking'] }
                 ].map((p, idx) => (
