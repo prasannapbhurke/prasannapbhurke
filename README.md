@@ -49,25 +49,7 @@
   <img src="https://img.shields.io/github/stars/prasannapbhurke?label=Stars&logo=github&style=for-the-badge&color=6D28D9&labelColor=1A1B27" alt="Stars"/>
 </a>
 
-<br/><br/>
 
-<!-- 🏆 GITHUB OFFICIAL ACHIEVEMENTS SHOWCASE -->
-<div align="center">
-
-<h3>🏆 Official GitHub Achievements & Badges</h3>
-
-<a href="https://github.com/prasannapbhurke?tab=achievements" target="_blank">
-  <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/yolo-default.png" width="65" alt="YOLO Badge" title="YOLO — Merged PR without code review"/>
-  <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/quickdraw-default.png" width="65" alt="Quickdraw Badge" title="Quickdraw — Closed issue/PR within 5 minutes"/>
-  <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pull-shark-default.png" width="65" alt="Pull Shark Badge" title="Pull Shark — Opened & merged pull requests"/>
-  <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/pair-extraordinaire-default.png" width="65" alt="Pair Extraordinaire Badge" title="Pair Extraordinaire — Co-authored merged PRs"/>
-  <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/galaxy-brain-default.png" width="65" alt="Galaxy Brain Badge" title="Galaxy Brain — Accepted discussion answers"/>
-  <img src="https://github.com/Schweinepriester/github-profile-achievements/raw/main/images/starstruck-default.png" width="65" alt="Starstruck Badge" title="Starstruck — Repository star milestones"/>
-</a>
-
-</div>
-
-<br/><br/>
 
 <!-- QUICK NAVIGATION JUMP BAR -->
 <p align="center">
